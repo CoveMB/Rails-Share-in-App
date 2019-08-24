@@ -15,6 +15,8 @@ Rails.application.configure do
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
 
+  config.web_socket_server_url = "wss://https://ruby-share-in-app.herokuapp.com/cable"
+
   # Ensures that a master key has been made available in either ENV["RAILS_MASTER_KEY"]
   # or in config/master.key. This key is used to decrypt credentials (and other encrypted files).
   # config.require_master_key = true
@@ -40,7 +42,9 @@ Rails.application.configure do
   # config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for NGINX
 
   # Store uploaded files on the local file system (see config/storage.yml for options)
-  config.active_storage.service = :local
+  config.active_storage.service = :amazon
+
+    config.action_cable.allowed_request_origins = [ 'https://ruby-share-in-app.herokuapp.com', "http://ruby-share-in-app.herokuapp.com" ]
 
   # Mount Action Cable outside main process or domain
   # config.action_cable.mount_path = nil

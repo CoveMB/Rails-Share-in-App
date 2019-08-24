@@ -7,7 +7,10 @@ const buildMap = () => {
   mapboxgl.accessToken = mapElement.dataset.mapboxApiKey;
   return new mapboxgl.Map({
     container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v10'
+    style: 'mapbox://styles/mapbox/streets-v10',
+    options: {
+      marker: true
+    },
   });
 };
 
@@ -39,6 +42,14 @@ const fitMapToMarkers = (map, markers) => {
   map.fitBounds(bounds, { padding: 70, maxZoom: 10 });
 };
 
+const addGeoCoder = (map) => {
+  const geocoder = new MapboxGeocoder({
+    accessToken: mapboxgl.accessToken,
+    mapboxgl: mapboxgl
+  });
+  document.getElementById('geocoder').appendChild(geocoder.onAdd(map));
+};
+
 const initMapbox = () => {
   if (mapElement) {
     const map = buildMap();
@@ -46,7 +57,7 @@ const initMapbox = () => {
     addMarkersToMap(map, markers);
     fitMapToMarkers(map, markers);
     addGeolocationControl(map);
-    map.addControl(new MapboxGeocoder({ accessToken: mapboxgl.accessToken }));
+    addGeoCoder(map);
   }
 };
 

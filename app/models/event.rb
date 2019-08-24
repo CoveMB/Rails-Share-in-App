@@ -2,6 +2,8 @@ class Event < ApplicationRecord
   extend FriendlyId
   friendly_id :name, use: :slugged
 
+  has_one_attached :image
+
   has_many :event_interests, dependent: :destroy
   has_many :interests, through: :event_interests
 

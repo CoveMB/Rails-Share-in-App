@@ -5,9 +5,10 @@ class EventsController < ApplicationController
     p request.ip
     p request.location
     p request.location.city
+    @interest_categories = policy_scope(InterestCategory)
     @events = policy_scope(Event)
-    @geocoded = @events.filter { |item| item.user.longitude && item.user.latitude }
-    @markers = @geocoded.map do |event|
+    geocoded = @events.filter { |item| item.user.longitude && item.user.latitude }
+    @markers = geocoded.map do |event|
       {
         lat: event.latitude,
         lng: event.longitude

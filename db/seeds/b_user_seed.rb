@@ -8,6 +8,30 @@ User.create!(
 )
 
 User.create!(
+  name: "Attendee",
+  surname: "Attendee",
+  password: "password123",
+  address: "1359 rue Casgrain montreal",
+  email: "attendee@gmail.com"
+)
+
+User.create!(
+  name: "Attendee2",
+  surname: "Attendee2",
+  password: "password123",
+  address: "1339 rue Casgrain montreal",
+  email: "attendee2@gmail.com"
+)
+
+User.create!(
+  name: "Attendee3",
+  surname: "Attendee3",
+  password: "password123",
+  address: "1339 rue Hutchison montreal",
+  email: "attendee3@gmail.com"
+)
+
+User.create!(
   name: "Benjamin",
   surname: "Marquis",
   bio: "I came to Montreal a couple of years ago to study sociology. After graduating I became a digital marketing specialist and web analyst. I started learning JavaScript then Python to interact with the data I was exposed to. I found that building stuff suited my pragmatic profile and decided to push it further!",

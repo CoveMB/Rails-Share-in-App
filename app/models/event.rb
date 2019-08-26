@@ -11,10 +11,9 @@ class Event < ApplicationRecord
   has_many :user_events, dependent: :destroy
   has_many :users, through: :user_events
 
-  belongs_to :event_type
   belongs_to :organiser
+  belongs_to :event_type
 
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
-
 end

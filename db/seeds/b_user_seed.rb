@@ -58,4 +58,4 @@ User.create!(
   password: "password123"
 )
 
-p "User created"
+p "User created!"

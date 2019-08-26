@@ -3,13 +3,13 @@ Rails.application.routes.draw do
 
   root to: 'events#index'
 
+  # Organiser and event routes
   resources :organisers, only: [:show] do
-    resources :events, only: [:show, :create, :update]
+    resources :events, only: [:show]
   end
 
   # User and messaging routes
   resources :users, only:[:show] do
-    resources :organisers, only: [:create, :update]
     resources :chats, only:[:index, :create, :show]
   end
 

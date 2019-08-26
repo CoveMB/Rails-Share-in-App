@@ -1,8 +1,7 @@
-<% if item.image.attached? %>
-  <%= image_tag url_for(item.image), class:"card-img-top" %>
+<% if event.image.attached? %>
+  <%= image_tag url_for(event.image), class:"card-img-top" %>
 <% end %>
-<h2><%= item.title %></h2>
-<p><%= item.description %></p>
+<h4><%= event.name %></h4>
 <button>
-  <%= link_to "Borrow a thing", new_reservation_path(item), method: :post, class: "btn btn-quatrery" %>
+  <%= link_to "Learn More", organiser_event_path(event.organiser, event) %>
 </button>

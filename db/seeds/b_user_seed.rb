@@ -7,29 +7,44 @@ User.create!(
   admin: true
 )
 
-User.create!(
-  name: "Attendee",
-  surname: "Attendee",
+doan = User.new(
+  name: "Kimson",
+  surname: "Doan",
   password: "password123",
   address: "1359 rue Casgrain montreal",
-  email: "attendee@gmail.com"
+  email: "kimson@gmail.com"
 )
+doan.avatar.attach(io: File.open("./app/assets/images/storage/kimsonpic.webp"), filename: "kimsonpic.webp")
+doan.image.attach(io: File.open("./app/assets/images/storage/kimsonimage.jpg"), filename: "kimsonimage.jpg")
+doan.save!
 
-User.create!(
-  name: "Attendee2",
-  surname: "Attendee2",
+p doan.id
+
+ap = User.create!(
+  name: "AP X",
+  surname: "90",
   password: "password123",
   address: "1339 rue Casgrain montreal",
-  email: "attendee2@gmail.com"
+  email: "apx90@gmail.com"
 )
+ap.avatar.attach(io: File.open("./app/assets/images/storage/pxxpic.jpg"), filename: "pxxpic.jpg")
+ap.image.attach(io: File.open("./app/assets/images/storage/pxximg.jpeg"), filename: "pxximg.jpeg")
+ap.save!
 
-User.create!(
-  name: "Attendee3",
-  surname: "Attendee3",
+p ap.id
+
+marteen = User.create!(
+  name: "Marteen",
+  surname: "Deckers",
   password: "password123",
   address: "1339 rue Hutchison montreal",
-  email: "attendee3@gmail.com"
+  email: "marteen@gmail.com"
 )
+marteen.avatar.attach(io: File.open("./app/assets/images/storage/martinpic.jpeg"), filename: "martinpic.jpeg")
+marteen.image.attach(io: File.open("./app/assets/images/storage/martinimg.jpeg"), filename: "martinimg.jpeg")
+marteen.save!
+
+p marteen.id
 
 User.create!(
   name: "Benjamin",

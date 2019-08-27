@@ -1,1 +1,22 @@
-<%= render "edit_form", user: @user %>
+<div class="modal fade" id="exempleModal" tabindex="-1" role="dialog" aria-labelledby="editUserModallabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 id="editUserModallabel" class="modal-title">Edit your profile</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <div class="col-md">
+            <div class="input-group">
+              <div class="input-group-addon"></div>
+            </div>
+          </div>
+        </div>
+        <%= render "edit_form" %>
+      </div>
+    </div>
+  </div>
+</div>

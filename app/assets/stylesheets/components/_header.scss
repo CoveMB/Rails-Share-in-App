@@ -1,0 +1,24 @@
+.header-content {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: url(http://blogue.lesventes.ca/wp-content/uploads/2019/06/Montreal-Skyline.jpg);
+  background-color: rgba(172, 12, 12, 0.4);
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  place-items:center;
+  color: rgba(245,245,255,.85);
+  text-align: center;
+  a{
+    color: rgba(255,255,255,.85);
+    text-decoration: none;
+    &:hover{
+      color: gray;
+      cursor:pointer;
+      z-index:-1;
+    }
+  }
+}

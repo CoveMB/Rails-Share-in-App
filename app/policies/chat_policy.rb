@@ -6,15 +6,15 @@ class ChatPolicy < ApplicationPolicy
   end
 
   def show?
-    return true
+    true
   end
 
   def create?
-    return true
+    true
   end
 
   def index?
-    return true
+    true
   end
 
   private

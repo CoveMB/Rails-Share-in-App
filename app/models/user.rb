@@ -1,16 +1,22 @@
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
-  has_one_attached :avatar
 
+  # Activestorege config
+  has_one_attached :avatar
+  has_one_attached :image
+
+  # Model config
   has_many :user_interests, dependent: :destroy
   has_many :interests, through: :user_interests
 
-  has_one :organiser
+  # has_one :organiser
 
+  # Devise config
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  # Geocoding config
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
 
@@ -19,6 +25,7 @@ class User < ApplicationRecord
   has_many :subscriptions
   has_many :chats, through: :subscriptions
 
+  # Set default profile image
   before_create :set_default_avatar
 
   def existing_chats_users

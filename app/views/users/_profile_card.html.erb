@@ -1,0 +1,9 @@
+<div class="body-card">
+  <% if @user.avatar.attached? %>
+    <%= image_tag url_for(@user.avatar), class: "card-avatar" %>
+  <% else %>
+    <%= image_tag image_path('default_avatar.jpg'), class: "card-avatar" %>
+  <% end %>
+  <p><%= @user.bio %></p>
+  <p>abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz</p>
+</div>

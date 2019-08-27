@@ -1,24 +1,19 @@
-.header-box{
-  width: 100%;
-  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.25);
+.header-home-title-line{
+  margin: 25vh auto;
+  width: 15%;
+  border: 1px solid #FFFFFF;
+  box-shadow: 6px 6px 8px rgba(0, 0, 0, 0.25);
 }
 
-.header-image{
-  height: 60vh;
+.header-home-image{
+  height: 100vh;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.header-title-line{
-  margin: auto;
-  width: 25%;
-  border: 1px solid #FFFFFF;
-  box-shadow: 6px 6px 8px rgba(0, 0, 0, 0.25);
-}
-
-.header-title{
+.header-home-title{
   margin-top: -120px;
   text-align: center;
   font-family: Damion;
@@ -29,8 +24,7 @@
   color: #FFFFFF;
 }
 
-
-.header-filter{
+.header-home-filter{
   background: rgba(172, 12, 12, 0.10);
   mix-blend-mode: normal;
   box-shadow: 2px 0px 4px rgba(0, 0, 0, 0.25);

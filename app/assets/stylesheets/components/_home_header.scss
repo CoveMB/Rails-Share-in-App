@@ -1,7 +1,7 @@
 .header-home-title-line{
-  margin: 25vh auto;
+  margin: auto;
   width: 15%;
-  border: 1px solid #FFFFFF;
+  border: 1px solid $white;
   box-shadow: 6px 6px 8px rgba(0, 0, 0, 0.25);
 }
 
@@ -14,14 +14,14 @@
 }
 
 .header-home-title{
-  margin-top: -120px;
+  font-family: $lora;
+  margin-top: -320px;
   text-align: center;
-  font-family: Damion;
   font-style: normal;
   font-weight: normal;
   font-size: 90px;
   line-height: 124px;
-  color: #FFFFFF;
+  color: $white;
 }
 
 .header-home-filter{

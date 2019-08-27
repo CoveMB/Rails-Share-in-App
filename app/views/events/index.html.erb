@@ -1,11 +1,11 @@
-<div id='geocoder' class='geocoder'></div>
+<%= render "events/home_header" %>
 <div class="container">
   <div class="row">
     <div class="col-4"></div>
     <div class="col-8">
-      <%= render "map" %>
+      <%= render "map", markers: @markers %>
     </div>
   </div>
 </div>
 <%= render "map_event_filter", interest_category: @interest_category %>
-<%= render "map_event_modal", event: event %>
+<%= render "map_event_modal", markers: @markers %>

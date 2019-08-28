@@ -8,9 +8,11 @@ footer {
   font-family: 'Raleway', sans-serif;
   color: rgb(0, 0, 0);
   bottom: 0;
-  width: 100%;
+  width: 90%;
   /* Set the fixed height of the footer here */
   height: 90px;
+  border-radius: 8px 8px 0 0;
+  margin: auto
 }
 .footer-icons {
   text-align: center;

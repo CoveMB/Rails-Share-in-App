@@ -1,7 +1,17 @@
 <%= render "events/home_header" %>
 <div class="container">
   <div class="row">
-    <div class="col-4"></div>
+    <div class="col-4">
+
+      <div class="filter-card">
+        <div class="gradient-square">
+          <h5 class="gradient-square-text">Filters</h5>
+
+        </div>
+        <%= render "filter", interest_categories: @interest_categories%>
+      </div>
+
+    </div>
     <div class="col-8">
       <%= render "map", markers: @markers %>
     </div>

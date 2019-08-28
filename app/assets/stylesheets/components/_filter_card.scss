@@ -1,0 +1,51 @@
+.filter-card{
+  margin: -60px auto 30px auto;
+  width: 100%;
+  background: $white;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  z-index: 5;
+}
+
+.ul-interest-category{
+  margin: 0;
+  padding: 0 20px;
+}
+
+.ul-interest{
+  margin: 0;
+  padding: 0;
+}
+
+.interest-category{
+  text-align: center;
+  padding: 30px 15px 20px 15px;
+  font-family: Alegreya;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 30px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.2px;
+  color: #000000;
+  border-bottom: 2px solid #DFE0EB;
+}
+
+.interest-select-circle{
+  border: 2px solid #AC0C0C;
+  box-sizing: border-box;
+}
+
+.interest{
+  padding: 20px;
+  font-family: Alegreya;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 26px;
+  line-height: 25px;
+  text-align: right;
+  letter-spacing: 0.2px;
+  border-bottom: 1px solid #DFE0EB;
+}

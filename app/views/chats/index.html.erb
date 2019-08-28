@@ -1,4 +1,5 @@
-<div class="container">
+<%= render "chat_header" %>
+<div class="body-card">
   <ul>
     <% if @existing_chats_users %>
       <% @existing_chats_users.each do |other_user| %>

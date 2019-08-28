@@ -8,7 +8,7 @@ class MessagesController < ApplicationController
         "messages_#{message_params[:chat_id]}",
         message: message.content,
         user_id: message.user.id,
-        user_status: message.user == current_user ? "current" : "other",
+        user_name: message.user.name,
         user_avatar: url_for(message.user.avatar)
       )
     else

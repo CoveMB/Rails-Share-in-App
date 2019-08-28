@@ -8,7 +8,7 @@ function createMessageChannel() {
           document.getElementById('messages').insertAdjacentHTML("beforeend", this.renderMessage(data));
         },
         renderMessage: function(data) {
-          let user_status = (window.username == data.user_name) ? "current" : "other" ;
+          var user_status = (window.username == data.user_name) ? "current" : "other" ;
     return '<div class="' + user_status + '-user-custom-row"><a href="/users/' + data.user_id + '"><img class="avatar" src="' + data.user_avatar + '"></a><p class="' + user_status + '-user-message">' + data.message + '</p><p class="time-indicator-message">just now</p></div>';
   },
       });

@@ -1,0 +1,47 @@
+.current-user-box{
+  border-radius: 8px;
+  float:right;
+}
+
+.current-user-message{
+  background: rgba(172, 12, 12, 0.3);
+  font-family: Alegreya;
+  font-style: normal;
+  font-size: 15px;
+  line-height: 20px;
+  color: $classicred;
+}
+
+.other-user-box{
+  border-radius: 8px;
+  float:left;
+}
+
+.other-user-message{
+  background: rgba(172, 12, 12, 0.85);
+  font-family: Alegreya;
+  font-style: normal;
+  font-size: 15px;
+  line-height: 20px;
+  color: $white;
+}
+
+.other-user-time-indicator-message{
+  float: left;
+  font-family: Alegreya;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 10px;
+  line-height: 14px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.current-user-time-indicator-message{
+  float:right;
+  font-family: Alegreya;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 10px;
+  line-height: 14px;
+  color: rgba(0, 0, 0, 0.6);
+}

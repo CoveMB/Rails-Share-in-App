@@ -1,2 +1,6 @@
-<p><%= message.user.name %>:
-  <%=message.content%></p>
+<div class="<%= message.user == current_user ? "current-user" : "other-user" %>-box">
+  <p class="<%= message.user == current_user ? "current-user" : "other-user" %>-message">
+    <strong><%= message.user.name %></strong>:
+    <%=message.content%></p>
+</div>
+<p class="<%= message.user == current_user ? "current-user" : "other-user" %>-time-indicator-message"><%= time_ago_in_words(message.created_at) %></p>

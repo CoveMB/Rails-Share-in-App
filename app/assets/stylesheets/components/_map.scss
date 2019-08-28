@@ -16,7 +16,7 @@
 #geocoder {
   text-align: left;
   position: absolute;
-  left: 40%;
+  left: 38%;
   top: 38%;
   margin-top: 14px;
   z-index:2;
@@ -28,31 +28,25 @@
 #geocoder {
 
   .mapboxgl-ctrl-geocoder--input {
-    font-size: 2.4rem;
+    font-size: 1.5rem;
     width: 25rem;
-    height: 5rem;
+    height: 4rem;
     border: none;
     outline: none;
-    border-radius: 10rem;
+    background-color: $white;
     box-shadow: 0 1rem 2rem rgba(black, .1);
     padding: 2rem;
   // position: relative;
     transition: all .2s;
     transition-delay: .1s;
+    border-radius: 2px;
   }
 
-  .mapboxgl-ctrl-geocoder--input:hover {
-    width: 27rem;
-    height: 6rem;
+  .mapboxgl-ctrl-geocoder--icon {
+    display:none;
   }
 
   .mapboxgl-ctrl-geocoder--input::placeholder {
   opacity: .5;
-  }
-
-  .mapboxgl-ctrl-geocoder--input:hover {
-  height: 2.5rem;
-  top: 1.8rem;
-  right: 0;
   }
 }

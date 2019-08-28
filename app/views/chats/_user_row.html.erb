@@ -1,3 +1,6 @@
-<%= link_to(user_chats_path(current_user, :other_user => user.id), method: :post) do %>
-<%= user.name %>
-<% end %>
+<div class="user-row">
+  <a rel="nofollow" data-method="post" href="/users/<%= current_user.id %>/chats?other_user=<%= user.id %>"><%= image_tag url_for(user.avatar), class: "avatar" %>
+    <p class="user-row-text"><%= user.name %></p>
+  </a>
+  <div class="user-row-border"></div>
+</div>

@@ -1,6 +1,8 @@
-<div class="<%= message.user == current_user ? "current-user" : "other-user" %>-box">
-  <p class="<%= message.user == current_user ? "current-user" : "other-user" %>-message">
-    <strong><%= message.user.name %></strong>:
+<div class="<%= message.user == current_user ? "current" : "other" %>-user-custom-row">
+
+  <a href="/users/<%= message.user.id %>"><%= image_tag url_for(message.user.avatar), class: "avatar" %></a>
+  <p class="<%= message.user == current_user ? 'current' : 'other' %>-user-message">
     <%=message.content%></p>
+  <p class="time-indicator-message"><%= time_ago_in_words(message.created_at) %></p>
+
 </div>
-<p class="<%= message.user == current_user ? "current-user" : "other-user" %>-time-indicator-message"><%= time_ago_in_words(message.created_at) %></p>

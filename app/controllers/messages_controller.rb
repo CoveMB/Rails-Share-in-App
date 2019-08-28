@@ -5,7 +5,11 @@ class MessagesController < ApplicationController
     send_notification
     if message.save!
       ActionCable.server.broadcast(
-        "messages_#{message_params[:chat_id]}", message: message.content, user: message.user.name
+        "messages_#{message_params[:chat_id]}",
+        message: message.content,
+        user_id: message.user.id,
+        user_status: message.user == current_user ? "current" : "other",
+        user_avatar: url_for(message.user.avatar)
       )
     else
       redirect_to chats_path

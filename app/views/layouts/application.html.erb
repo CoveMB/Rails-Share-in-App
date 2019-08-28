@@ -11,7 +11,7 @@
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= stylesheet_pack_tag 'application', media: 'all' %>
     <%= javascript_tag do %>
-    window.username = '<%= j current_user.name %>'
+    window.username = '<%= j current_user ? current_user.name : "" %>'
   <% end %>
 </head>
 <body>

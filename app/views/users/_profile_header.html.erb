@@ -1,0 +1,12 @@
+<div class="header-box">
+  <% if @user.image.attached? %>
+    <div class="header-image" style="background-image:linear-gradient(rgba(172,12,12,0.1),rgba(172,12,12,0.2)), url('<%= url_for(@user.image) %>'); background-size: cover;">
+    <% else %>
+      <div class="header-image" style="background-image:linear-gradient(rgba(172,12,12,0.1),rgba(172,12,12,0.1)), url('<%= image_path('profile_image_default.jpeg') %>'); background-size: cover;">
+      <% end %>
+      <div>
+        <h1 class="header-title"><%= @user.name %></h1>
+        <div class="header-title-line"></div>
+      </div>
+    </div>
+  </div>

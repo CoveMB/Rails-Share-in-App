@@ -5,7 +5,7 @@
         <% if other_user != current_user %>
           <li>
             <%= link_to(user_chats_path(current_user, :other_user => other_user.id), method: :post) do %>
-            <%= other_user.username %>
+            <%= other_user.name %>
           <% end %>
         </li>
       <% end %>

@@ -1,0 +1,31 @@
+.header-home-title-line{
+  margin: auto;
+  width: 15%;
+  border: 1px solid $white;
+  box-shadow: 6px 6px 8px rgba(0, 0, 0, 0.25);
+}
+
+.header-home-image{
+  height: 108vh;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-home-title{
+  font-family: $lora;
+  margin-top: -320px;
+  text-align: center;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 90px;
+  line-height: 124px;
+  color: $white;
+}
+
+.header-home-filter{
+  background: rgba(172, 12, 12, 0.10);
+  mix-blend-mode: normal;
+  box-shadow: 2px 0px 4px rgba(0, 0, 0, 0.25);
+}

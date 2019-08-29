@@ -23,14 +23,15 @@
 }
 
 .event-description {
-  margin-top:8%;
+  margin-top:2%;
   font-size:25px;
   font-weight: 250;
   font-family: $alegreyabody;
+  color: $darkgray;
 }
 
 .event-date {
-  font-size:30px;
+  font-size:28px;
   font-family: $merriweather;
   color:$redcinq;
 }
@@ -44,13 +45,14 @@
 .event-btn{
   display: inline-block;
   text-decoration: none;
-  // margin: 0.2rem 0.1rem;
   padding: 0.6rem 1.1rem;
   background-color: transparent;
   transition: all ease .3s;
+
   font-size: 1rem;
   border-radius: 5px;
   cursor: pointer;
+
 }
 
 .event-btn *{
@@ -64,9 +66,20 @@
 .red{
   border: 1px solid $classicred;
   color: $classicred;
+  margin-left: 60%;
+  width: auto;
+}
+
+.ired{
+  border: 1px solid $classicred;
+  color: $classicred;
 }
 
 .red:hover{
+  background-color: $classicred;
+}
+
+.ired:hover{
   background-color: $classicred;
 }
 
@@ -74,8 +87,14 @@
   color: $white;
 }
 
+.ired *{
+  color:$white;
+}
+
 
 #right-part{
  width:100%;
  display:inline-block;
 }
+
+

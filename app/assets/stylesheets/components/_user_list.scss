@@ -1,5 +1,4 @@
 .user-list-container{
-
   padding-right: 30px;
 }
 
@@ -7,6 +6,7 @@
 }
 
 .user-list-title{
+  position: sticky;
   display: block;
   font-family: Alegreya;
   font-style: normal;

@@ -1,10 +1,14 @@
-<ul class="ul-interest">
+<div class="dropdown show">
   <% interest_categories.each do |interest_category| %>
-    <ul class="ul-interest-category">
-      <li class="interest-category"><%= interest_category.name %></li>
-      <% interest_category.interests.each do |interest| %>
-        <li class="interest"><%= interest.name %></li>
-      <% end %>
-    </ul>
+  <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="firstMenuDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><%= interest_category.name %>
+  </a>
+
+  <div class="dropdown-menu filter-dropdown" aria-labelledby="firstMenuDropdown">
+    <% interest_category.interests.each do |interest| %>
+    <a class="dropdown-item filter-item" id="secondMenuDropdown" href="#"><%= interest.name %></a>
+    <% end %>
+  </div>
   <% end %>
-</ul>
+</div>
+
+

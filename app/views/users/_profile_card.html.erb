@@ -13,4 +13,5 @@
   <% else %>
     <%= link_to "Message #{user.name}", user_chats_path(current_user, other_user: user.id), method: :post, class: "simple-btn" %>
   <% end %>
+  <%= render "event_list"%>
 </div>

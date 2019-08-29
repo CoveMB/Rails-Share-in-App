@@ -10,8 +10,6 @@
   z-index: 8
 }
 
-
-
 #left-part {
   width:40%;
 }
@@ -46,7 +44,7 @@
 .event-btn{
   display: inline-block;
   text-decoration: none;
-  margin: 0.2rem 0.1rem;
+  // margin: 0.2rem 0.1rem;
   padding: 0.6rem 1.1rem;
   background-color: transparent;
   transition: all ease .3s;
@@ -81,4 +79,3 @@
  width:100%;
  display:inline-block;
 }
-

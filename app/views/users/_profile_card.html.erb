@@ -4,14 +4,21 @@
   <% else %>
     <%= image_tag image_path('default_avatar.jpg'), class: "card-avatar" %>
   <% end %>
-  <p><%= @user.bio %></p>
-  <p>abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz</p>
-  <% if current_user == user %>
-    <h3 class="simple-btn" data-toggle="modal" data-target="#exempleModal">
-      <span>Edit your profile</span></h3>
-    <%= render "edit_modal" %>
-  <% else %>
-    <%= link_to "Message #{user.name}", user_chats_path(current_user, other_user: user.id), method: :post, class: "simple-btn" %>
-  <% end %>
-  <%= render "event_list"%>
+  <div class="row">
+
+    <div class="info-event col-md-6 col-sm-12 card-column" id="left-part">
+      <p><%= @user.bio %></p>
+      <p>abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz</p>
+      <% if current_user == user %>
+        <h3 class="simple-btn" data-toggle="modal" data-target="#exempleModal">
+          <span>Edit your profile</span></h3>
+        <%= render "edit_modal" %>
+      <% else %>
+        <%= link_to "Message #{user.name}", user_chats_path(current_user, other_user: user.id), method: :post, class: "simple-btn" %>
+      <% end %>
+    </div>
+    <div class="col-md-6 col-sm-12 card-column">
+      <%= render "event_list"%>
+    </div>
+  </div>
 </div>

@@ -1,0 +1,63 @@
+$orange: #C0392B;
+$blue: #2980B9;
+$gray: #EEE;
+
+@mixin ul-nostyle {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+@mixin double-shadow($color) {
+  @include box-shadow(0 1px 0 lighten($color, 10%) inset, 0 -1px 0 darken($color, 10%) inset);
+}
+
+@mixin hover-style($color) {
+  &:hover {
+    background: lighten($color, 3%);
+  }
+}
+
+@mixin animation($content) {
+  animation: $content;
+  -moz-animation: $content;
+  -webkit-animation: $content;
+}
+
+@mixin keyframes($name) {
+  @keyframes #{$name} { @content; }
+  @-moz-keyframes #{$name} { @content; }
+  @-webkit-keyframes #{$name} { @content; }
+}
+
+
+
+.dropdown {
+  position: relative;
+
+  a {
+    text-decoration: none;
+  }
+
+  [data-toggle="dropdown"] {
+    display: block;
+    color: white;
+    background: $orange;
+    @include double-shadow($orange);
+    @include hover-style($orange);
+    padding: 10px;
+  }
+
+  &:before {
+    position: absolute;
+    display: block;
+    content: '\25BC';
+    font-size: 0.7em;
+    color: #fff;
+    top: 13px;
+    right: 10px;
+      // @include transform(rotate(0deg));
+      // @include transition(transform .6s);
+    }
+
+}

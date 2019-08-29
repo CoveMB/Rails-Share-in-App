@@ -13,5 +13,5 @@ function flash(flashHTML){
 <% else %>
   changeBtn()
   addUserList('<%= j render "events/attendee_row", user: @attendee %>')
-  flash('j <div class="alert alert-info alert-dismissible fade show m-1" role="alert">You are now register to <%= @attendee.events.last.name %> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>')
+  flash('j <div class="alert alert-info alert-dismissible fade show m-1" role="alert">You are now register to <%= @attendee.events.first.name %> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>')
 <% end %>

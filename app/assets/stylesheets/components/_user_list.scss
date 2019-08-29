@@ -28,10 +28,14 @@
 }
 
 .user-row-text{
+  width: 100%;
+  // overflow:hidden;
+  // text-overflow: ellipsis;
+  // display:inline-block;
+  // white-space: nowrap;
   margin-left: 20px;
   font-family: Alegreya;
   font-style: normal;
-  // font-weight: bold;
   font-size: 30px;
   line-height: 41px;
   display: flex;

@@ -10,3 +10,61 @@
   z-index: 8
 
 }
+
+
+#info-event {
+  width:43%;
+}
+
+.event-title {
+  margin-top:-25%;
+  text-align: left;
+
+}
+
+.event-description {
+  margin-top:8%;
+}
+
+.event-date {
+  position:absolute;
+  margin-top:-3.90%;
+  margin-left:13%;
+}
+
+.event-adress {
+
+}
+
+.event-btn{
+  display: inline-block;
+  text-decoration: none;
+  margin: 0.2rem 0.1rem;
+  padding: 0.6rem 1.1rem;
+  background-color: transparent;
+  transition: all ease .3s;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.event-btn *{
+   transition: all ease .3s;
+}
+
+.event-btn:hover, .event-btn:hover *{
+  color: white;
+}
+
+.red{
+  border: 1px solid $classicred;
+  color: $classicred;
+}
+
+.red:hover{
+  background-color: $classicred;
+}
+
+.red *{
+  color: $white;
+}

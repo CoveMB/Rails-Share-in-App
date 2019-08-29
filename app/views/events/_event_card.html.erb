@@ -4,23 +4,20 @@
   <% else %>
     <%= image_tag image_path('default_avatar.jpg'), class: "card-avatar" %>
   <% end %>
-  <div class="info-event" id="info-event">
-    <p class="event-title"><%= event.name %></p>
-    <p class="event-date"><%= event.start_date %>
-      -
-      <%= event.end_date %></p>
-    <p class="event-description"><%= event.description %></p>
-    <p class="event-adress"><%= event.address %></p>
-    <button class="event-btn red"><%= event.event_website %></button>
-  </div>
-  <div class="info-section">
-    <p><%= event.description %></p>
-  </div>
-  <% unless current_user.events.include? event %>
+  <div class="row">
+    <div class="info-event col-md-6 col-sm-12" id="left-part">
+      <p class="event-title"><%= event.name %></p>
+      <p class="event-date"><%= event.start_date %> - <%= event.end_date %></p>
+      <p class="event-description"><%= event.description %></p>
+      <p class="event-adress"><%= event.address %></p>
+      <button class="event-btn red"><%= event.event_website %></button>
+    </div>
+    <div class="col-md-6 col-sm-12">
+    <%= render "attendee_list"%>
+      <% unless current_user.events.include? event %>
     <%= link_to "Register to the event", organiser_event_attendee_path(event.organiser, event, current_user), remote: true, method: :patch, class: "event-btn red", id:"event-attendee-btn" %>
   <% else %>
     <p class="event-btn red">You registered to the event</p>
   <% end %>
-  <%= render "attendee_list"%>
-</div>
-</div>
+  </div>
+  </div>

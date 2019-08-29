@@ -7,11 +7,12 @@
   <div class="row">
 
     <div class="info-event col-md-6 col-sm-12 card-column" id="left-part">
+      <p><%= user.name %></p> <p><%=user.surname %></p>
       <p><%= @user.bio %></p>
-      <p>abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz</p>
+      <p>lirvlnbvihdkshnveomjzojoapiâanôinkenzipknvpzikjepbahpfîakbezhnvikeznjvbze</p>
       <% if current_user == user %>
-        <h3 class="simple-btn" data-toggle="modal" data-target="#exempleModal">
-          <span>Edit your profile</span></h3>
+        <button class="event-btn ired" data-toggle="modal" data-target="#exempleModal">
+          Edit your profile</button>
         <%= render "edit_modal" %>
       <% else %>
         <%= link_to "Message #{user.name}", user_chats_path(current_user, other_user: user.id), method: :post, class: "simple-btn" %>

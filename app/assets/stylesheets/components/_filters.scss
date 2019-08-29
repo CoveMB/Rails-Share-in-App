@@ -1,7 +1,3 @@
-$orange: #C0392B;
-$blue: #2980B9;
-$gray: #EEE;
-
 @mixin ul-nostyle {
   list-style: none;
   padding: 0;
@@ -32,19 +28,23 @@ $gray: #EEE;
 
 
 
-.dropdown {
+.idropdown {
   position: relative;
 
   a {
     text-decoration: none;
   }
 
+   #secondMenuDropdown {
+    background-color: $redsix;
+   }
+
   [data-toggle="dropdown"] {
     display: block;
     color: white;
-    background: $orange;
-    @include double-shadow($orange);
-    @include hover-style($orange);
+    background: $classicred;
+    @include double-shadow($redhuit);
+    @include hover-style($redhuit);
     padding: 10px;
   }
 

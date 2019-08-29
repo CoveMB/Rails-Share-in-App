@@ -1,4 +1,4 @@
-<div class="chat-container">
+<div class="chat-container scrollbar-custom">
   <% if @chat.messages.any? %>
     <div id="messages">
       <%= render partial: 'messages/message', collection: @chat.messages.order(id: :asc) %>

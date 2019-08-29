@@ -1,33 +1,62 @@
-.current-user-box{
-  border-radius: 8px;
-  float:right;
+.flex-body{
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+}
+
+.chat-container{
+  width: 100%;
+  margin: 0;
+  border-left: 1px solid $classicred;
+  padding-left: 35px;
+}
+
+.current-user-custom-row{
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 100%;
+  margin-top: 20px;
 }
 
 .current-user-message{
-  background: rgba(172, 12, 12, 0.3);
   font-family: Alegreya;
   font-style: normal;
-  font-size: 15px;
+  font-size: 22px;
   line-height: 20px;
-  color: $classicred;
+  color: $white;
+  margin-top: 10px;
+  width: 42%;
+  border-radius: 12px 12px 0 12px;
+  background: rgba(172, 12, 12, 0.85);
+  padding: 15px;
+  word-wrap: break-word;
+  margin-bottom: 5px;
 }
 
-.other-user-box{
-  border-radius: 8px;
-  float:left;
+.other-user-custom-row{
+  width: 100%;
+  margin-top: 20px;
 }
 
 .other-user-message{
-  background: rgba(172, 12, 12, 0.85);
   font-family: Alegreya;
   font-style: normal;
-  font-size: 15px;
+  font-size: 22px;
   line-height: 20px;
-  color: $white;
+  color: $classicred;
+  margin: 10px 0 0 0;
+  width: 42%;
+  border-radius: 8px;
+  background: rgba(172, 12, 12, 0.1);
+  padding: 15px;
+  word-wrap: break-word;
+  border-radius: 12px 12px 12px 0;
+  margin-bottom: 5px;
 }
 
-.other-user-time-indicator-message{
-  float: left;
+.time-indicator-message{
   font-family: Alegreya;
   font-style: normal;
   font-weight: bold;
@@ -36,12 +65,19 @@
   color: rgba(0, 0, 0, 0.6);
 }
 
-.current-user-time-indicator-message{
-  float:right;
+
+.new-message{
+  margin-top: 38px;
+  border-radius: 8px;
+  width: 100%;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.25);
   font-family: Alegreya;
   font-style: normal;
   font-weight: bold;
-  font-size: 10px;
-  line-height: 14px;
+  font-size: 15px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  text-align: center;
   color: rgba(0, 0, 0, 0.6);
 }

@@ -4,7 +4,7 @@
 }
 
 .header-image{
-  height: 70vh;
+  height: 60vh;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
   display: flex;
   align-items: center;
@@ -26,11 +26,4 @@
   line-height: 124px;
   text-align: center;
   color: $white;
-}
-
-
-.header-filter{
-  background: rgba(172, 12, 12, 0.10);
-  mix-blend-mode: normal;
-  box-shadow: 2px 0px 4px rgba(0, 0, 0, 0.25);
 }

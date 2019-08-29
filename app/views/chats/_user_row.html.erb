@@ -1,0 +1,6 @@
+<div class="user-row">
+  <a rel="nofollow" data-method="post" href="/users/<%= current_user.id %>/chats?other_user=<%= user.id %>"><%= image_tag url_for(user.avatar), class: "avatar" %>
+    <p id="user-<%= user.id %>" class="user-row-text" style=""><%= user.name %></p>
+  </a>
+  <div class="user-row-border"></div>
+</div>

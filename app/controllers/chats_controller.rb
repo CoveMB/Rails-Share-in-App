@@ -21,6 +21,10 @@ class ChatsController < ApplicationController
   end
 
   def show
+    chats = current_user.chats
+    @existing_chats_users = policy_scope(Chat)
+    current_user.new_message = false
+    current_user.save
     @other_user = User.find(params[:other_user])
     @chat = Chat.find_by(id: params[:id])
     authorize @chat

@@ -1,6 +1,6 @@
 <div>
   <% if @user.image.attached? %>
-    <div class="header-image" style="background-image:linear-gradient(rgba(70,6,6,0.5),rgba(70,6,6,0.5)), url('<%= url_for(@user.image) %>'); background-size: cover;">
+    <div class="header-image" style="background-image:linear-gradient(rgba(40,0,0,0.3),rgba(40,0,0,0.3)), url('<%= url_for(@user.image) %>'); background-size: cover;">
     <% else %>
       <div class="header-image" style="background-image:linear-gradient(rgba(172,12,12,0.1),rgba(172,12,12,0.1)), url('<%= image_path('profile_image_default.jpeg') %>'); background-size: cover;">
       <% end %>

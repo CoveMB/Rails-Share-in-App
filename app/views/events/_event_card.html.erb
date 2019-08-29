@@ -4,5 +4,8 @@
   <% else %>
     <%= image_tag image_path('default_avatar.jpg'), class: "card-avatar" %>
   <% end %>
-  <p><%= event.description %></p>
+  <div class="info-section">
+    <p><%= event.description %></p>
+  </div>
+  <%= render "attendee_list"%>
 </div>

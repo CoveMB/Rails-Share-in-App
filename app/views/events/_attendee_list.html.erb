@@ -1,0 +1,12 @@
+<div class="user-list-container">
+  <h2 class="user-list-title">Attendee list</h2>
+  <ul>
+
+    <% @event.users.each do |attendee| %>
+      <% if attendee != current_user %>
+        <li>
+          <%= render "attendee_row", user: attendee %>
+        </li>
+      <% end %>
+    <% end %>
+  </ul>

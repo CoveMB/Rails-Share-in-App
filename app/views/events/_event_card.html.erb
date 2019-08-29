@@ -11,9 +11,9 @@
     <div class="col-md-6 col-sm-12 card-column">
       <%= render "attendee_list"%>
       <% unless current_user.events.include? event %>
-        <%= link_to "Register to the event", organiser_event_attendee_path(event.organiser, event, current_user), remote: true, method: :patch, class: "event-btn red", id:"event-attendee-btn" %>
+        <%= link_to "Register to the event", organiser_event_user_event_path(event.organiser, event, current_user), remote: true, method: :patch, class: "event-btn red", id:"event-attendee-btn" %>
       <% else %>
-        <p class="event-btn red">You registered to the event</p>
+        <%= link_to "Unregister from the event", organiser_event_user_event_path(event.organiser, event, current_user), remote: true, method: :delete, class: "event-btn red", id:"event-attendee-btn" %>
       <% end %>
     </div>
   </div>

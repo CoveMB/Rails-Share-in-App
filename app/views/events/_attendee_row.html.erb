@@ -1,6 +1,6 @@
-<div class="user-row">
+<div class="user-row" id="user-<%= user.id %>">
   <a rel="nofollow" href="/users/<%= user.id %>"><%= image_tag url_for(user.avatar), class: "avatar" %>
-    <p id="user-<%= user.id %>" class="user-row-text"><%= user.name %></p>
+    <p class="user-row-text"><%= user.name %></p>
   </a>
   <div class="user-row-border"></div>
 </div>

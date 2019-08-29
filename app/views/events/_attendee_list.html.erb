@@ -1,12 +1,13 @@
 <div class="user-list-container scrollbar-custom">
   <h2 class="user-list-title">Attendee list</h2>
-  <ul>
+  <ul id="attendee-list">
 
     <% @event.users.each do |attendee| %>
-      <% if attendee != current_user %>
-        <li>
-          <%= render "attendee_row", user: attendee %>
-        </li>
-      <% end %>
+
+      <li>
+        <%= render "attendee_row", user: attendee %>
+      </li>
+
     <% end %>
   </ul>
+</div>

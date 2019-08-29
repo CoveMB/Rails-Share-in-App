@@ -1,0 +1,13 @@
+<div class="user-list-container scrollbar-custom">
+  <h2 class="user-list-title">Events you want to go</h2>
+  <ul id="attendee-list">
+
+    <% @user.events.each do |event| %>
+
+      <li>
+        <%= render "event_row", event: event %>
+      </li>
+
+    <% end %>
+  </ul>
+</div>

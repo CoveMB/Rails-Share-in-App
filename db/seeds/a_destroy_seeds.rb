@@ -1,3 +1,5 @@
+Chat.destroy_all
+Message.destroy_all
 Event.destroy_all
 EventType.destroy_all
 Interest.destroy_all

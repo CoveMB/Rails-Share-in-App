@@ -4,8 +4,16 @@
   <% else %>
     <%= image_tag image_path('default_avatar.jpg'), class: "card-avatar" %>
   <% end %>
-  <div class="info-section">
+  <div class="info-event" id="info-event">
+    <p class="event-title"><%= event.name %></p>
+    <p class="event-date"><%= event.start_date %> - <%= event.end_date %></p>
+  <p class="event-description"><%= event.description %></p>
+  <p class="event-adress"><%= event.address %></p>
+  <button class="event-btn red"><%= event.event_website %></button>
+  </div>
+<div class="info-section">
     <p><%= event.description %></p>
   </div>
   <%= render "attendee_list"%>
+</div>
 </div>

@@ -5,7 +5,9 @@ Rails.application.routes.draw do
 
   # Organiser and event routes
   resources :organisers, only: [:show] do
-    resources :events, only: [:show]
+    resources :events, only: [:show] do
+      resources :attendees, only: [:update, :destroy]
+    end
   end
 
   # User and messaging routes

@@ -1,3 +1,16 @@
+.flex-body{
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+}
+
+.chat-container{
+  width: 100%;
+  margin: 0;
+  border-left: 1px solid $classicred;
+  padding-left: 35px;
+}
+
 .current-user-custom-row{
   display: flex;
   justify-content: flex-end;

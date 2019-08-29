@@ -1,16 +1,4 @@
-<div class="body-card">
-  <div>
-    <h5 class="message-title">Your Chat with
-      <%= @other_user.name %>
-      <%= @other_user.surname %></h5>
-    <% if @chat.messages.any? %>
-      <div id="messages">
-        <%= render partial: 'messages/message', collection: @chat.messages.order(id: :asc) %>
-      </div>
-    <%else%>
-      <div id="messages"></div>
-    <%end%>
-  </div>
-  <%= render partial: 'messages/message_form', locals: {message: @message, chat: @chat, other_user: @other_user}%>
-</div>
+<div class="body-card flex-body">
+  <%= render "user_list", existing_chats_users: @existing_chats_users %>
+  <%= render "chat_box" %>
 </div>

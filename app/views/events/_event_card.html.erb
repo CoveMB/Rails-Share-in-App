@@ -1,6 +1,8 @@
 <div class="body-card">
   <% if event.organiser.avatar.attached? %>
-    <%= image_tag url_for(event.organiser.avatar), class: "card-avatar" %>
+    <%= link_to(organiser_path(event.organiser)) do %>
+      <%= image_tag url_for(event.organiser.avatar), class: "card-avatar" %>
+    <% end %>
   <% else %>
     <%= image_tag image_path('default_avatar.jpg'), class: "card-avatar" %>
   <% end %>

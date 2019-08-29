@@ -1,0 +1,22 @@
+<div class="body-card">
+  <% if @organiser.avatar.attached? %>
+    <%= image_tag url_for(@organiser.avatar), class: "card-avatar" %>
+  <% else %>
+    <%= image_tag image_path('default_avatar.jpg'), class: "card-avatar" %>
+  <% end %>
+  <div class="row">
+    <div class="info-event col-md-6 col-sm-12 card-column" id="left-part">
+      <p class="event-title"><%= @organiser.name %></p>
+      <p class="event-description"><%= @organiser.description %></p>
+      <p class="event-adress"><%= @organiser.address %></p>
+      <button class="event-btn ired"><%= organiser.website %></button>
+
+
+
+
+    </div>
+    <div class="col-md-6 col-sm-12 card-column">
+      
+    </div>
+  </div>
+</div>

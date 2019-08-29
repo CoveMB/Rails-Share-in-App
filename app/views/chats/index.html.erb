@@ -1,15 +1,5 @@
 <%= render "chat_header" %>
 <div class="body-card">
-  <h2>Contact list</h2>
-  <ul>
-    <% if @existing_chats_users %>
-      <% @existing_chats_users.each do |other_user| %>
-        <% if other_user != current_user %>
-          <li>
-            <%= render "user_row", user: other_user %>
-          </li>
-        <% end %>
-      <% end %>
-    <% end %>
-  </ul>
+  <%= render "user_list", existing_chats_users: @existing_chats_users %>
+</div>
 </div>

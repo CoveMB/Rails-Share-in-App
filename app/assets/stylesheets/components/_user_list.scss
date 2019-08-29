@@ -1,6 +1,26 @@
-.user-row{
-  width: 260px;
+.user-list-container{
+  margin: 0;
+  width: 45%;
+
 }
+
+.user-list-container ul{
+}
+
+.user-list-title{
+  display: block;
+  font-family: Alegreya;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 54px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.user-row{
+}
+
 .user-row a{
   display: flex;
   flex-direction: row;
@@ -12,12 +32,11 @@
   margin-left: 20px;
   font-family: Alegreya;
   font-style: normal;
-  font-weight: bold;
+  // font-weight: bold;
   font-size: 30px;
   line-height: 41px;
   display: flex;
   align-items: center;
-  text-align: right;
   color: $darkgray;
   margin-bottom: 0;
 }

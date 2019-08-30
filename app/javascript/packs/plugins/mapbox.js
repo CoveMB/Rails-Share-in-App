@@ -14,9 +14,20 @@ const buildMap = () => {
   });
 };
 
+const addEventListener = () => {
+  document.querySelector(".mapboxgl-ctrl-geocoder--input").addEventListener("keydown", (event) => {
+    if (event.keyCode == 13) {
+      window.scrollTo({
+        top: 800,
+        left: 0,
+        behavior: 'smooth'
+      });
+    }
+  });
+};
+
 const addMarkersToMap = (map, markers) => {
   markers.forEach((marker) => {
-    console.log(marker);
     const popup = new mapboxgl.Popup().setHTML(marker.infoWindow);
     new mapboxgl.Marker()
       .setLngLat([ marker.lng, marker.lat ])
@@ -58,9 +69,8 @@ const initMapbox = () => {
     fitMapToMarkers(map, markers);
     addGeolocationControl(map);
     addGeoCoder(map);
+    addEventListener();
   }
 };
 
 export { initMapbox };
-
-

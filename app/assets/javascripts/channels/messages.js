@@ -10,7 +10,7 @@ function createMessageChannel() {
         renderMessage: function(data) {
           var user_status = (window.username == data.user_name) ? "current" : "other" ;
           setTimeout(function() { var objDiv = document.getElementById("messages").parentElement;
-          objDiv.scrollTop = objDiv.scrollHeight;}, 50);
+          objDiv.scrollTop = objDiv.scrollHeight;}, 8);
 
           if (user_status == "other"){
             document.getElementById("notification-area").insertAdjacentHTML("beforeend", '<span class="badge badge-light">New</span>');

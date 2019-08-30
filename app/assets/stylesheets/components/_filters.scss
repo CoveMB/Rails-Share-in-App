@@ -59,5 +59,12 @@
       // @include transform(rotate(0deg));
       // @include transition(transform .6s);
     }
+  }
 
-}
+#firstMenuDropdown {
+      background-color: $classicred;
+      border-color: $darkgray;
+      border-radius: 0px;
+    }
+
+

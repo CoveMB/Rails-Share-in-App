@@ -72,11 +72,13 @@
 }
 
 
-.new-message{
+.new_message{
+  // position: absolute;
+  // bottom: 0;
   margin-top: 38px;
   border-radius: 8px;
   width: 100%;
-  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.25);
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.25);
   font-family: Alegreya;
   font-style: normal;
   font-weight: bold;

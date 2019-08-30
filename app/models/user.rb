@@ -24,11 +24,9 @@ class User < ApplicationRecord
   after_validation :geocode, if: :will_save_change_to_address?
 
   # Messaging config
-  # has_many :messages
-  # has_many :subscriptions
-  # has_many :chats, through: :subscriptions
   has_many :messages
-  has_many :chats, through: :messages
+  has_many :subscriptions
+  has_many :chats, through: :subscriptions
 
 
   def existing_chats_users

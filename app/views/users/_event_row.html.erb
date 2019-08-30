@@ -1,6 +1,6 @@
 <div class="user-row">
-  <a rel="nofollow" href="/users/<%= event.id %>"><%= image_tag url_for(event.organiser.avatar), class: "avatar" %>
-    <p id="user-<%= event.id %>" class="user-row-text"><%= event.name %></p>
-  </a>
+  <%= link_to(organiser_event_path(event.organiser, event)) do %> <%= image_tag url_for(event.organiser.avatar), class: "avatar" %>
+  <p id="user-<%= event.id %>" class="user-row-text"><%= event.name %></p>
+  <% end %>
   <div class="user-row-border"></div>
 </div>

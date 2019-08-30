@@ -125,7 +125,9 @@
 
 .red{
   border: 1px solid $classicred;
-  color: $classicred;
+  color: $white;
+  font-weight: bold;
+  background-color: $classicred;
   margin-left: 60%;
   width: auto;
 }
@@ -133,6 +135,7 @@
 .ired{
   border: 1px solid $classicred;
   color: $classicred;
+  font-weight: bold;
 }
 
 .red:hover{

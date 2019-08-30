@@ -6,4 +6,9 @@
   // app/assets/javascripts/channels/messages.js
   messageForm();
   // app/assets/javascripts/messages_form.js
+  function scroll () {
+    var objDiv = document.getElementById("messages").parentElement;
+    objDiv.scrollTop = objDiv.scrollHeight;
+  };
+  scroll()
 </script>

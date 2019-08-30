@@ -6,7 +6,10 @@
 }
 
 .user-list-title{
-  // position: sticky;
+  position: sticky;
+  top: 0;
+  background-color: #fffafa;
+  z-index: 3;
   display: block;
   font-family: Alegreya;
   font-style: normal;

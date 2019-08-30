@@ -1,8 +1,8 @@
-<div class="body-card">
+<h3 class="btn" id="event-details-btn">Events Details</h3>
+<h3 class="btn" id="organiser-details-btn">Organiser Details</h3>
+<div class="body-card" id="event-card">
   <% if event.organiser.avatar.attached? %>
-    <%= link_to(organiser_path(event.organiser)) do %>
       <%= image_tag url_for(event.organiser.avatar), class: "card-avatar" %>
-    <% end %>
   <% else %>
     <%= image_tag image_path('default_avatar.jpg'), class: "card-avatar" %>
   <% end %>
@@ -20,3 +20,5 @@
     </div>
   </div>
 </div>
+
+<%= render "organisers/organiser_card", organiser: event.organiser, id: "organiser-card" %>

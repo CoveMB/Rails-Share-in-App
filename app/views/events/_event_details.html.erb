@@ -1,7 +1,7 @@
 <p class="event-title"><%= event.name %></p>
 <p class="event-date">From : <%= (event.start_date).strftime("%B %e, %Y") %></p>
 <p class="event-date">To : <%= (event.end_date).strftime("%B %e, %Y") %></p>
+<p><%= event.event_type.name %></p>
 <p class="event-description"><%= event.description %></p>
 <p class="event-adress"><%= event.address %></p>
 <button class="event-btn ired"><%= event.event_website %></button>
-

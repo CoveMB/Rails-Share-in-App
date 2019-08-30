@@ -1,3 +1,63 @@
+#organiser-card{
+  display: none;
+}
+
+#event-details-btn{
+  position: absolute;
+  left: 18%;
+  top: 60vh;
+  font-family: $merriweather;
+  font-size: 25px;
+  color: $redcinq;
+  border-bottom: 1px solid $classicred;
+}
+
+#organiser-details-btn{
+  position: absolute;
+  right: 18%;
+  top: 60vh;
+  font-size: 25px;
+  font-family: $merriweather;
+  color: $redcinq;
+  border-bottom: 1px solid $classicred;
+}
+
+#event-details-btn{
+  -webkit-transition-duration: 0.33s;
+       -o-transition-duration: 0.33s;
+          transition-duration: 0.33s;
+}
+
+#event-details-btn:hover{
+  -webkit-transform: scale(1.022);
+      -ms-transform: scale(1.022);
+          transform: scale(1.022);
+}
+
+#event-details-btn:active{
+  -webkit-transition-duration: 0.1s;
+       -o-transition-duration: 0.1s;
+          transition-duration: 0.1s;
+}
+
+#organiser-details-btn{
+  -webkit-transition-duration: 0.33s;
+       -o-transition-duration: 0.33s;
+          transition-duration: 0.33s;
+}
+
+#organiser-details-btn:hover{
+  -webkit-transform: scale(1.022);
+      -ms-transform: scale(1.022);
+          transform: scale(1.022);
+}
+
+#organiser-details-btn:active{
+  -webkit-transition-duration: 0.1s;
+       -o-transition-duration: 0.1s;
+          transition-duration: 0.1s;
+}
+
 .body-card{
   padding: 48px;
   display: block;
@@ -96,5 +156,3 @@
  width:100%;
  display:inline-block;
 }
-
-

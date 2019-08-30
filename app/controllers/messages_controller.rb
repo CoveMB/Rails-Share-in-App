@@ -1,6 +1,7 @@
 class MessagesController < ApplicationController
   def create
     message = Message.new(message_params)
+    authorize message
     message.user = current_user
     send_notification(message)
     if message.save!

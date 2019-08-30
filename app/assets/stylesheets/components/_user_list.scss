@@ -1,5 +1,4 @@
 .user-list-container{
-
   padding-right: 30px;
 }
 
@@ -7,6 +6,7 @@
 }
 
 .user-list-title{
+  // position: sticky;
   display: block;
   font-family: Alegreya;
   font-style: normal;
@@ -14,10 +14,25 @@
   font-size: 40px;
   line-height: 54px;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .user-row{
+  -webkit-transition-duration: 0.33s;
+       -o-transition-duration: 0.33s;
+          transition-duration: 0.33s;
+}
+
+.user-row:hover{
+  -webkit-transform: scale(1.022);
+      -ms-transform: scale(1.022);
+          transform: scale(1.022);
+}
+
+.user-row:active{
+  -webkit-transition-duration: 0.1s;
+       -o-transition-duration: 0.1s;
+          transition-duration: 0.1s;
 }
 
 .user-row a{

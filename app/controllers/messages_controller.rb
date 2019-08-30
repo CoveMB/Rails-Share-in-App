@@ -1,6 +1,7 @@
 class MessagesController < ApplicationController
   def create
     message = Message.new(message_params)
+    authorize message
     message.user = current_user
     send_notification(message)
     if message.save!
@@ -12,7 +13,8 @@ class MessagesController < ApplicationController
         user_avatar: url_for(message.user.avatar)
       )
     else
-      redirect_to chats_path
+      flash[:alert] = "Sorry but we couldn' t do this"
+      redirect_to user_path(current_user)
     end
   end
 

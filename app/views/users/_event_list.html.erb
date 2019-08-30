@@ -1,5 +1,11 @@
 <div class="user-list-container scrollbar-custom">
-  <h2 class="user-list-title">Events you want to go</h2>
+  <% if @user == current_user %>
+    <h2 class="user-list-title">Events you want to go</h2>
+  <% else %>
+    <h2 class="user-list-title">Events
+      <%= @user.name %>
+      wants to go</h2>
+  <% end %>
   <ul id="attendee-list">
 
     <% @user.events.each do |event| %>

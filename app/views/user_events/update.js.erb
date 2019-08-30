@@ -1,0 +1,18 @@
+function changeBtn(){
+  document.getElementById("event-attendee-btn").outerHTML = '<%= link_to "Unregister from the event", organiser_event_user_event_path(@event.organiser, @event, current_user), remote: true, method: :delete, class: "event-btn red", id:"event-attendee-btn" %>'
+}
+
+function addUserList(attendeeRowHtml){
+  document.getElementById("attendee-list").insertAdjacentHTML('afterbegin', attendeeRowHtml);
+}
+
+function flash(flashHTML){
+  document.querySelector("body").insertAdjacentHTML("beforeend", flashHTML);
+}
+
+<% if @user.errors.any? %>
+<% else %>
+  changeBtn();
+  addUserList('<%= j render "events/attendee_row", user: @user %>');
+  flash('<div class="alert alert-info alert-dismissible fade show m-1" role="alert">You are now register to <%= @event.name %><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
+<% end %>

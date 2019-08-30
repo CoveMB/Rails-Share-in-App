@@ -1,7 +1,7 @@
 class ChatPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
-      user.existing_chats_users
+      @user.existing_chats_users
     end
   end
 

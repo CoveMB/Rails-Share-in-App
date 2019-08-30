@@ -17,7 +17,7 @@ def create_event(info)
   info[:interests].each do |interest|
     event.interests << Interest.find_by_name(interest)
   end
-  ["kimson@gmail.com", "marteen@gmail.com", "apx90@gmail.com"].each do |user|
+  ["kimson@gmail.com", "marteen@gmail.com", "john@gmail.com", "camille@gmail.com"].each do |user|
     event.users << User.find_by_email(user)
   end
   event.save!

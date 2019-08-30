@@ -1,0 +1,16 @@
+<div class="body-card" id="<%= id %>">
+  <% if organiser.avatar.attached? %>
+    <%= image_tag url_for(organiser.avatar), class: "card-avatar" %>
+  <% else %>
+    <%= image_tag image_path('default_avatar.jpg'), class: "card-avatar" %>
+  <% end %>
+  <div class="row">
+    <div class="info-event col-md-6 col-sm-12 card-column" id="left-part">
+      <%= render "organisers/organiser_details", organiser: organiser %>
+
+    </div>
+    <div class="col-md-6 col-sm-12 card-column">
+      <%= render "organisers/event_list", organiser: organiser %>
+    </div>
+  </div>
+</div>

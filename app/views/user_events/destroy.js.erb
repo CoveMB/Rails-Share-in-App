@@ -1,0 +1,19 @@
+function changeBtn(){
+  document.getElementById("event-attendee-btn").outerHTML = '<%= link_to "Unregister from the event", organiser_event_user_event_path(@event.organiser, @event, current_user), remote: true, method: :patch, class: "event-btn red", id:"event-attendee-btn" %>'
+}
+
+function deleteUserList(){
+  var row = document.getElementById('user-<%= current_user.id %>');
+  row.parentNode.removeChild(row);
+}
+
+function flash(flashHTML){
+  document.querySelector("body").insertAdjacentHTML("beforeend", flashHTML);
+}
+
+<% if @event.errors.any? %>
+<% else %>
+  changeBtn();
+  deleteUserList();
+  flash('<div class="alert alert-info alert-dismissible fade show m-1" role="alert">You are now unregister<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
+<% end %>

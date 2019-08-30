@@ -13,6 +13,7 @@ gem 'jquery-rails'
 gem 'turbolinks', '~> 5'
 gem 'geocoder'
 gem "aws-sdk-s3", require: false
+gem "google-cloud-storage", "~> 1.8", require: false
 
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 5.6.1'

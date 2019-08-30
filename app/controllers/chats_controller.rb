@@ -29,6 +29,7 @@ class ChatsController < ApplicationController
     @chat = Chat.find_by(id: params[:id])
     authorize @chat
     @message = Message.new
+    # authorize @message
   end
 
   private

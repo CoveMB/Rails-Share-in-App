@@ -13,7 +13,8 @@ class MessagesController < ApplicationController
         user_avatar: url_for(message.user.avatar)
       )
     else
-      redirect_to chats_path
+      flash[:alert] = "Sorry but we couldn' t do this"
+      redirect_to user_path(current_user)
     end
   end
 

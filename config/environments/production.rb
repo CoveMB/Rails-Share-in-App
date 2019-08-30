@@ -42,7 +42,7 @@ Rails.application.configure do
   # config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for NGINX
 
   # Store uploaded files on the local file system (see config/storage.yml for options)
-  config.active_storage.service = :amazon
+  config.active_storage.service = :google
 
     config.action_cable.allowed_request_origins = [ 'https://ruby-share-in-app.herokuapp.com', "http://ruby-share-in-app.herokuapp.com" ]
 

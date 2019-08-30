@@ -18,20 +18,28 @@ doan.avatar.attach(io: File.open("./app/assets/images/storage/kimsonpic.webp"), 
 doan.image.attach(io: File.open("./app/assets/images/storage/kimsonimage.jpg"), filename: "kimsonimage.jpg")
 doan.save!
 
-p doan.id
+camille = User.new(
+  name: "Camille",
+  surname: "Villard",
+  bio: "Interested in all things creative. Freelance graphic designer, art director & content creator, obsessed (and a little bit annoying about that) with typography, avocado toasts and sports. learning, coding & reading all the documentation enthusiast.",
+  password: "password123",
+  address: "1359 rue Casgrain montreal",
+  email: "camille@gmail.com"
+)
+camille.avatar.attach(io: File.open("./app/assets/images/storage/camillepic.jpeg"), filename: "camillepic.jpeg")
+camille.image.attach(io: File.open("./app/assets/images/storage/cover.jpg"), filename: "cover.jpg")
+camille.save!
 
 ap = User.create!(
-  name: "AP X",
+  name: "John",
   surname: "90",
   password: "password123",
   address: "1339 rue Casgrain montreal",
-  email: "apx90@gmail.com"
+  email: "john@gmail.com"
 )
 ap.avatar.attach(io: File.open("./app/assets/images/storage/pxxpic.jpg"), filename: "pxxpic.jpg")
 ap.image.attach(io: File.open("./app/assets/images/storage/pxximg.jpeg"), filename: "pxximg.jpeg")
 ap.save!
-
-p ap.id
 
 marteen = User.create!(
   name: "Marteen",
@@ -44,9 +52,7 @@ marteen.avatar.attach(io: File.open("./app/assets/images/storage/martinpic.jpeg"
 marteen.image.attach(io: File.open("./app/assets/images/storage/martinimg.jpeg"), filename: "martinimg.jpeg")
 marteen.save!
 
-p marteen.id
-
-User.create!(
+benjamin = User.create!(
   name: "Benjamin",
   surname: "Marquis",
   bio: "I came to Montreal a couple of years ago to study sociology. After graduating I became a digital marketing specialist and web analyst. I started learning JavaScript then Python to interact with the data I was exposed to. I found that building stuff suited my pragmatic profile and decided to push it further!",
@@ -54,8 +60,11 @@ User.create!(
   email: "bmarquiscom@gmail.com",
   password: "benjamin23"
 )
+benjamin.avatar.attach(io: File.open("./app/assets/images/storage/profile.jpeg"), filename: "profile.jpeg")
+benjamin.image.attach(io: File.open("./app/assets/images/storage/bjcover.jpg"), filename: "bjcover.jpg")
+benjamin.save!
 
-User.create!(
+jean = User.create!(
   name: "Jean",
   surname: "Blanchard",
   bio: "I just graduated from a digital marketing&communication degree and I've been working for the past year for Caterpillar, a industrial company equipment, mostly in Africa.",
@@ -63,14 +72,8 @@ User.create!(
   email: "jean@gmail.com",
   password: "password123"
 )
+jean.avatar.attach(io: File.open("./app/assets/images/storage/jeanpic.jpeg"), filename: "jeanpic.jpeg")
+jean.image.attach(io: File.open("./app/assets/images/storage/jeancover.jpg"), filename: "jeancover.jpg")
+jean.save!
 
-User.create!(
-  name: "Beau",
-  surname: "Ruster",
-  bio: "I am currently an engineering student who is interested in learning more about all aspects of programming. My goal is to gain the skills necessary to make my ideas for an app or website a reality.",
-  address: "5483 avenue Parc montreal",
-  email: "beau@gmail.com",
-  password: "password123"
-)
-
-p "User created!"
+p "Users created!"

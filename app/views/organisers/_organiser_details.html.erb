@@ -2,4 +2,4 @@
 <p><%= organiser.organiser_type.name %></p>
 <p class="event-description"><%= organiser.description %></p>
 <p class="event-adress"><%= organiser.address %></p>
-<button class="event-btn ired"><%= organiser.website %></button>
+<%= link_to "Visit organiser's website", organiser.website, class: "event-btn ired", target: "_blank" %>

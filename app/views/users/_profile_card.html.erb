@@ -15,7 +15,7 @@
           Edit your profile</button>
         <%= render "edit_modal" %>
       <% else %>
-        <%= link_to "Message #{user.name}", user_chats_path(current_user, other_user: user.id), method: :post, class: "simple-btn" %>
+        <%= link_to "Message #{user.name}", user_chats_path(current_user, other_user: user.id), method: :post, class: "event-btn ired" %>
       <% end %>
     </div>
     <div class="col-md-6 col-sm-12 card-column">

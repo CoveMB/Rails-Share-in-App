@@ -1,38 +1,57 @@
-.simple-btn {
-  width: 200px;
-  border: 3px solid #AC0C0C;
-  box-sizing: border-box  ;
-  border-radius: 8px;
-  padding: 5px;
-  ont-family: Alegreya;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 20px;
-  line-height: 27px;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  background-color: #AC0C0C;
-  color: #FFFFFF;
-  box-shadow: 0.5px 1px 2px hsla(0, 0%, 20%, 1);
-  display: center;
+.event-btn{
+  display: inline-block;
+  text-decoration: none;
+  padding: 0.6rem 1.1rem;
+  background-color: transparent;
+  transition: all ease .3s;
+
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+
 }
 
-.simple-btn:hover {
-  border: 3px solid #AC0C0C;
-  box-sizing: border-box  ;
-  border-radius: 8px;
-  padding: 5px;
-  ont-family: Alegreya;
-  font-style: normal;
+.event-btn *{
+   transition: all ease .3s;
+}
+
+.event-btn:hover, .event-btn:hover *{
+  color: white;
+}
+
+
+.red{
+  border: 1px solid $classicred;
+  color: $white;
   font-weight: bold;
-  font-size: 20px;
-  line-height: 27px;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  background-color: #FFFFFF;
-  color: #AC0C0C;
-  transform: translateY(-2px);
-  box-shadow: 2px 2px 5px hsla(0, 0%, 20%, 1);
+  background-color: $classicred;
+  margin-left: 60%;
+  width: auto;
+}
+
+.ired{
+  border: 1px solid $classicred;
+  color: $classicred;
+  font-weight: bold;
+}
+
+.red:hover{
+  background-color: $classicred;
+}
+
+.ired:hover{
+  background-color: $classicred;
+}
+
+.red *{
+  color: $white;
+}
+
+.ired *{
+  color:$white;
+}
+
+button:focus {
+  outline: none;
+  background-color: $classicred;
 }

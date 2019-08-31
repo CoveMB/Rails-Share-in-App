@@ -3,10 +3,12 @@ function scroll () {
   objDiv.scrollTop = objDiv.scrollHeight;
 };
 
-var user = window.location.href.split("=").pop();
+function boldName (){
+  var user = window.location.href.split("=").pop();
 
-document.querySelectorAll(".user-row").forEach((userRow) => {
-  if (userRow.firstElementChild.lastElementChild.id.split("-")[1] == user) {
-    userRow.firstElementChild.lastElementChild.style.fontWeight = "bold";
-  }
-});
+  document.querySelectorAll(".user-row").forEach(function (userRow) {
+    if (userRow.firstElementChild.lastElementChild.id.split("-")[1] == user) {
+      userRow.firstElementChild.lastElementChild.style.fontWeight = "bold";
+    }
+  });
+}

@@ -9,7 +9,8 @@ class EventsController < ApplicationController
       {
         lat: event.latitude,
         lng: event.longitude,
-        infoWindow: render_to_string(partial: "info_window", locals: { event: event })
+        infoWindow: render_to_string(partial: "info_window", locals: { event: event }),
+        categories: event.interests.pluck(:name)
       }
     end
   end

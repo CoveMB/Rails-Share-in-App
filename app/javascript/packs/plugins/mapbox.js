@@ -63,10 +63,14 @@ const addGeoCoder = (map) => {
   document.getElementById('geocoder').appendChild(geocoder.onAdd(map));
 };
 
-const initMapbox = () => {
+const initMapbox = (markersForMap = 0) => {
   if (mapElement) {
     const map = buildMap();
-    const markers = JSON.parse(mapElement.dataset.markers);
+    if (markersForMap == 0){
+      var markers = JSON.parse(mapElement.dataset.markers);
+    } else {
+      var markers = markersForMap;
+    }
     addMarkersToMap(map, markers);
     fitMapToMarkers(map, markers);
     addGeolocationControl(map);
@@ -79,4 +83,4 @@ const initMapbox = () => {
   };
 };
 
-export { initMapbox };
+export { initMapbox, addMarkersToMap };

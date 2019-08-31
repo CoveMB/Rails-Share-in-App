@@ -1,19 +1,16 @@
 <%= render "events/home_header" %>
 <div class="container-custom">
-  <div class="row">
-    <div class="col-2">
-
-      <div class="filter-card">
-        <div class="gradient-square">
-          <h5 class="gradient-square-text">Filters</h5>
-
-        </div>
-        <%= render "filter", interest_categories: @interest_categories%>
-      </div>
-
-    </div>
-    <div class="col-10">
-      <%= render "map", markers: @markers %>
-    </div>
-  </div>
+  <%= render "filter" %>
+  <%= render "map", markers: @markers %>
 </div>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var elems = document.querySelectorAll('select');
+    var instances = M.FormSelect.init(elems);
+  });
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var elems = document.querySelectorAll('.datepicker');
+    var instances = M.Datepicker.init(elems);
+  });
+</script>

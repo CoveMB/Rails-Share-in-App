@@ -1,0 +1,25 @@
+<div class="idropdown show">
+  <% interest_categories.each do |interest_category| %>
+    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="firstMenuDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><%= interest_category.name %>
+    </a>
+
+    <div class="dropdown-menu filter-dropdown" aria-labelledby="firstMenuDropdown">
+      <% interest_category.interests.each do |interest| %>
+        <a class="dropdown-item filter-item" id="secondMenuDropdown" href="#"><%= interest.name %></a>
+      <% end %>
+    </div>
+  <% end %>
+</div>
+
+<div class="interest-category-box">
+  <% interest_categories.each do |interest_category| %>
+    <div class="interest-category">
+      <a class="interest-category-filter" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><%= interest_category.name %></a>
+      <div class="dropdown-menu filter-dropdown" aria-labelledby="firstMenuDropdown">
+        <% interest_category.interests.each do |interest| %>
+          <a class=""><%= interest.name %></a>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+</div>

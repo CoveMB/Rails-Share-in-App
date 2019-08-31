@@ -1,6 +1,6 @@
 .container-custom{
-  margin: -30px auto 30px auto;
-  width: 90%;  
+  margin: -50px auto 30px auto;
+  width: 95%;
 }
 
 .header-box{
@@ -63,11 +63,11 @@
   // position: relative;
     transition: all .2s;
     transition-delay: .1s;
-    border-radius: 8px;
+    border-radius: 4px;
   }
 
   .mapboxgl-ctrl-geocoder{
-    border-radius: 8px;
+    border-radius: 4px;
   }
 
   .mapboxgl-ctrl-geocoder--icon {

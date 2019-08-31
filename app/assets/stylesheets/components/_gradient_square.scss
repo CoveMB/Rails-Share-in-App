@@ -1,17 +1,17 @@
 .gradient-square{
   // width: 200px;
-  margin: -20px auto 0 auto;
+  margin: -50px auto 0 auto;
   padding: 40px 66px 40px 66px;
   height: 70px;
   background: linear-gradient(90deg, $gradientred 0%, $classicred 100%);
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.12), 0px 5px 10px rgba(0, 0, 0, 0.3);
-  border-radius: 8px 8px 0 0;
+  border-radius: 4px 4px 4px 4px;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   color: $white;
-  z-index: 10;
+  z-index: 20;
 }
 
 .gradient-square-text{

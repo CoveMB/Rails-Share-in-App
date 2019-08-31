@@ -4,19 +4,10 @@
 <script>
   createMessageChannel();
   // app/assets/javascripts/channels/messages.js
+
   messageForm();
   // app/assets/javascripts/messages_form.js
-  function scroll () {
-    var objDiv = document.getElementById("messages").parentElement;
-    objDiv.scrollTop = objDiv.scrollHeight;
-  };
+
   scroll()
-
-  var user = window.location.href.split("=").pop()
-
-  document.querySelectorAll(".user-row").forEach((userRow) => {
-    if (userRow.firstElementChild.lastElementChild.id.split("-")[1] == user) {
-      userRow.firstElementChild.lastElementChild.style.fontWeight = "bold"
-    }
-  })
+  // app/assets/javascripts/style_message.js
 </script>

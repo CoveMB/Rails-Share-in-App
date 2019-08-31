@@ -2,6 +2,7 @@ import MapboxGeocoder from '@mapbox/mapbox-gl-geocoder';
 import mapboxgl from 'mapbox-gl';
 
 const mapElement = document.getElementById('map');
+const allMarkers = [];
 
 const buildMap = () => {
   mapboxgl.accessToken = mapElement.dataset.mapboxApiKey;
@@ -29,10 +30,11 @@ const addEventListener = () => {
 const addMarkersToMap = (map, markers) => {
   markers.forEach((marker) => {
     const popup = new mapboxgl.Popup().setHTML(marker.infoWindow);
-    new mapboxgl.Marker()
+    const newMarker = new mapboxgl.Marker()
       .setLngLat([ marker.lng, marker.lat ])
       .setPopup(popup)
       .addTo(map);
+      allMarkers.push(newMarker);
   });
 };
 
@@ -71,6 +73,10 @@ const initMapbox = () => {
     addGeoCoder(map);
     addEventListener();
   }
+  return {
+    map: map,
+    markers:allMarkers,
+  };
 };
 
 export { initMapbox };

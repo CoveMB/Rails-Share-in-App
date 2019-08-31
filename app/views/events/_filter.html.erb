@@ -1,23 +1,27 @@
 <div class="filter-banner">
   <div class="interests-selection">
     <div class="input-field col s4">
-      <select multiple="multiple">
+      <select multiple="multiple" id="category-select">
         <option value="" disabled="disabled" selected="selected">Choose an interest category</option>
         <% @interest_categories.each do |interest_category| %>
-          <option value="<%= interest_category.id %>"><%= interest_category.name %></option>
+          <option value="<%= interest_category.id %>" data-category="<%= interest_category.name %>"><%= interest_category.name %></option>
         <% end %>
       </select>
     </div>
-    <h1 class="filter-arrow">></h1>
-    <div class="input-field col s4">
-      <select multiple="multiple">
-        <option value="" disabled="disabled" selected="selected">Choose an interest</option>
+    <h1 class="filter-arrow" style="display: none;">></h1>
+    <div class="input-field col s4" id="interest-dropdown" style="display: none;">
+      <select multiple="multiple" id="interest-select">
+        <option value="" disabled="disabled" selected="selected">Select your interests</option>
         <% @interest_categories.each do |interest_category| %>
-          <option value="<%= interest_category.id %>"><%= interest_category.name %></option>
+          <% interest_category.interests.each do |interest| %>
+            <option value="<%= interest.name %>" data-category="<%= interest.interest_category.name %>"><%= interest.name %></option>
+          <% end %>
         <% end %>
       </select>
     </div>
-    <h1 class="filter-arrow">></h1>
+    <h1 class="filter-arrow-2">
+      |
+    </h1>
   </div>
   <div class="date-selection">
     <input type="text" class="datepicker" value="Choose a date">

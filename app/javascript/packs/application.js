@@ -7,6 +7,6 @@ import { initMapbox } from './plugins/mapbox';
 import { initDetailsToggle } from './plugins/init_details_toggle';
 import { initFilter } from './plugins/filter';
 
-initMapbox();
+// initMapbox();
 initDetailsToggle();
 initFilter();

@@ -1,5 +1,5 @@
 function changeBtn(){
-  document.getElementById("event-attendee-btn").outerHTML = '<%= link_to "Register to the event", organiser_event_user_event_path(@event.organiser, @event, current_user), remote: true, method: :patch, class: "event-btn red", id:"event-attendee-btn" %>'
+  document.getElementById("event-attendee-btn").outerHTML = '<%= link_to "Register to the event", organiser_event_user_event_path(@event.organiser, @event, current_user), remote: true, method: :patch, class: "event-btn redi", id:"event-attendee-btn" %>'
 }
 
 function deleteUserList(){

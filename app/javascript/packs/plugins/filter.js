@@ -1,12 +1,8 @@
 import MapboxGeocoder from '@mapbox/mapbox-gl-geocoder';
 import mapboxgl from 'mapbox-gl';
-import { initMapbox, addMarkersToMap } from './mapbox';
+import { initMapbox } from './mapbox';
 
-// const markers = JSON.parse(mapElement.dataset.markers);
 const mapElement = document.getElementById('map');
-const mapElements = initMapbox();
-const map = mapElements["map"];
-const markers = mapElements["markers"];
 
 const initFilter = () => {
   document.addEventListener('DOMContentLoaded', function () {
@@ -56,7 +52,7 @@ const initFilter = () => {
             const interests = interestsElement.map((element) => {
               return element.innerText;
             });
-            updateMarkers(mapElement, markers, interests);
+            updateMarkers(mapElement, interests);
           });
         }
       });
@@ -64,15 +60,15 @@ const initFilter = () => {
   });
 };
 
-const updateMarkers = (mapElement, markers, interests) => {
-  markers.forEach((marker) => {
-    marker.remove();
-  });
+const updateMarkers = (mapElement, interests) => {
+  // markers.forEach((marker) => {
+  //   marker.remove();
+  // });
+  document.querySelector("#geocoder > div").remove();
   const newMarker = JSON.parse(mapElement.dataset.markers).filter((marker) => {
     return marker["categories"].filter((interest) =>  interests.includes(interest)).length > 0;
   });
-  markers = newMarker;
-  initMapbox(markers);
+  initMapbox(newMarker);
 };
 
 export { initFilter };

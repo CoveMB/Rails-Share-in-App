@@ -8,6 +8,7 @@ function createMessageChannel() {
           document.getElementById('messages').insertAdjacentHTML("beforeend", this.renderMessage(data));
         },
         renderMessage: function(data) {
+          console.log(data.message);
           var user_status = (window.username == data.user_name) ? "current" : "other" ;
           setTimeout(function() { var objDiv = document.getElementById("messages").parentElement;
           objDiv.scrollTop = objDiv.scrollHeight;}, 1);

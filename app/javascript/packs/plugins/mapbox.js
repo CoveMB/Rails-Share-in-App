@@ -79,7 +79,7 @@ const initMapbox = (markersForMap = 0) => {
   }
   return {
     map: map,
-    markers:allMarkers,
+    markers: allMarkers,
   };
 };
 

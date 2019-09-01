@@ -64,11 +64,6 @@
   color: $white;
 }
 
-[type="checkbox"]:checked+span:not(.lever):before {
-  border-right: 2px solid $classicred;
-  border-bottom: 2px solid $classicred;
-}
-
 body > div.container-custom > div.filter-banner > div.interests-selection > div:nth-child(1) > div > input {
   margin: auto;
   height: 70px;
@@ -101,8 +96,4 @@ body > div.container-custom > div.filter-banner > div.date-selection > input{
   border: none;
   font-family: Alegreya;
   font-size: 20px;
-}
-
-.datepicker-day-button:focus {
-  background-color: rgba(172, 12, 12, 0.20);
 }

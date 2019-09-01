@@ -2,6 +2,7 @@ class EventsController < ApplicationController
   skip_before_action :authenticate_user!, only: :index
 
   def index
+    cookies[:user_id] = current_user.id if current_user
     @interest_categories = policy_scope(InterestCategory)
     @events = policy_scope(Event)
     geocoded = @events.filter(&:geocoded?)
@@ -13,16 +14,6 @@ class EventsController < ApplicationController
         categories: event.interests.pluck(:name)
       }
     end
-    # if current_user
-    #   chats = current_user.chats
-    #   @existing_chats_users = policy_scope(Chat)
-    #   current_user.new_message = false
-    #   current_user.save
-    #   @other_users = User.chats.find(params[:other_user])
-    #   @chat = Chat.find_by(id: params[:id])
-    #   authorize @chat
-    #   @message = Message.new
-    # end
   end
 
   def show

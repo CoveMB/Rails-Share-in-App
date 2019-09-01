@@ -1,6 +1,6 @@
 class MessagesChannel < ApplicationCable::Channel
   def subscribed
-    stream_from "messages_#{params[:chat_id]}"
+    # stream_from "messages_#{params[:chat_id]}"
     current_user.chats.pluck(:id).each do |chat|
       stream_from "messages_#{chat}"
       p "*******************************"

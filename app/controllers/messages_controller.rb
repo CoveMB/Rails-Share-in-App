@@ -8,6 +8,7 @@ class MessagesController < ApplicationController
       ActionCable.server.broadcast(
         "messages_#{message.chat.id}",
         message: message.content,
+        chat_id: message.chat.id,
         user_id: message.user.id,
         user_name: message.user.name,
         user_avatar: url_for(message.user.avatar)

@@ -1,0 +1,17 @@
+<div class="message-little-bar">
+  <% if current_user %>
+    <% current_user.chats.each do |chat| %>
+    <div class="message-little-box scrollbar-custom" id="message-box-<%= chat.id %>" style="display: none;">
+      <% if chat.messages.any? %>
+        <div class="messages" id="messages-<%= chat.id %>">
+          <%= render partial: 'messages/message', collection: chat.messages.order(id: :asc) %>
+        </div>
+      <% else %>
+        <div id="messages-<%= chat.id %>"></div>
+      <%end%>
+      <%= render partial: 'messages/message_form', locals: { message: Message.new, chat: chat }%>
+    </div>
+    <% end %>
+  <% else%>
+  <% end %>
+</div>

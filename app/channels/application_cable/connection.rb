@@ -9,11 +9,7 @@ module ApplicationCable
     private
 
     def find_verified_user
-      p "*88888888888888888888888888888888*"
-      p cookies[:user_id]
       if current_user = User.find_by(id: cookies[:user_id])
-        p "&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&"
-        p current_user
         current_user
       else
         reject_unauthorized_connection

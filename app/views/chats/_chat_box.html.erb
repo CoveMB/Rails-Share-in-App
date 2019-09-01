@@ -1,10 +1,10 @@
 <div class="chat-container scrollbar-custom">
   <% if @chat.messages.any? %>
-    <div id="messages">
+    <div class="messages" id="messages-<%= @chat.id %>">
       <%= render partial: 'messages/message', collection: @chat.messages.order(id: :asc) %>
     </div>
   <%else%>
-    <div id="messages"></div>
+    <div class="messages" id="messages-<%= @chat.id %>"></div>
   <%end%>
   <%= render partial: 'messages/message_form', locals: {message: @message, chat: @chat, other_user: @other_user}%>
 </div>

@@ -65,7 +65,7 @@ const addGeoCoder = (map) => {
 
 const initMapbox = (markersForMap = 0) => {
   if (mapElement) {
-    const map = buildMap();
+    var map = buildMap();
     if (markersForMap == 0){
       var markers = JSON.parse(mapElement.dataset.markers);
     } else {

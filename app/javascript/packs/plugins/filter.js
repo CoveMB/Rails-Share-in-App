@@ -72,7 +72,7 @@ const updateMarkers = (mapElement, mapAndMarkers, interests) => {
   });
   newMarkers.forEach((marker) => {
     const newMarker = new mapboxgl.Marker()
-      // .setLngLat([ marker.lng, marker.lat ])
+      .setLngLat([ marker.lng, marker.lat ])
       // .setPopup(popup)
       .addTo(mapAndMarkers["map"]);
   });

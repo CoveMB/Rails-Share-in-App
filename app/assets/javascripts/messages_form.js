@@ -2,10 +2,10 @@ function messageForm(){
   var shiftDown = false;
 
   var chatForms = document.querySelectorAll("#new_message");
-  Array.from(chatForms).forEach((form) =>{
-      form.addEventListener("keyup", (event) => {
+  Array.from(chatForms).forEach(function (form) {
+      form.addEventListener("keyup", function (event) {
         // event.preventDefault();
-        const input = form.children[2];
+        var input = form.children[2];
         if (event.keyCode == 13) {
           if ( document.activeElement === input && !shiftDown){
             event.preventDefault();

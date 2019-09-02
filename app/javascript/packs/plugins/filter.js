@@ -7,6 +7,9 @@ const initFilter = () => {
     document.addEventListener('DOMContentLoaded', function () {
       var mapElement = document.getElementById('map');
       var mapAndMarkers = initMapbox();
+      var map = mapAndMarkers["map"];
+      var markersOnMap = mapAndMarkers["markers"];
+      console.log(markersOnMap);
       // Build date picker
       var date = document.querySelectorAll('.datepicker');
       var dateinstance = M.Datepicker.init(date);
@@ -53,7 +56,7 @@ const initFilter = () => {
               const interests = interestsElement.map((element) => {
                 return element.innerText;
               });
-              updateMarkers(mapElement, mapAndMarkers, interests);
+              markersOnMap = updateMarkers(mapElement, map, markersOnMap, interests);
             });
           }
         });
@@ -62,19 +65,22 @@ const initFilter = () => {
   }
 };
 
-const updateMarkers = (mapElement, mapAndMarkers, interests) => {
-  mapAndMarkers["markers"].forEach((marker) => {
+const updateMarkers = (mapElement, map, markersOnMap, interests) => {
+  console.log(markersOnMap);
+  markersOnMap.forEach((marker) => {
     marker.remove();
   });
-  document.querySelector("#geocoder > div").remove();
+
   const newMarkers = JSON.parse(mapElement.dataset.markers).filter((marker) => {
     return marker["categories"].filter((interest) =>  interests.includes(interest)).length > 0;
   });
-  newMarkers.forEach((marker) => {
+
+  return newMarkers.map((marker) => {
     const newMarker = new mapboxgl.Marker()
       .setLngLat([ marker.lng, marker.lat ])
       // .setPopup(popup)
-      .addTo(mapAndMarkers["map"]);
+      .addTo(map);
+      return newMarker;
   });
 };
 

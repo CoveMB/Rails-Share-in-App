@@ -18,16 +18,16 @@
 // };
 
 function scroll () {
-  document.querySelectorAll(".scrollbar-custom").forEach((scrollBox) => {
+  document.querySelectorAll(".scrollbar-custom").forEach( function (scrollBox) {
     scrollBox.scrollTop = scrollBox.scrollHeight;
   });
 };
 
 function cancelNotification () {
-  document.querySelectorAll(".message-little-box").forEach((messageBox)=> {
-    messageBox.addEventListener("click", () => {
+  document.querySelectorAll(".message-little-box").forEach( function (messageBox) {
+    messageBox.addEventListener("click", function () {
       document.getElementById("notification").style.display = "none";
-      document.querySelectorAll(".alert").forEach((alert) => {
+      document.querySelectorAll(".alert").forEach(function (alert)  {
         alert.style.display = "none";
       });
     });
@@ -35,9 +35,9 @@ function cancelNotification () {
 }
 
 function switchPreviewBox() {
-  document.querySelectorAll(".message-little-preview").forEach((preview) => {
+  document.querySelectorAll(".message-little-preview").forEach(function (preview)  {
     // console.log(preview);
-    preview.addEventListener("click", (event) => {
+    preview.addEventListener("click", function (event)  {
       event.target.parentElement.style.display = "none";
       event.target.parentElement.nextElementSibling.style.display = "block";
       scroll();
@@ -46,16 +46,16 @@ function switchPreviewBox() {
 }
 
 function closeMessageBox (){
-  document.querySelectorAll(".closing-message").forEach((clossingCross) => {
-    clossingCross.addEventListener("click", (event) => {
+  document.querySelectorAll(".closing-message").forEach(function (clossingCross)  {
+    clossingCross.addEventListener("click", function (event)  {
       event.target.parentElement.style.display = "none";
     });
   });
 }
 
 function reduceMessageBox (){
-  document.querySelectorAll(".reduce-message").forEach((reduceSign) => {
-    reduceSign.addEventListener("click", (event) => {
+  document.querySelectorAll(".reduce-message").forEach(function (reduceSign)  {
+    reduceSign.addEventListener("click", function (event)  {
       event.target.parentElement.style.display = "none";
       event.target.parentElement.previousElementSibling.style.display = "block";
     });

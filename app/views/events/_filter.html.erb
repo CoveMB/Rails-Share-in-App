@@ -4,7 +4,7 @@
       <select multiple="multiple" id="category-select">
         <option value="" disabled="disabled" selected="selected">Choose an interest category</option>
         <% @interest_categories.each do |interest_category| %>
-          <option value="<%= interest_category.id %>" data-category="<%= interest_category.name %>"><%= interest_category.name %></option>
+          <option value="<%= interest_category.id %>" data-category="<%= interest_category.name %>" data-icon="<%= image_path(interest_category.icon+".png") %>"><%= interest_category.name %></option>
         <% end %>
       </select>
     </div>

@@ -23,7 +23,6 @@ function createMessageChannel() {
 
           if (user_status == "other"){
             document.getElementById("notification").style.display = "block";
-            // document.querySelector("body").insertAdjacentHTML("beforeend", '<div class="alert alert-info alert-dismissible fade show m-1" role="alert">' + data.user_name + ' sent you new a message <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
           };
           document.getElementById('messages-' + data.chat_id).insertAdjacentHTML("beforeend", '<div class="' + user_status + '-user-custom-row animated fadeIn delay-6"><a href="/users/' + data.user_id + '"><img class="avatar" src="' + data.user_avatar + '"></a><p class="' + user_status + '-user-message">' + data.message + '</p><p class="time-indicator-message">just now</p></div>');
         },

@@ -31,7 +31,7 @@ function switchPreviewBox() {
 function closeMessageBox (){
   document.querySelectorAll(".closing-message").forEach(function (clossingCross)  {
     clossingCross.addEventListener("click", function (event)  {
-      event.target.parentElement.style.display = "none";
+      event.target.parentElement.parentElement.style.display = "none";
     });
   });
 }
@@ -39,8 +39,9 @@ function closeMessageBox (){
 function reduceMessageBox (){
   document.querySelectorAll(".reduce-message").forEach(function (reduceSign)  {
     reduceSign.addEventListener("click", function (event)  {
-      event.target.parentElement.style.display = "none";
-      event.target.parentElement.previousElementSibling.style.display = "block";
+      console.log();
+      event.target.parentElement.parentElement.style.display = "none";
+      event.target.parentElement.parentElement.previousElementSibling.style.display = "block";
     });
   });
 }

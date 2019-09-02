@@ -26,7 +26,7 @@ end
 
 create_event(
   organiser: "McCord",
-  event_type: "Exhebition",
+  event_type: "Exhibition",
   name:"SDING K’AWXANGS – HAIDA: Supernatural Stories",
   start_date: DateTime.parse("25th april 2019"),
   end_date: DateTime.parse("27th october 2019"),
@@ -38,7 +38,7 @@ create_event(
 
 create_event(
   organiser: "McCord",
-  event_type: "Exhebition",
+  event_type: "Exhibition",
   name:"HANNAH CLAUS - There’s a reason for our connection",
   start_date: DateTime.parse("7th march 2019"),
   end_date: DateTime.parse("11th august 2019"),
@@ -50,7 +50,7 @@ create_event(
 
 create_event(
   organiser: "Pointe-à-Callière",
-  event_type: "Exhebition",
+  event_type: "Exhibition",
   name:"The Incas - Treasures of Peru",
   start_date: DateTime.parse("27th november 2019"),
   end_date: DateTime.parse("13th april 2019"),
@@ -62,7 +62,7 @@ create_event(
 
 create_event(
   organiser: "Pointe-à-Callière",
-  event_type: "Exhebition",
+  event_type: "Exhibition",
   name:"Memory Collector",
   start_date: DateTime.parse("27th november 2018"),
   end_date: DateTime.parse("13th april 2020"),
@@ -75,7 +75,7 @@ create_event(
 
 create_event(
   organiser: "Pointe-à-Callière",
-  event_type: "Exhebition",
+  event_type: "Exhibition",
   name:"Multimedia Show Generations MTL",
   start_date: DateTime.parse("27th november 2018"),
   end_date: DateTime.parse("13th april 2020"),
@@ -88,7 +88,7 @@ create_event(
 
 create_event(
   organiser: "Montreal Museum of Fine Arts",
-  event_type: "Exhebition",
+  event_type: "Exhibition",
   name:"LIMINALS - Un rituel fantasme de Jeremy Shaw",
   start_date: DateTime.parse("6th septembre 2018"),
   end_date: DateTime.parse("2 june 2019"),
@@ -100,7 +100,7 @@ create_event(
 
 create_event(
   organiser: "Montreal Museum of Fine Arts",
-  event_type: "Exhebition",
+  event_type: "Exhibition",
   name:"THIERRY MUGLER - Couturissime",
   start_date: DateTime.parse("2th march 2019"),
   end_date: DateTime.parse("8th september 2019"),
@@ -112,7 +112,7 @@ create_event(
 
 create_event(
   organiser: "Contemporary Art Museum of Montreal",
-  event_type: "Exhebition",
+  event_type: "Exhibition",
   name:"FRANCIS ALŸS - Children’s Games",
   start_date: DateTime.parse("4th august 2018"),
   end_date: DateTime.parse("1th january 2020"),
@@ -125,7 +125,7 @@ create_event(
 
 create_event(
   organiser: "Centre Phi",
-  event_type: "Exhebition",
+  event_type: "Exhibition",
   name:">HUM(AI)N",
   start_date: DateTime.parse("28th may 2019"),
   end_date: DateTime.parse("29th september 2019"),
@@ -137,7 +137,7 @@ create_event(
 
 create_event(
   organiser: "Centre Phi",
-  event_type: "Exhebition",
+  event_type: "Exhibition",
   name:"VR Cinema: Short Films on Canvas",
   start_date: DateTime.parse("4th april 2019"),
   end_date: DateTime.parse("29th september 2019"),
@@ -149,7 +149,7 @@ create_event(
 
 create_event(
   organiser: "Biosphere",
-  event_type: "Exhebition",
+  event_type: "Exhibition",
   name:"ENVIRONMENT MUSEUM",
   start_date: DateTime.parse("4th april 2018"),
   end_date: DateTime.parse("29th september 2020"),
@@ -224,7 +224,7 @@ create_event(
 
 create_event(
   organiser: "Bunker Art Gallery",
-  event_type: "Exhebition",
+  event_type: "Exhibition",
   name:"BUNKER ART - BY YVES LAROCHE",
   start_date: DateTime.parse("22th june 2019"),
   end_date: DateTime.parse("24th june 2020"),

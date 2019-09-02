@@ -14,7 +14,11 @@
 }
 
 .select-wrapper{
-  width: 50%;
+  width: 400px;
+}
+
+#geocoder .mapboxgl-ctrl-geocoder--input{
+  background-color: #faf7f7;
 }
 
 .interests-selection{
@@ -82,10 +86,6 @@ body > div.container-custom > div.filter-banner > div.interests-selection > div:
   border: none;
   font-family: Alegreya;
   font-size: 20px;
-}
-
-.select-wrapper{
-  width: 250px;
 }
 
 body > div.container-custom > div.filter-banner > div.date-selection > input{

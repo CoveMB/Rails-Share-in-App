@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   root to: 'events#index'
 
+  resources :interests, only: [:show]
+
   # Organiser and event routes
   resources :organisers, only: [:show] do
     resources :events, only: [:show] do

@@ -1,0 +1,13 @@
+<div class="user-list-container scrollbar-custom">
+    <h2 class="user-list-title">Other events related to this interest</h2>
+  <ul id="attendee-list">
+
+    <% interest.events.each do |event| %>
+
+      <li>
+        <%= render "users/event_row", event: event %>
+      </li>
+
+    <% end %>
+  </ul>
+</div>

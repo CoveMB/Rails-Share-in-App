@@ -1,0 +1,16 @@
+<div class="body-card">
+  <% if interest.events.last.organiser.avatar.attached? %>
+    <%= image_tag url_for(interest.events.last.organiser.avatar), class: "card-avatar" %>
+  <% else %>
+    <%= image_tag image_path('default_avatar.jpg'), class: "card-avatar" %>
+  <% end %>
+  <div class="row">
+    <div class="info-event col-md-6 col-sm-12 card-column" id="left-part">
+      <%= render "interests/interest_details" %>
+
+    </div>
+    <div class="col-md-6 col-sm-12 card-column">
+      <%= render "interests/event_list", interest: interest %>
+    </div>
+  </div>
+</div>

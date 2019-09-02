@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_31_173325) do
+ActiveRecord::Schema.define(version: 2019_09_02_214533) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -100,7 +100,9 @@ ActiveRecord::Schema.define(version: 2019_08_31_173325) do
     t.bigint "interest_category_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "slug"
     t.index ["interest_category_id"], name: "index_interests_on_interest_category_id"
+    t.index ["slug"], name: "index_interests_on_slug", unique: true
   end
 
   create_table "messages", force: :cascade do |t|

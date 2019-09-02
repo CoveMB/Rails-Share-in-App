@@ -18,6 +18,7 @@
 // };
 
 function scroll () {
+  // if 
   document.querySelectorAll(".scrollbar-custom").forEach( function (scrollBox) {
     scrollBox.scrollTop = scrollBox.scrollHeight;
   });

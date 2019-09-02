@@ -1,13 +1,13 @@
 .user-list-container{
   padding-right: 30px;
-  padding-left: 6px;
+  padding-left: 18px;
 }
 
 .user-list-container ul{
 }
 
 .user-list-title{
-  padding-left: 15px;
+  padding-left: 18px;
   position: sticky;
   top: 0;
   background-color: #fffafa;
@@ -23,7 +23,6 @@
 }
 
 .user-row{
-  padding-left: 15px;
   -webkit-transition-duration: 0.33s;
        -o-transition-duration: 0.33s;
           transition-duration: 0.33s;

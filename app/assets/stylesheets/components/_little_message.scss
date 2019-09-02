@@ -41,8 +41,9 @@
   z-index: 90;
 }
 
-.messages-action{
-  margin-top: -30px;
+.messages-actions{
+  margin-top: -25px;
+  background-color: rgba(172, 12, 12, 0.2);
 }
 
 .closing-message{
@@ -60,6 +61,7 @@
   font-weight: bold;
   position: fixed;
   margin-left: 30px;
+  // margin-bottom: 40px;
   padding: 2px 0 2px 0;
   font-size: 30px;
   cursor: pointer;

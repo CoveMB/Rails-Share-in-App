@@ -1,9 +1,9 @@
 <p class="event-title"><%= event.name %></p>
-<div class="event-interest-box">
+<p class="event-interest-box">
   <% event.interests.each do |interest| %>
-    <span class="event-interest"><%= link_to interest.name, interest_path(interest) %></span>
+    <%= link_to interest.name, interest_path(interest), class: "event-interest"%>
   <% end %>
-</div>
+</p>
 <p class="event-date">From : <%= (event.start_date).strftime("%B %e, %Y") %></p>
 <p class="event-date">To : <%= (event.end_date).strftime("%B %e, %Y") %></p>
 <p class="event-type"><%= event.event_type.name %></p>

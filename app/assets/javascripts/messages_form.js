@@ -3,7 +3,6 @@ function messageForm(){
 
   var chatForms = document.querySelectorAll("#new_message");
   Array.from(chatForms).forEach((form) =>{
-      console.log(form);
       form.addEventListener("keyup", (event) => {
         // event.preventDefault();
         const input = form.children[2];

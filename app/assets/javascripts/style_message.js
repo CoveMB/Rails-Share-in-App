@@ -7,6 +7,14 @@ function scroll () {
   });
 };
 
+function cancelNotification () {
+  document.querySelectorAll(".message-little-box").forEach((messageBox)=> {
+    messageBox.addEventListener("click", () => {
+      document.getElementById("notification").style.display = "none";
+    });
+  });
+}
+
 function boldName (){
   var user = window.location.href.split("=").pop();
   document.querySelectorAll(".user-row").forEach(function (userRow) {

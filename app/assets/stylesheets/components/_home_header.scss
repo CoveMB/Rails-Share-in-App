@@ -1,6 +1,6 @@
 .container-custom{
   margin: -30px auto 30px auto;
-  width: 90%;  
+  width: 90%;
 }
 
 .header-box{
@@ -8,11 +8,27 @@
   text-align: center;
 }
 
-.header-home-title-line{
-  margin: auto;
-  width: 15%;
-  border: 1px solid $white;
-  box-shadow: 6px 6px 8px rgba(0, 0, 0, 0.25);
+.header-white-box{
+  //width:600px;
+  height:400px;
+  left:30%;
+  right:30%;
+  top:30%;
+  position:absolute;
+  border-radius:5px;
+  @include box-shadow(0 20px 30px rgba(0,0,0,.6));
+  border:1px solid rgba(255,255,255,.3);
+  padding:20px;
+  text-align: center;
+  text-shadow:0 1px 1px rgba(0,0,0,.4);
+  //display: flex;
+  transition: box-shadow .3s ease;
+  background-color: $white;
+
+  &:active{
+    cursor:move;
+    @include box-shadow(0 20px 50px rgba(0,0,0,.9));
+  }
 }
 
 .header-home-image{
@@ -23,16 +39,6 @@
   justify-content: center;
 }
 
-.header-home-title{
-  font-family: $lora;
-  margin-top: -360px;
-  text-align: center;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 90px;
-  line-height: 124px;
-  color: $white;
-}
 
 .header-home-filter{
   background: rgba(172, 12, 12, 0.10);
@@ -41,8 +47,10 @@
 }
 
 #geocoder {
-  text-align: left;
-  margin-top: 14%;
+  text-align: center;
+  margin-top: 64%;
+  margin-right: 30%;
+  margin-left:15%;
   z-index: 2;
 }
 
@@ -60,10 +68,11 @@
     background-color: $white;
     box-shadow: 0 1rem 2rem rgba(black, .1);
     padding: 1rem;
-  // position: relative;
+    //position: absolute;
     transition: all .2s;
     transition-delay: .1s;
     border-radius: 8px;
+
   }
 
   .mapboxgl-ctrl-geocoder{
@@ -78,3 +87,11 @@
   opacity: .5;
   }
 }
+
+.home-logo{
+  margin-bottom: -65%;
+  margin-top:-47%;
+  size:80%;
+}
+
+

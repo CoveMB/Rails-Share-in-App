@@ -27,13 +27,18 @@ footer {
 
 .footer-bottom {
   text-align: center;
-  color: white;
+  color: $white;
   width: 100%;
   align-items: center;
   justify-content: space-around;
   position: relative;
   margin-top: 10px;
   margin-bottom: 0;
+}
+
+#footer-words {
+  font-size:24px;
+  color: $white;
 }
 a {
   text-decoration: none;

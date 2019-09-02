@@ -14,15 +14,13 @@
         <div id="notification-area">
           <% if current_user.avatar.attached? %>
             <%= image_tag url_for(current_user.avatar), class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-            <div id="notification-area"></div>
           <% else %>
             <%= image_tag image_path('default_avatar.jpg'), class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-            <div id="notification-area"></div>
           <% end %>
           <% if current_user.new_message %>
             <span id="notification" class="badge badge-light" style="display: block;">New</span>
           <% else %>
-            <span class="badge badge-light" style="display: none;">New</span>
+            <span id="notification" class="badge badge-light" style="display: none;">New</span>
           <% end %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
             <%= link_to "Profile", user_path(current_user), class: "dropdown-item"%>

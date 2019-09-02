@@ -3,7 +3,7 @@ class MessagesController < ApplicationController
     message = Message.new(message_params)
     authorize message
     message.user = current_user
-    send_notification(message)
+    # send_notification(message)
     if message.save!
       ActionCable.server.broadcast(
         "messages_#{message.chat.id}",

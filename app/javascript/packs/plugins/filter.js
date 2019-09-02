@@ -29,6 +29,9 @@ const initFilter = () => {
             optionHtml.addEventListener("click", (event) => {
               document.querySelector(".filter-arrow").style.display = "block";
               document.getElementById("interest-dropdown").style.display = "block";
+              document.querySelectorAll(".select-wrapper").forEach((interestDropdown) => {
+                interestDropdown.style.width = "100%";
+              });
               // Check if category is check or unchecked if
               if (event.target.parentElement.parentNode.parentNode.className === "selected" || event.target.parentElement.className === "selected") {
                 document.querySelectorAll("#interest-dropdown > .select-wrapper > ul > li").forEach(function (interest) {

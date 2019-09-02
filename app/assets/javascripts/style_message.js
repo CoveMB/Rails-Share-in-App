@@ -1,26 +1,8 @@
-// function scroll () {
-//   var formElements = Array.from(document.querySelectorAll(".messages")).map((formElement) => {
-//     if (window.location.href.match(/chats/)){
-//       return formElement.parentElement;
-//     } else {
-//       if (formElement.parentElement.nextElementSibling){
-//         console.log(formElement.parentElement.nextElementSibling);
-//         return formElement.parentElement.nextElementSibling;
-//       } else {
-//         console.log(formElement.parentElement);
-//         return formElement.parentElement;
-//       }
-//     }
-//   });
-//   formElements.forEach((form) => {
-//     form.scrollTop = form.scrollHeight;
-//   });
-// };
-
 function scroll () {
-  // if 
   document.querySelectorAll(".scrollbar-custom").forEach( function (scrollBox) {
-    scrollBox.scrollTop = scrollBox.scrollHeight;
+    if (Array.from(scrollBox.classList).includes("chat-container") || Array.from(scrollBox.classList).includes("message-little-box")){
+      scrollBox.scrollTop = scrollBox.scrollHeight;
+    }
   });
 };
 

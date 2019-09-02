@@ -1,7 +1,13 @@
 <p class="event-title"><%= event.name %></p>
+<p class="event-interest">
+  <% event.interests.each do |interest| %>
+    <span><%= interest.name %></span> -
+  <% end %>
+</p>
 <p class="event-date">From : <%= (event.start_date).strftime("%B %e, %Y") %></p>
 <p class="event-date">To : <%= (event.end_date).strftime("%B %e, %Y") %></p>
 <p class="event-type"><%= event.event_type.name %></p>
 <p class="event-description"><%= event.description %></p>
 <p class="event-adress"><%= event.address %></p>
 <%= link_to "Visit event's website", event.event_website, class: "event-btn ired", target: "_blank" %>
+

@@ -17,6 +17,10 @@
   width: 400px;
 }
 
+.select-wrapper > input {
+  color: $darkgray;
+}
+
 #geocoder .mapboxgl-ctrl-geocoder--input{
   background-color: #faf7f7;
 }
@@ -76,28 +80,77 @@ body > div.container-custom > div.filter-banner > div.interests-selection > div:
   margin: auto;
   height: 70px;
   border: none;
-  font-family: Alegreya;
-  font-size: 20px;
+  font-family: $alegreyabody;
+  font-size: 25px;
 }
 
 body > div.container-custom > div.filter-banner > div.interests-selection > div:nth-child(3) > div > input {
   margin: auto;
   height: 70px;
   border: none;
-  font-family: Alegreya;
-  font-size: 20px;
+  font-family: $alegreyabody;
+  font-size: 25px;
 }
 
 body > div.container-custom > div.filter-banner > div.date-selection > input{
   height: 70px;
   border: none;
-  font-family: Alegreya;
-  font-size: 20px;
+  font-family: $alegreyabody;
+  font-size: 25px;
 }
 
 .datepicker{
   height: 70px;
   border: none;
-  font-family: Alegreya;
-  font-size: 20px;
+  font-family: $alegreyabody;
+  font-size: 25px;
+}
+
+#datepicker-title-zf > div > div.select-wrapper.select-month > input{
+  width: 100%
+}
+
+body > div.container-custom > div.filter-banner > div.interests-selection > div:nth-child(1) > div{
+  font-family: $alegreyabody;
+  color: $darkgray;
+}
+
+body > div.container-custom > div.filter-banner > div.interests-selection > div:nth-child(2) > div{
+  font-family: $alegreyabody;
+  color: $darkgray;
+}
+
+body > div.container-custom > div.filter-banner > div.interests-selection > div:nth-child(3) > div{
+  font-family: $alegreyabody;
+  color: $darkgray;
+}
+
+.select-wrapper > ul > li > span > label > span {
+  color: $darkgray;
+  font-size: 25px;
+}
+
+[type="checkbox"]+span:not(.lever){
+  font-size: 25px;
+}
+
+#datepicker-title-zf > div > div.select-wrapper.select-month > input{
+  width: 120px;
+}
+
+.datepicker-controls .select-month input{
+  width: 120px;
+}
+
+.datepicker-day-button{
+  font-size: 18px;
+}
+
+.date-selection{
+  padding: 27px;
+}
+
+.datepicker{
+  font-family: $alegreyabody;
+  color: $darkgray;
 }

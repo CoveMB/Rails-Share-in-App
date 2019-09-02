@@ -1,0 +1,111 @@
+.message-little-bar{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.message-little-box{
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  margin-right: 10px;
+  width: 300px;
+  height: 340px;
+  border-radius: 4px 4px 0 0;
+  background: #fffafa;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.25);
+  z-index: 90;
+}
+
+#message-preview-notification{
+  margin-top: 3px;
+  background-color: #fffafa;
+  border: 1px solid $classicred;
+}
+
+.message-little-preview {
+  padding-top: 2px;
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  margin-right: 10px;
+  width: 300px;
+  height: 35px;
+  border-radius: 4px 4px 0 0;
+  background: #fffafa;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.25);
+  z-index: 90;
+}
+
+.closing-message{
+  font-weight: bold;
+  position: fixed;
+  margin-top: 10px;
+  padding: 5px;
+  cursor: pointer;
+  text-align: right;
+  color: $classicred;
+  z-index: 95;
+}
+
+.reduce-message{
+  font-weight: bold;
+  position: fixed;
+  margin-top: 10px;
+  margin-left: 30px;
+  padding: 5px;
+  cursor: pointer;
+  text-align: right;
+  color: $classicred;
+  z-index: 95;
+}
+
+
+.current-user-custom-row-little{
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.current-user-message-little{
+  font-family: Alegreya;
+  font-style: normal;
+  font-size: 12px;
+  line-height: 10px;
+  color: $white;
+  margin-top: 10px;
+  width: 42%;
+  border-radius: 12px 12px 0 12px;
+  background: rgba(172, 12, 12, 0.85);
+  padding: 5px;
+  word-wrap: break-word;
+  margin-bottom: 2px;
+}
+
+.other-user-custom-row-little{
+  width: 100%;
+  margin-top: 20px;
+}
+
+.other-user-message-little{
+  font-family: Alegreya;
+  font-style: normal;
+  font-size: 22px;
+  line-height: 20px;
+  color: $classicred;
+  margin: 10px 0 0 0;
+  width: 42%;
+  border-radius: 4px;
+  background: rgba(172, 12, 12, 0.1);
+  padding: 15px;
+  word-wrap: break-word;
+  border-radius: 12px 12px 12px 0;
+  margin-bottom: 5px;
+}

@@ -2,6 +2,7 @@ import MapboxGeocoder from '@mapbox/mapbox-gl-geocoder';
 import mapboxgl from 'mapbox-gl';
 
 const mapElement = document.getElementById('map');
+const allMarkers = [];
 
 const buildMap = () => {
   mapboxgl.accessToken = mapElement.dataset.mapboxApiKey;
@@ -18,7 +19,7 @@ const addEventListener = () => {
   document.querySelector(".mapboxgl-ctrl-geocoder--input").addEventListener("keydown", (event) => {
     if (event.keyCode == 13) {
       window.scrollTo({
-        top: 1000,
+        top: 900,
         left: 0,
         behavior: 'smooth'
       });
@@ -29,10 +30,19 @@ const addEventListener = () => {
 const addMarkersToMap = (map, markers) => {
   markers.forEach((marker) => {
     const popup = new mapboxgl.Popup().setHTML(marker.infoWindow);
-    new mapboxgl.Marker()
+
+    const element = document.createElement('div');
+    element.className = 'marker';
+    element.style.backgroundImage = `url('${marker.image_url}')`;
+    element.style.backgroundSize = 'contain';
+    element.style.width = '20px';
+    element.style.height = '20px';
+
+    const newMarker = new mapboxgl.Marker(element)
       .setLngLat([ marker.lng, marker.lat ])
       .setPopup(popup)
       .addTo(map);
+      allMarkers.push(newMarker);
   });
 };
 
@@ -61,16 +71,24 @@ const addGeoCoder = (map) => {
   document.getElementById('geocoder').appendChild(geocoder.onAdd(map));
 };
 
-const initMapbox = () => {
+const initMapbox = (markersForMap = 0) => {
   if (mapElement) {
-    const map = buildMap();
-    const markers = JSON.parse(mapElement.dataset.markers);
+    var map = buildMap();
+    if (markersForMap == 0){
+      var markers = JSON.parse(mapElement.dataset.markers);
+    } else {
+      var markers = markersForMap;
+    }
     addMarkersToMap(map, markers);
     fitMapToMarkers(map, markers);
     addGeolocationControl(map);
     addGeoCoder(map);
     addEventListener();
   }
+  return {
+    map: map,
+    markers: allMarkers,
+  };
 };
 
-export { initMapbox };
+export { initMapbox, addMarkersToMap };

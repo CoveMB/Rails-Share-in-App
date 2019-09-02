@@ -3,17 +3,18 @@ class MessagesController < ApplicationController
     message = Message.new(message_params)
     authorize message
     message.user = current_user
-    send_notification(message)
+    # send_notification(message)
     if message.save!
       ActionCable.server.broadcast(
-        "messages_#{message_params[:chat_id]}",
+        "messages_#{message.chat.id}",
         message: message.content,
+        chat_id: message.chat.id,
         user_id: message.user.id,
         user_name: message.user.name,
         user_avatar: url_for(message.user.avatar)
       )
     else
-      flash[:alert] = "Sorry but we couldn' t do this"
+      flash[:alert] = "Sorry but we couldn't do this"
       redirect_to user_path(current_user)
     end
   end

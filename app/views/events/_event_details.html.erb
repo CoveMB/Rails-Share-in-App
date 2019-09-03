@@ -1,5 +1,5 @@
 <p class="event-title"><%= event.name %></p>
-<p class="event-interest-box">
+<p class="event-interest-box"> <span class="event-type">More events related to:</span>
   <% event.interests.each do |interest| %>
     <span class="event-interest" data-interest="<%= interest.id %>"><%=  interest.name %></span>
   <% end %>

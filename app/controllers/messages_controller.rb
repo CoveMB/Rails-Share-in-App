@@ -5,14 +5,16 @@ class MessagesController < ApplicationController
     message.user = current_user
     # send_notification(message)
     if message.save!
-      ActionCable.server.broadcast(
-        "messages_#{message.chat.id}",
-        message: message.content,
-        chat_id: message.chat.id,
-        user_id: message.user.id,
-        user_name: message.user.name,
-        user_avatar: url_for(message.user.avatar)
-      )
+      message.chat.users.pluck(:id).each do |chat_users_id|
+        ActionCable.server.broadcast(
+          "messages_#{chat_users_id}",
+          message: message.content,
+          chat_id: message.chat.id,
+          user_id: message.user.id,
+          user_name: message.user.name,
+          user_avatar: url_for(message.user.avatar)
+        )
+      end
     else
       flash[:alert] = "Sorry but we couldn't do this"
       redirect_to user_path(current_user)

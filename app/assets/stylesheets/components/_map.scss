@@ -24,14 +24,8 @@
 
 #geocoder {
   width: 80%;
-  margin: auto;
+  margin: 26px auto;
   text-align: center;
-  // margin-top: 65%;
-  // display: flex;
-  // flex-wrap: wrap;
-  // justify-content: center;
-  // text-align: center;
-  // align-content: center;
   z-index: 2;
 }
 
@@ -43,7 +37,8 @@
     margin-top: 20px;
     // width: 480px !important;
     font-size: 1.5rem;
-    width: 30rem;
+    width: 100%;
+    box-sizing: border-box;
     height: 4rem;
     border: none;
     outline: none;
@@ -81,16 +76,21 @@
 }
 
 .mapboxgl-ctrl-geocoder{
-  width: 80% !important;
+  // width: 80% !important;
+  width: 100% !important;
+  max-width: 100% !important;
 }
 
+.suggestions-wrapper{
+  width: 100%;
+}
 
 .mapboxgl-ctrl-geocoder mapboxgl-ctrl{
   width: 100%;
 }
 
 #geocoder > div > div.suggestions-wrapper > ul{
-  width: 133%;
+  width: 100%;
 }
 
 #button-map {

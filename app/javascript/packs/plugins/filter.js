@@ -9,7 +9,6 @@ const initFilter = () => {
       var mapAndMarkers = initMapbox();
       var map = mapAndMarkers["map"];
       var markersOnMap = mapAndMarkers["markers"];
-      console.log(markersOnMap);
       // Build date picker
       var date = document.querySelectorAll('.datepicker');
       var dateinstance = M.Datepicker.init(date);
@@ -69,7 +68,6 @@ const initFilter = () => {
 };
 
 const updateMarkers = (mapElement, map, markersOnMap, interests) => {
-  console.log(markersOnMap);
   markersOnMap.forEach((marker) => {
     marker.remove();
   });

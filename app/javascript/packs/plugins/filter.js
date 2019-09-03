@@ -89,6 +89,15 @@ const updateMarkers = (mapElement, map, markersOnMap, interests) => {
       .setLngLat([ marker.lng, marker.lat ])
       .setPopup(popup)
       .addTo(map);
+      newMarker.getElement().addEventListener("mouseenter", (event) => {
+        newMarker.togglePopup();
+      });
+      newMarker.getElement().addEventListener("click", (event) => {
+        window.location.href = marker.event_path;
+      });
+      newMarker.getElement().addEventListener("mouseleave", (event) => {
+        newMarker.togglePopup();
+      });
       return newMarker;
   });
 };

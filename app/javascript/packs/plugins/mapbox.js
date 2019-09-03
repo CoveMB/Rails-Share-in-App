@@ -45,6 +45,9 @@ const addMarkersToMap = (map, markers) => {
       newMarker.getElement().addEventListener("mouseenter", (event) => {
         newMarker.togglePopup();
       });
+      newMarker.getElement().addEventListener("click", (event) => {
+        window.location.href = marker.event_path;
+      });
       newMarker.getElement().addEventListener("mouseleave", (event) => {
         newMarker.togglePopup();
       });

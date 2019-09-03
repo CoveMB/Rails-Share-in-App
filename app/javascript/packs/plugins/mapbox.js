@@ -35,13 +35,19 @@ const addMarkersToMap = (map, markers) => {
     element.className = 'marker';
     element.style.backgroundImage = `url('${marker.image_url}')`;
     element.style.backgroundSize = 'contain';
-    element.style.width = '26px';
-    element.style.height = '26px';
+    element.style.width = '30px';
+    element.style.height = '30px';
 
     const newMarker = new mapboxgl.Marker(element)
       .setLngLat([ marker.lng, marker.lat ])
       .setPopup(popup)
       .addTo(map);
+      newMarker.getElement().addEventListener("mouseenter", (event) => {
+        newMarker.togglePopup();
+      });
+      newMarker.getElement().addEventListener("mouseleave", (event) => {
+        newMarker.togglePopup();
+      });
       allMarkers.push(newMarker);
   });
 };

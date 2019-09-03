@@ -1,4 +1,4 @@
-<div class="user-row animated slideInLeft" id="user-<%= user.id %>">
+<div class="user-row <%= extra_class %>" id="user-<%= user.id %>">
   <a rel="nofollow" href="/users/<%= user.id %>"><%= image_tag url_for(user.avatar), class: "avatar" %>
     <p class="user-row-text"><%= user.name %></p>
   </a>

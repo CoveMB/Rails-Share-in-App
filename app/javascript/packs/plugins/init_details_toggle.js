@@ -7,6 +7,7 @@ const initDetailsToggle = () => {
     const interests = document.querySelectorAll(".event-interest");
     const userList = document.getElementById("attendee-list-event");
     const interestsLists = document.querySelectorAll(".interest-event-list");
+    const attendeeBtn = document.getElementById("event-attendee-btn");
 
     interests.forEach((interest) => {
       interest.addEventListener("click", (event) => {
@@ -14,6 +15,7 @@ const initDetailsToggle = () => {
           interestList.style.display = "none";
         });
         document.getElementById(event.target.dataset.interest).style.display = "block";
+        attendeeBtn.style.display = "none";
         userList.style.display = "none";
       });
     });
@@ -25,6 +27,7 @@ const initDetailsToggle = () => {
       });
       eventCard.style.display = "block";
       organiserCard.style.display = "none";
+      attendeeBtn.style.display = "block";
     });
 
     organiserDetailsBtn.addEventListener("click", (event) => {

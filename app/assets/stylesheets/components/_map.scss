@@ -7,9 +7,13 @@
   max-width: 200px;
 }
 
+.card-img-top {
+  border:none;
+}
+
 .mapboxgl-popup-content {
   text-align: center;
-  font-family: 'Open Sans', sans-serif;
+  font-family: $alegreyabody;
 }
 
 #map{
@@ -87,4 +91,22 @@
 
 #geocoder > div > div.suggestions-wrapper > ul{
   width: 133%;
+}
+
+#button-map {
+  color: $redsix;
+}
+
+a{
+  color:$classicred;
+}
+
+.mapboxgl-popup-content {
+  padding: 6px 6px 10px !important;
+}
+
+.title-mapcard {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family:$alegreyabody;
 }

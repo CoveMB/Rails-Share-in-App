@@ -1,9 +1,9 @@
-<div data-category="<%= event.interests.pluck(:name) %>">
+<div id= "mapcard" data-category="<%= event.interests.pluck(:name) %>">
   <% if event.image.attached? %>
     <%= image_tag url_for(event.image), class:"card-img-top" %>
   <% end %>
-  <h4><%= event.name %></h4>
-  <button>
+  <h4 class="title-mapcard"><%= event.name %></h4>
+  <button class="event-btn ired" id="button-map">
     <%= link_to "Learn More", organiser_event_path(event.organiser, event) %>
   </button>
 

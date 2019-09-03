@@ -1,7 +1,7 @@
 <p class="event-title"><%= event.name %></p>
 <p class="event-interest-box">
   <% event.interests.each do |interest| %>
-    <%= link_to interest.name, interest_path(interest), class: "event-interest"%>
+    <span class="event-interest" data-interest="<%= interest.id %>"><%=  interest.name %></span>
   <% end %>
 </p>
 <p class="event-date">From : <%= (event.start_date).strftime("%B %e, %Y") %></p>

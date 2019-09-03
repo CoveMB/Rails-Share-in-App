@@ -10,6 +10,9 @@ function createMessageChannel() {
             // document.getElementById("user-" + data.user_id).style.fontWeight = "bold";
             this.renderMessageOnChat(data);
           } else {
+            if (document.getElementById("messages-preview-" + data.chat_id === nul)){
+              // create a message box if it does not exist
+            }
             if (document.getElementById("messages-preview-" + data.chat_id).style.display === "none" && document.getElementById("message-box-" + data.chat_id).style.display === "none"){
               document.getElementById("messages-preview-" + data.chat_id).style.display = "block";
             }

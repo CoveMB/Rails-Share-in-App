@@ -12,6 +12,9 @@
     </div>
     <div class="col-md-6 col-sm-12 card-column">
       <%= render "attendee_list"%>
+      <% event.interests.each do |interest| %>
+        <%= render "interests/event_list", interest: interest, id: interest.id %>
+      <% end %>
       <% unless current_user.events.include? event %>
         <%= link_to "Register to the event", organiser_event_user_event_path(event.organiser, event, current_user), remote: true, method: :patch, class: "event-btn redi", id:"event-attendee-btn" %>
       <% else %>

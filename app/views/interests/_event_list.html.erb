@@ -1,6 +1,6 @@
-<div class="user-list-container scrollbar-custom">
-    <h2 class="user-list-title">Other events related to this interest</h2>
-  <ul id="attendee-list">
+<div class="user-list-container scrollbar-custom interest-event-list" id="<%= id %>">
+    <h2 class="user-list-title">Other events related to <%= interest.name %></h2>
+  <ul>
 
     <% interest.events.each do |event| %>
 

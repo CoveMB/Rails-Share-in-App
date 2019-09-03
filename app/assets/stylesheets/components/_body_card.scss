@@ -2,6 +2,14 @@
   display: none;
 }
 
+.interest-event-list{
+  display: none;
+}
+
+#interest-interest{
+  display: block;
+}
+
 #event-details-btn{
   position: absolute;
   left: 18%;
@@ -128,8 +136,9 @@
 }
 
 .event-interest {
-  font-size:23px;
-  color:$dimgray;
-  font-family:$alegreyabody;
-  padding: 0px 0px 16px 0px;
+  font-size: 23px;
+  color: $dimgray;
+  font-family: $alegreyabody;
+  padding: 0px 18px 16px 0px;
+  cursor: pointer;
 }

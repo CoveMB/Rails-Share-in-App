@@ -42,6 +42,9 @@
 }
 
 .messages-actions{
+  text-align:right;
+  width: 190px;
+  position: fixed;
   margin-top: -25px;
   background-color: rgba(172, 12, 12, 0.2);
 }
@@ -50,6 +53,7 @@
   font-weight: bold;
   position: fixed;
   font-size: 15px;
+  margin-left: 30px;
   padding: 2px 0 2px 0;
   cursor: pointer;
   text-align: right;
@@ -60,7 +64,7 @@
 .reduce-message{
   font-weight: bold;
   position: fixed;
-  margin-left: 30px;
+  margin-top: -15px;
   // margin-bottom: 40px;
   padding: 2px 0 2px 0;
   font-size: 30px;

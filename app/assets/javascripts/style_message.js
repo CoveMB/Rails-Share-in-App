@@ -39,7 +39,7 @@ function closeMessageBox (){
 function reduceMessageBox (){
   document.querySelectorAll(".reduce-message").forEach(function (reduceSign)  {
     reduceSign.addEventListener("click", function (event)  {
-      console.log();
+      event.target.parentElement.parentElement.previousElementSibling.firstElementChild.firstElementChild.style.display = "none";
       event.target.parentElement.parentElement.style.display = "none";
       event.target.parentElement.parentElement.previousElementSibling.style.display = "block";
     });

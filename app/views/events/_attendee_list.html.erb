@@ -1,11 +1,11 @@
-<div class="user-list-container scrollbar-custom" id="attendee-list-event">
+<div class="user-list-container scrollbar-custom animated fadeIn" id="attendee-list-event">
   <h2 class="user-list-title">Attendee list</h2>
   <ul id="attendee-list">
 
     <% @event.users.each do |attendee| %>
 
       <li>
-        <%= render "attendee_row", user: attendee %>
+        <%= render "attendee_row", user: attendee, extra_class:"" %>
       </li>
 
     <% end %>

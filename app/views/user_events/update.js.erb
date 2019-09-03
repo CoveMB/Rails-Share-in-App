@@ -13,6 +13,6 @@ function flash(flashHTML){
 <% if @user.errors.any? %>
 <% else %>
   changeBtn();
-  addUserList('<%= j render "events/attendee_row", user: @user %>');
+  addUserList('<%= j render "events/attendee_row", user: @user, extra_class: "animated slideInLeft" %>');
   flash('<div class="alert alert-info alert-dismissible fade show m-1" role="alert">You are now register to <%= @event.name %><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
 <% end %>

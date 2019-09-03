@@ -13,9 +13,4 @@ node_modules
 yarn-error.log
 .byebug_history
 .env*
-.dockerignore
-docker-compose.yml
-Dockerfile
-config/database.yml
-config/environments/development.rb
-entrypoint.sh
+/config/secrets/*

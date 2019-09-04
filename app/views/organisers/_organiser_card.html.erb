@@ -7,6 +7,7 @@
   <div class="row">
     <div class="info-event col-md-6 col-sm-12 card-column" id="left-part">
       <%= render "organisers/organiser_details", organiser: organiser %>
+      <%= link_to "Visit organiser's website", organiser.website, class: "event-btn ired", target: "_blank" %>
 
     </div>
     <div class="col-md-6 col-sm-12 card-column">

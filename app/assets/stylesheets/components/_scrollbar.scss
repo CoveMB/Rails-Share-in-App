@@ -1,6 +1,7 @@
 .scrollbar-custom{
   overflow-y: auto;
-  height: 600px;
+  max-height: 740px;
+  // overflow-y: hidden;
 }
 
 .scrollbar-custom::-webkit-scrollbar-track

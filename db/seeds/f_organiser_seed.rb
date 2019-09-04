@@ -126,4 +126,46 @@ Organiser.create!(
   website: "https://spadeandpalacio.com"
 ).avatar.attach(io: File.open('./app/assets/images/storage/spade.png'), filename: 'spade.png')
 
+# Organiser.create!(
+#   name: "Montreal Events",
+#   organiser_type: OrganiserType.find_by_name("City Organiser"),
+#   address: "Montreal Canada",
+#   description: "Montréal is a big, busy, exhilarating city, with so much to see and do. To give you some ideas and inspiration for your next trip to Montréal, explore the many “moments” you can live in the city. Think of them as bite-sized snacks of information to whet your appetite for the big buffet of choices you have when you get here. The more you like and interact with moments, the more you will receive personalized recommendations along similar themes. And, of course, it’s Montréal, so prepare for a few surprises along the way!",
+#   website: "https://www.mtl.org/en"
+# ).avatar.attach(io: File.open('./app/assets/images/storage/montreal.jpg'), filename: 'montreal.jpg')
+#
+# Organiser.create!(
+#   name: "Montreal Events",
+#   organiser_type: OrganiserType.find_by_name("City Organiser"),
+#   address: "Montreal Canada",
+#   description: "Montréal is a big, busy, exhilarating city, with so much to see and do. To give you some ideas and inspiration for your next trip to Montréal, explore the many “moments” you can live in the city. Think of them as bite-sized snacks of information to whet your appetite for the big buffet of choices you have when you get here. The more you like and interact with moments, the more you will receive personalized recommendations along similar themes. And, of course, it’s Montréal, so prepare for a few surprises along the way!",
+#   website: "https://www.mtl.org/en"
+# ).avatar.attach(io: File.open('./app/assets/images/storage/montreal.jpg'), filename: 'montreal.jpg')
+
+# Organiser.create!(
+#   name: "Montreal Events",
+#   organiser_type: OrganiserType.find_by_name("City Organiser"),
+#   address: "Montreal Canada",
+#   description: "Montréal is a big, busy, exhilarating city, with so much to see and do. To give you some ideas and inspiration for your next trip to Montréal, explore the many “moments” you can live in the city. Think of them as bite-sized snacks of information to whet your appetite for the big buffet of choices you have when you get here. The more you like and interact with moments, the more you will receive personalized recommendations along similar themes. And, of course, it’s Montréal, so prepare for a few surprises along the way!",
+#   website: "https://www.mtl.org/en"
+# ).avatar.attach(io: File.open('./app/assets/images/storage/montreal.jpg'), filename: 'montreal.jpg')
+
+Organiser.create!(
+  name: "Laval Events",
+  organiser_type: OrganiserType.find_by_name("City Organiser"),
+  address: "Laval City Hall, 1 Place du Souvenir, Laval",
+  description: "« Je veux vous présenter Laval aujourd'hui, une ville transformée qui s'affirme comme la 3e grande ville du Québec, avec une économie solide, dynamique et diversifiée, une ville qui vous offre un grand potentiel de développement. Marc Demers​
+  C’est ainsi que le maire de Laval, Marc Demers, s’est adressé à plus de 250 membres et invités de la Chambre de commerce du Montréal métropolitain (CCMM). Après avoir remercié le président de la Chambre, Michel Leblanc, pour cette occasion exceptionnelle qu’on lui offrait de parler de l’étonnante diversification de l’économie lavalloise, le maire Demers a exposé en 3 volets toute la métamorphose municipale, toujours en progression rapide.",
+  website: "https://www.laval.ca/Pages/Fr/accueil.aspx"
+).avatar.attach(io: File.open('./app/assets/images/storage/logo-laval.svg'), filename: 'logo-laval.svg')
+
+Organiser.create!(
+  name: "Longueuil Events",
+  organiser_type: OrganiserType.find_by_name("City Organiser"),
+  address: "4250 Ch de la Savane, Saint-Hubert",
+  description: "Longueuil compte une foule d'événements, de fêtes et de festivals qui font d'elle une ville vivante et accueillante. Temps et passion sont investis pour vous divertir et vous offrir une vie municipale des plus enrichissantes.
+  Voici un aperçu des grands événements annuels à surveiller et à inscrire à votre agenda.",
+  website: "https://www.longueuil.quebec/en/events"
+).avatar.attach(io: File.open('./app/assets/images/storage/long.gif'), filename: 'long.gif')
+
 p "Organisers created!"

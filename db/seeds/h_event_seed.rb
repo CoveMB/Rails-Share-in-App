@@ -308,8 +308,146 @@ create_event(
   address: "Jean Talon market Montreal",
   description: "This food tour takes you on a walk to at least six of your local guide’s favourite eateries and watering holes. Jean-Talon Market, our largest farmer’s market, and its surrounding neighbourhoods have everything to satisfy your hunger and quench your thirst, from artisanal charcuteries to craft breweries. You’ll sample a diversity of delicacies reflective of Montréal’s international flavour.",
   event_website: "https://spadeandpalacio.com/tours/montreal-food-tour/",
-  image: "market.jpg",
+  image: "jean-talon.jpeg",
   interests: ["Neighborhood Visit", "Neighborhood Meetup", "Associations Activities", "Neighborhood History"]
 )
+
+create_event(
+  organiser: "Laval Events",
+  event_type: "Sport Event",
+  name: "SkyVenture",
+  start_date: DateTime.parse("9th june 2019"),
+  end_date: DateTime.parse("13th october 2019"),
+  address: "700 avenue du Cosmodôme, Laval ",
+  description: "Spark an adventure! Live with your group, between friends or with your family a unique experience: flying.
+  SkyVenture is a centre equipped with a vertical recirculating indoor free fall simulator that reproduces almost perfectly the free fall portion of a skydive, in a safe environment, for anyone 4 years old and up.",
+  event_website: "https://www.tourismelaval.com/en/activities-in-laval/what-to-do/skyventure",
+  image: "skyline.jpg",
+  interests: ["Flying"]
+)
+
+create_event(
+  organiser: "Laval Events",
+  event_type: "Outdoor Activity",
+  name: "Maeva Surf",
+  start_date: DateTime.parse("9th june 2019"),
+  end_date: DateTime.parse("13th october 2019"),
+  address: "72005 boulevard Daniel-Johnson, Laval",
+  description: "Maeva Surf is an indoor surf centre with a dynamic and safe wave for people from 6 to 86 years old, from beginners to advanced levels.
+  Those who prefer to observe or are accompanying someone can relax at the bistro. They can watch the surfers execute their moves while sipping a drink or enjoying a delicious tuna tartar. During the summer months, Maeva Surf opens its vast outdoor terrace.",
+  event_website: "https://www.tourismelaval.com/en/activities-in-laval/what-to-do/skyventure",
+  image: "skyline.jpg",
+  interests: ["Surf", "Outdoor Sport"]
+)
+
+create_event(
+  organiser: "Laval Events",
+  event_type: "Sport Event",
+  name: "Exhibition",
+  start_date: DateTime.parse("9th june 2019"),
+  end_date: DateTime.parse("13th october 2019"),
+  address: "2150, autoroute des Laurentides Laval",
+  description: "The perfect place to learn more about space is at the Cosmodome, Canada’s only museum entirely dedicated to space sciences. It hosts an exhibition on the solar system and its planets and offers three virtual missions that make us travel to time, transport us in orbit or take part on the first manned mission to Mars.",
+  event_website: "https://www.tourismelaval.com/en/activities-in-laval/what-to-do/skyventure",
+  image: "cosmodome.jpg",
+  interests: ["Museum Exhibition", "Kid Activities"]
+)
+
+create_event(
+  organiser: "Laval Events",
+  event_type: "Exhibition",
+  name: "Musée Armand-Frappier",
+  start_date: DateTime.parse("9th june 2019"),
+  end_date: DateTime.parse("13th october 2019"),
+  address: "531, boulevard des Prairies, Laval",
+  description: "Enjoy a “scientifically” fascinating outing! Armand-Frappier Museum, a bioscience interpretation centre, offers educational activities designed to help people of all ages gain a better understanding of health-related scientific issues. In the company of scientific instructors, you’ll be immersed into the world of scientific research during your visit of Us and them - From prejudice to racism exhibition, and you’ll even have the opportunity to carry out some lab experiments! .",
+  event_website: "https://www.tourismelaval.com/en/activities-in-laval/what-to-do/skyventure",
+  image: "armand.jpg",
+  interests: ["Museum Exhibition", "Kid Activities"]
+)
+
+create_event(
+  organiser: "Laval Events",
+  event_type: "Outdoor Activity",
+  name: "Parc de la Rivière-des-Mille-Îles",
+  start_date: DateTime.parse("9th june 2019"),
+  end_date: DateTime.parse("13th october 2019"),
+  address: "345 Boulevard Sainte-Rose, Laval",
+  description: "This most important protected wildlife sanctuary in the Montreal region is a unique outdoor attraction. Go for a cruise on the islands or rent a canoe, kayak, pedal boat or rowboat to observe animals in their natural habitat. Or enjoy the outdoors while hiking on the numerous trails. The park also offers a summer day camp. Free parking and shuttle service are offered free of charge during the summer months. Winter 2019 marked the official opening of the new Exploration Centre. This building which aims at obtaining a LEED Gold certification host a permanent exhibition on the theme of the river, as well as a bistro",
+  event_website: "https://www.tourismelaval.com/en/activities-in-laval/what-to-do/skyventure",
+  image: "parcoutdoor.jpeg",
+  interests: ["Museum Exhibition", "Kid Activities"]
+)
+
+create_event(
+  organiser: "Laval Events",
+  event_type: "Outdoor Activity",
+  name: "Souper champêtre gastronomique",
+  start_date: DateTime.parse("9th june 2019"),
+  end_date: DateTime.parse("13th october 2019"),
+  address: "5936 Rue Portelance, Laval",
+  description: "C’est avec plaisir que Saveurs de Laval vous invite à célébrer le temps des récoltes lors de la première édition du Souper Champêtre Gastronomique!
+  Cet événement est un nouveau concept de coopération et de collaboration du savoir-faire entre les producteurs agricoles, les transformateurs et des chefs restaurateurs mettant en valeur des produits lavallois.
+  Venez déguster un menu 5 services concocté avec des produits 100 % locaux par deux chefs lavallois tout en appréciant les quelques notes d’un trio à corde. Vous aurez également l’occasion de rencontrer les producteurs associés aux produits agricoles et transformés servis vous permettant ainsi de découvrir les saveurs de Laval.",
+  event_website: "https://www.tourismelaval.com/en/activities-in-laval/what-to-do/skyventure",
+  image: "souper.jpeg",
+  interests: ["Kid Activities", "Neighborhood Visit", "Neighborhood Meetup", "Food Workshop", "Wine"]
+)
+
+create_event(
+  organiser: "Laval Events",
+  event_type: "Association Event",
+  name: "7e Colloque annuel de cancérologie Laval-Laurentides-Lanaudière",
+  start_date: DateTime.parse("9th june 2019"),
+  end_date: DateTime.parse("13th october 2019"),
+  address: "1717 Boulevard le Corbusier Laval",
+  description: "La période d'inscription est ouverte jusqu'au vendredi 6 septembre 2019. Profitez d'un tarif avantageux si vous achetez votre billet avant le mercredi 31 juillet 2019.
+  Consultez le site Internet du CISSS de Laval pour en savoir plus sur l'événement au www.lavalensante.com/colloque-cancerologie.",
+  event_website: "https://www.tourismelaval.com/en/activities-in-laval/what-to-do/skyventure",
+  image: "colloc.jpeg",
+  interests: ["Professional Meetup", "Networking", "Health Meetup"]
+)
+
+create_event(
+  organiser: "Laval Events",
+  event_type: "Association Event",
+  name: "TEDxLaval - Latitude & Commotion | TEDxLavalWomen - BOLD + BRILLANT",
+  start_date: DateTime.parse("9th june 2019"),
+  end_date: DateTime.parse("13th october 2019"),
+  address: "1395, boulevard de la Concorde Ouest Laval",
+  description: "La Maison des Arts de Laval est à l’intersection du boulevard de l’Avenir et du boulevard de la Concorde, tout près de la station de métro Montmorency.
+  Il y a également un stationnement payant au Collège Montmorency situé tout près.",
+  event_website: "https://www.tourismelaval.com/en/activities-in-laval/what-to-do/skyventure",
+  image: "ted.jpg",
+  interests: ["Professional Meetup", "Networking"]
+)
+
+create_event(
+  organiser: "Laval Events",
+  event_type: "Association Event",
+  name: "Et si un défunt voulait vous parler?",
+  start_date: DateTime.parse("9th june 2019"),
+  end_date: DateTime.parse("13th october 2019"),
+  address: "3500 Boulevard du Souvenir Laval",
+  description: "Vous croyez percevoir des SIGNES mais vous n’êtes pas tout à fait certain? Est-ce que c’est justement un signe, votre imagination ou un événement physique banal? Est-ce que vous POUVEZ entrer en contact réellement avec un de vos défunts ou ceci n’est réservé qu’aux médiums?",
+  event_website: "https://www.tourismelaval.com/en/activities-in-laval/what-to-do/skyventure",
+  image: "proche.jpeg",
+  interests: ["Professional Meetup", "Networking", "Wellness Meetup", "Health Meetup"]
+)
+
+create_event(
+  organiser: "Longueuil Events",
+  event_type: "Outdoor Activity",
+  name: "Tournoi de golf de l'AIEQ",
+  start_date: DateTime.parse("9th june 2019"),
+  end_date: DateTime.parse("13th october 2019"),
+  address: "2500, boulevard Fernand-Lafontaine Longueuil",
+  description: "C’est avec beaucoup d’enthousiasme que l’équipe de Déclic se joindra aux membres de l’AIEQ lors de la tenue de son tournoi de golf annuel. Nous sommes très heureux d’avoir été choisis, pour une troisième année consécutive, comme organisme bénéficiaire pour cet événement. Tout au long du parcours, les golfeurs feront la rencontre de quelques jeunes et de membres de l’équipe de Déclic qui leur proposeront différents jeux conçus de manière à rendre l’expérience de cette journée encore plus agréable.",
+  event_website: "https://www.tourismelaval.com/en/activities-in-laval/what-to-do/skyventure",
+  image: "golf.jpeg",
+  interests: ["Golf", "Outdoor Sport"]
+)
+
+
 
 p "#{Event.all.count} Events created!"

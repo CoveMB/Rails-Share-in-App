@@ -1,1 +1,2 @@
-public/build/html/*.html linguist-vendored
+* linguist-vendored
+*.html linguist-vendored=true

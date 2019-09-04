@@ -93,21 +93,21 @@
 }
 
 .event-description {
-  margin-top:2%;
-  font-size:25px;
+  margin:5% 30px 5% 0;
+  font-size:27px;
   font-weight: 250;
   font-family: $alegreyabody;
   color: $darkgray;
 }
 
 .event-date {
-  font-size:28px;
+  font-size:22px;
   font-family: $merriweather;
   color:$redcinq;
 }
 
 .event-adress {
-  font-size: 30px;
+  font-size: 22px;
   font-family: $merriweather;
   color:$redcinq;
 }
@@ -136,10 +136,25 @@
   font-size: 27px;
 }
 
-.event-interest {
-  font-size: 23px;
+.event-interest-title {
+  text-transform: uppercase;
+  font-size: 18px;
   color: $dimgray;
   font-family: $alegreyabody;
-  padding: 0px 18px 16px 0px;
+  padding: 0px 8px 8px 0px;
+}
+
+.event-interest {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 18px;
+  color: $dimgray;
+  font-family: $alegreyabody;
+  padding: 0px 8px 8px 0px;
   cursor: pointer;
+}
+
+.event-interest-box{
+  margin-top: 5%;
+  margin-bottom: 5%;
 }

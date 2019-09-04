@@ -8,7 +8,7 @@ const buildMap = () => {
   mapboxgl.accessToken = mapElement.dataset.mapboxApiKey;
   return new mapboxgl.Map({
     container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v10',
+    style: 'mapbox://styles/jeanblrd/ck0589u8s17bl1cp2hploncu9',
     options: {
       marker: true
     },
@@ -35,13 +35,25 @@ const addMarkersToMap = (map, markers) => {
     element.className = 'marker';
     element.style.backgroundImage = `url('${marker.image_url}')`;
     element.style.backgroundSize = 'contain';
-    element.style.width = '22px';
-    element.style.height = '26px';
+    element.style.width = '27px';
+    element.style.height = '31px';
 
     const newMarker = new mapboxgl.Marker(element)
       .setLngLat([ marker.lng, marker.lat ])
       .setPopup(popup)
       .addTo(map);
+      newMarker.getElement().addEventListener("mouseenter", (event) => {
+        newMarker.togglePopup();
+        newMarker.getElement().classList.toggle("anim-custom-marker");
+      });
+      newMarker.getElement().addEventListener("click", (event) => {
+        window.location.href = marker.event_path;
+      });
+      newMarker.getElement().addEventListener("mouseleave", (event) => {
+        newMarker.togglePopup();
+        newMarker.getElement().classList.toggle("anim-custom-marker");
+        clearInterval();
+      });
       allMarkers.push(newMarker);
   });
 };
@@ -60,7 +72,7 @@ const fitMapToMarkers = (map, markers) => {
 
   const bounds = new mapboxgl.LngLatBounds();
   markers.forEach(marker => bounds.extend([ marker.lng, marker.lat ]));
-  map.fitBounds(bounds, { padding: 70, maxZoom: 14 });
+  map.fitBounds(bounds, { padding: 70, maxZoom: 14, duration: 2000 });
 };
 
 const addGeoCoder = (map) => {

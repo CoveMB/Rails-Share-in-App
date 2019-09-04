@@ -1,0 +1,2 @@
+*.html linguist-vendored
+*.erb linguist-vendored

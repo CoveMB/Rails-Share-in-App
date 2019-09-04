@@ -19,11 +19,16 @@ function cancelNotification () {
 
 function switchPreviewBox() {
   document.querySelectorAll(".message-little-preview").forEach(function (preview)  {
-    // console.log(preview);
     preview.addEventListener("click", function (event)  {
-      event.target.parentElement.style.display = "none";
-      event.target.parentElement.nextElementSibling.style.display = "block";
-      scroll();
+      if (event.target.parentElement.tagName === "H3"){
+        event.target.parentElement.parentElement.style.display = "none";
+        event.target.parentElement.parentElement.nextElementSibling.style.display = "block";
+        scroll();
+      } else {
+        event.target.parentElement.style.display = "none";
+        event.target.parentElement.nextElementSibling.style.display = "block";
+        scroll();
+      }
     });
   });
 }

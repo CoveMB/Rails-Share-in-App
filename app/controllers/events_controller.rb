@@ -12,7 +12,7 @@ class EventsController < ApplicationController
         lng: event.longitude,
         infoWindow: render_to_string(partial: "info_window", locals: { event: event }),
         categories: event.interests.pluck(:name),
-        image_url: helpers.asset_url(event.interest_categories.first.icon + ".png"),
+        image_url: helpers.asset_url(event.interest_categories.first.icon + "fill.png"),
         event_path: organiser_event_path(event.organiser, event)
       }
     end

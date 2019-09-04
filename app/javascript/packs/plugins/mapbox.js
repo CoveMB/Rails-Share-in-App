@@ -44,12 +44,18 @@ const addMarkersToMap = (map, markers) => {
       .addTo(map);
       newMarker.getElement().addEventListener("mouseenter", (event) => {
         newMarker.togglePopup();
+        // newMarker.getElement().classList.toggle("animated");
+        // newMarker.getElement().classList.toggle("infinite");
+        // newMarker.getElement().classList.toggle("pulse");
       });
       newMarker.getElement().addEventListener("click", (event) => {
         window.location.href = marker.event_path;
       });
       newMarker.getElement().addEventListener("mouseleave", (event) => {
         newMarker.togglePopup();
+        // newMarker.getElement().classList.toggle("animated");
+        // newMarker.getElement().classList.toggle("infinite");
+        // newMarker.getElement().classList.toggle("pulse");
       });
       allMarkers.push(newMarker);
   });

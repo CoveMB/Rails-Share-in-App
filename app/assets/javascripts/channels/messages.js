@@ -6,7 +6,7 @@ function createMessageChannel() {
         {
         received: function(data) {
           // console.log(data.message);
-          if (window.location.href.match(/chats/)){
+          if (window.location.href.match(/other_user/)){
             $("#messages-"+ data.chat_id).removeClass('hidden');
             this.renderMessageOnChat(data);
           } else {

@@ -1,3 +1,7 @@
+.test-class {
+  border: 4px solid red;
+}
+
 #organiser-card{
   display: none;
 }
@@ -156,4 +160,14 @@
 .event-interest-box{
   margin-top: 5%;
   margin-bottom: 5%;
+}
+.buttons-container {
+  padding: 0 2%;
+  margin-right: 2%;
+  margin-bottom: 10px;
+}
+
+#event-card {
+  display: flex;
+  flex-direction: column;
 }

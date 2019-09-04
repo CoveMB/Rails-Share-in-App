@@ -11,14 +11,6 @@
   margin-bottom: 0;
 }
 
-#organiser-details-btn{
-  color: $classicred;
-}
-
-#event-details-btn{
-  color: $classicred;
-}
-
 .message-btn{
   display: inline-block;
   text-decoration: none;
@@ -42,7 +34,7 @@
 }
 
 .message-icon{
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   padding-left: 15px;
 }
 
@@ -70,9 +62,6 @@
   color: white;
   font-weight: bold;
   background-color: #AC0C0C;
-  // margin-left: 58%;
-  // margin-bottom: 0;
-  // width: 45%;
 }
 
 .redi:hover{
@@ -112,4 +101,63 @@
 button:focus {
   outline: none;
   background-color: $classicred;
+}
+
+
+#event-details-btn{
+  position: absolute;
+  left: 18%;
+  top: 59vh;
+  font-family: $merriweather;
+  font-size: 25px;
+  color: $classicred;
+  border-bottom: 1px solid $classicred;
+  padding-bottom: 50px;
+}
+
+#organiser-details-btn{
+  position: absolute;
+  right: 18%;
+  top: 59vh;
+  font-size: 25px;
+  font-family: $merriweather;
+  color: $classicred;
+  border-bottom: 1px solid $classicred;
+  padding-bottom: 50px;
+}
+
+#event-details-btn{
+  -webkit-transition-duration: 0.33s;
+       -o-transition-duration: 0.33s;
+          transition-duration: 0.33s;
+}
+
+#event-details-btn:hover{
+  -webkit-transform: scale(1.022);
+      -ms-transform: scale(1.022);
+          transform: scale(1.022);
+}
+
+#event-details-btn:active{
+  -webkit-transition-duration: 0.1s;
+       -o-transition-duration: 0.1s;
+          transition-duration: 0.1s;
+}
+
+#organiser-details-btn{
+  -webkit-transition-duration: 0.33s;
+       -o-transition-duration: 0.33s;
+          transition-duration: 0.33s;
+}
+
+#organiser-details-btn:hover{
+  -webkit-transform: scale(1.022);
+      -ms-transform: scale(1.022);
+          transform: scale(1.022);
+}
+
+#organiser-details-btn:active{
+  -webkit-transition-duration: 0.1s;
+       -o-transition-duration: 0.1s;
+          transition-duration: 0.1s;
 }

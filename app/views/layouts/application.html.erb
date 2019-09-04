@@ -3,13 +3,17 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Share-in</title>
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
-    <meta property="og:title" content="Share{in}">
-    <meta property="og:description" content="Meet people with the same interests you have and discover related events near you">
-    <meta property="og:image" content="http://share-in.world/ogimage.jpg">
-    <meta property="og:url" content="http://share-in.world">
+    <title><%= meta_title %></title>
+    <meta name="description" content="<%= meta_description %>">
+
+    <meta property="og:title" content="<%= meta_title %>" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="<%= request.original_url %>" />
+    <meta property="og:image" content="<%= meta_image %>" />
+    <meta property="og:description" content="<%= meta_description %>" />
+    <meta property="og:site_name" content="<%= meta_title %>" />
 
     <!--Import materialize.css-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
@@ -17,11 +21,9 @@
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.2.1/mapbox-gl.css' rel='stylesheet'/>
     <!--Import animated css-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-    <!-- footer fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Raleway:400,500i,700,800" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,900" rel="stylesheet">
+    <!--Import fontawesome css-->
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <%= favicon_link_tag asset_path('logo1.png'), :rel => 'icon', :type =>  'image/png' %>
+    <%= favicon_link_tag %>
 
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <!--Import Google Icon Font-->

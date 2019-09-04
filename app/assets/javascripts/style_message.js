@@ -26,7 +26,7 @@ function switchPreviewBox() {
         scroll();
       } else {
         event.target.parentElement.style.display = "none";
-        event.target.parentElement.nextElementSibling.style.display = "block";
+        event.target.parentElement.nextElementSibling.style.display = "flex";
         scroll();
       }
     });

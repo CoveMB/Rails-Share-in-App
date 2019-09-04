@@ -9,6 +9,9 @@
 }
 
 .chat-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 60%;
   margin: 0;
   border-left: 1px solid $classicred;

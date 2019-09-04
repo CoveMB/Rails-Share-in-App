@@ -4,64 +4,118 @@
   <title>The page you were looking for doesn't exist (404)</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <style>
-  .rails-default-error-page {
-    background-color: #EFEFEF;
-    color: #2E2F30;
-    text-align: center;
-    font-family: arial, sans-serif;
+  .header-box{
+    width: 100%;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  body{
+    width: 100%;
+    padding: 0;
     margin: 0;
   }
 
-  .rails-default-error-page div.dialog {
-    width: 95%;
-    max-width: 33em;
-    margin: 4em auto 0;
+  .header-image{
+    width: 100%
+    height: 60vh;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
-  .rails-default-error-page div.dialog > div {
-    border: 1px solid #CCC;
-    border-right-color: #999;
-    border-left-color: #999;
-    border-bottom-color: #BBB;
-    border-top: #B00100 solid 4px;
-    border-top-left-radius: 9px;
-    border-top-right-radius: 9px;
-    background-color: white;
-    padding: 7px 12% 0;
-    box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
+  .header-title-line{
+    margin: auto;
+    width: 25%;
+    border: 1px solid $white;
+    box-shadow: 6px 6px 8px rgba(0, 0, 0, 0.25);
   }
 
-  .rails-default-error-page h1 {
-    font-size: 100%;
-    color: #730E15;
-    line-height: 1.5em;
+  .header-title{
+    padding: 30px 150px 0 150px;
+    margin-top: -150px;
+    text-align: center;
+    font-weight: normal;
+    font-size: 90px;
+    line-height: 124px;
+    text-align: center;
+    color: White;
   }
 
-  .rails-default-error-page div.dialog > p {
-    margin: 0 0 1em;
-    padding: 1em;
-    background-color: #F7F7F7;
-    border: 1px solid #CCC;
-    border-right-color: #999;
-    border-left-color: #999;
-    border-bottom-color: #999;
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
-    border-top-color: #DADADA;
-    color: #666;
-    box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
+  .container-custom{
+    margin: -30px auto 30px auto;
+    width: 90%;
+  }
+
+  .header-white-box{
+    /* height:460px; */
+    width: 80%;
+    top:60%;
+    position:absolute;
+    border-radius:5px;
+    @include box-shadow(0 20px 30px rgba(0,0,0,.6));
+    padding:20px;
+    text-align: center;
+    text-shadow:0 1px 1px rgba(0,0,0,.4);
+    // display: flex;
+    transition: box-shadow .3s ease;
+    color: white;
+
+    &:active{
+      cursor:move;
+      @include box-shadow(0 20px 50px rgba(0,0,0,.9));
+    }
+  }
+
+  .header-home-image{
+    background-image: linear-gradient(rgba(40,0,0,0.3),rgba(40,0,0,0.3)), url('https://i.imgur.com/FOeYt4E.png');
+    /* background-size: cover; */
+    height: 100vh;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+  .header-home-filter{
+    background: rgba(172, 12, 12, 0.10);
+    mix-blend-mode: normal;
+    box-shadow: 2px 0px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  .header-home-title-line{
+    text-align: center;
+    width: 80%;
+    margin: auto;
+  }
+
+  .home-logo{
+    // margin-bottom: -65%;
+    margin-top: -45%;
+    size:80%;
+  }
+
+  h1{
+  font-size: 40px;
+  }
+
+  h3{
+  font-size: 30px
   }
   </style>
 </head>
 
-<body class="rails-default-error-page">
-  <!-- This file lives in public/404.html -->
-  <div class="dialog">
-    <div>
-      <h1>The page you were looking for doesn't exist.</h1>
-      <p>You may have mistyped the address or the page may have moved.</p>
-    </div>
-    <p>If you are the application owner check the logs for more information.</p>
-  </div>
+<body>
+  <a href="https://ruby-share-in-app.herokuapp.com/">
+    <div class="header-home-image">
+      <div class="header-white-box">
+          <div class="header-home-title-line">
+            <h1>This Page is Buried in the Sand</h1>
+            <h3>You have never seen an ostrich head. Whenever you’re around it seems ostriches are avoiding your gaze. You came on this trip specifically to see an ostrich head, but here is this ostrich right in front of you, head invisible. You may never see an ostrich head.</h3>
+          </div>
+        </div>
+      </div>
+  </a>
 </body>
 </html>

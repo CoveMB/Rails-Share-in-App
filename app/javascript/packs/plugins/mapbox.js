@@ -44,18 +44,15 @@ const addMarkersToMap = (map, markers) => {
       .addTo(map);
       newMarker.getElement().addEventListener("mouseenter", (event) => {
         newMarker.togglePopup();
-        // newMarker.getElement().classList.toggle("animated");
-        // newMarker.getElement().classList.toggle("infinite");
-        // newMarker.getElement().classList.toggle("pulse");
+        newMarker.getElement().classList.toggle("anim-custom-marker");
       });
       newMarker.getElement().addEventListener("click", (event) => {
         window.location.href = marker.event_path;
       });
       newMarker.getElement().addEventListener("mouseleave", (event) => {
         newMarker.togglePopup();
-        // newMarker.getElement().classList.toggle("animated");
-        // newMarker.getElement().classList.toggle("infinite");
-        // newMarker.getElement().classList.toggle("pulse");
+        newMarker.getElement().classList.toggle("anim-custom-marker");
+        clearInterval();
       });
       allMarkers.push(newMarker);
   });
@@ -75,7 +72,7 @@ const fitMapToMarkers = (map, markers) => {
 
   const bounds = new mapboxgl.LngLatBounds();
   markers.forEach(marker => bounds.extend([ marker.lng, marker.lat ]));
-  map.fitBounds(bounds, { padding: 70, maxZoom: 14 });
+  map.fitBounds(bounds, { padding: 70, maxZoom: 14, duration: 2000 });
 };
 
 const addGeoCoder = (map) => {

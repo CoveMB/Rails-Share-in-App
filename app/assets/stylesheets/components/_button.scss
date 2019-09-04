@@ -11,6 +11,14 @@
   margin-bottom: 0;
 }
 
+#organiser-details-btn{
+  color: $classicred;
+}
+
+#event-details-btn{
+  color: $classicred;
+}
+
 .message-btn{
   display: inline-block;
   text-decoration: none;
@@ -62,9 +70,9 @@
   color: white;
   font-weight: bold;
   background-color: #AC0C0C;
-  margin-left: 58%;
-  margin-bottom: 0;
-  width: 45%;
+  // margin-left: 58%;
+  // margin-bottom: 0;
+  // width: 45%;
 }
 
 .redi:hover{

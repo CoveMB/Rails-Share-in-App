@@ -4,8 +4,8 @@
 }
 
 .header-white-box{
-  height:460px;
-  top:36%;
+  height:482px;
+  top:34%;
   position:absolute;
   border-radius:5px;
   @include box-shadow(0 20px 30px rgba(0,0,0,.6));
@@ -46,6 +46,10 @@
 
 .home-logo{
   // margin-bottom: -65%;
-  margin-top: -45%;
+  margin-top: -51%;
   size:80%;
+}
+
+.header-home-title-line h3 {
+  color: $classicred;
 }

@@ -14,7 +14,9 @@
         <option value="" disabled="disabled" selected="selected">Select your interests</option>
         <% @interest_categories.each do |interest_category| %>
           <% interest_category.interests.each do |interest| %>
-            <option value="<%= interest.name %>" data-category="<%= interest.interest_category.name %>"><%= interest.name %></option>
+            <% unless interest.name.include? "Date" %>
+              <option value="<%= interest.name %>" data-category="<%= interest.interest_category.name %>"><%= interest.name %></option>
+           <% end %>
           <% end %>
         <% end %>
       </select>

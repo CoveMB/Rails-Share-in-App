@@ -30,6 +30,10 @@ class ApplicationController < ActionController::Base
 
   private
 
+  def set_cookie
+    cookies[:user_id] = current_user.id if current_user
+  end
+
   def skip_pundit?
     devise_controller? || params[:controller] =~ /(^(rails_)?admin)|(^pages$)/
   end

@@ -63,9 +63,25 @@ const initFilter = () => {
           }
         });
       });
+      document.querySelector(".datepicker-done").addEventListener("click", () => {
+        removeDateMarkers(mapElement, map, markersOnMap);
+      });
     });
   }
 };
+
+const removeDateMarkers = (mapElement, map, markersOnMap) => {
+  markersOnMap.forEach((marker) => {
+    marker.remove();
+  });
+
+  const newMarkers = JSON.parse(mapElement.dataset.markers).filter((marker) => {
+    return !marker["categories"][0].includes("Date");
+  });
+  
+  return renderNewMarkers(newMarkers, map);
+};
+
 
 const updateMarkers = (mapElement, map, markersOnMap, interests) => {
   markersOnMap.forEach((marker) => {
@@ -76,14 +92,18 @@ const updateMarkers = (mapElement, map, markersOnMap, interests) => {
     return marker["categories"].filter((interest) =>  interests.includes(interest)).length > 0;
   });
 
+  return renderNewMarkers(newMarkers, map);
+};
+
+const renderNewMarkers = (newMarkers, map) => {
   return newMarkers.map((marker) => {
     const popup = new mapboxgl.Popup().setHTML(marker.infoWindow);
     const element = document.createElement('div');
     element.className = 'marker';
     element.style.backgroundImage = `url('${marker.image_url}')`;
     element.style.backgroundSize = 'contain';
-    element.style.width = '25px';
-    element.style.height = '25px';
+    element.style.width = '31px';
+    element.style.height = '35px';
 
     const newMarker = new mapboxgl.Marker(element)
       .setLngLat([ marker.lng, marker.lat ])

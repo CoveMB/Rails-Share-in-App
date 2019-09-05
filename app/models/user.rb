@@ -20,8 +20,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   # Geocoding config
-  geocoded_by :address
-  after_validation :geocode, if: :will_save_change_to_address?
+  # geocoded_by :address
+  # after_validation :geocode, if: :will_save_change_to_address?
 
   # Messaging config
   has_many :messages

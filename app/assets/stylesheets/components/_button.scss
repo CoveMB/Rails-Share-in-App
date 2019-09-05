@@ -4,20 +4,53 @@
   padding: 0.6rem 1.1rem;
   background-color: transparent;
   transition: all ease .3s;
-
-  font-size: 1rem;
+  font-style: $merriweather;
+  font-size: 1.1rem;
   border-radius: 4px;
   cursor: pointer;
+  margin-bottom: 0;
+}
 
+.message-btn{
+  display: inline-block;
+  text-decoration: none;
+  padding: 0.6rem 1.1rem;
+  background-color: transparent;
+  transition: all ease .3s;
+  text-align: center;
+  margin-right: 58%;
+  width: 42%;
+  border: 1px solid $classicred;
+  color: $classicred;
+  font-weight: bold;
+  font-size: 1.2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 0;
+}
+
+.message-btn a{
+  font-size: 1.2rem;
+}
+
+.message-icon{
+  font-size: 1.5rem;
+  padding-left: 15px;
 }
 
 .event-btn *{
    transition: all ease .3s;
 }
 
-.event-btn:hover, .event-btn:hover *{
+.message-btn *{
+   transition: all ease .3s;
+}
+
+.message-btn:hover, .message-btn:hover *{
+  background-color: $classicred;
   color: white;
 }
+
 
 .btn{
   z-index: 999999999999;
@@ -26,11 +59,14 @@
 .redi{
   text-align: center;
   border: 1px solid #AC0C0C;
-  color: #faf1f1;
+  color: white;
   font-weight: bold;
   background-color: #AC0C0C;
-  // margin-left: 58%;
-  // width: 42%;
+}
+
+.redi:hover{
+  background-color: $classicred;
+  color: white;
 }
 
 .ired{
@@ -40,14 +76,18 @@
   border: 1px solid $classicred;
   color: $classicred;
   font-weight: bold;
+  font-family: $merriweather ;
+  margin-bottom: 0;
 }
 
 .red:hover{
   background-color: $classicred;
+  color: white;
 }
 
 .ired:hover{
   background-color: $classicred;
+  color: white;
 }
 
 .red *{
@@ -61,4 +101,63 @@
 button:focus {
   outline: none;
   background-color: $classicred;
+}
+
+
+#event-details-btn{
+  position: absolute;
+  left: 18%;
+  top: 59vh;
+  font-family: $merriweather;
+  font-size: 25px;
+  color: $classicred;
+  border-bottom: 1px solid $classicred;
+  padding-bottom: 50px;
+}
+
+#organiser-details-btn{
+  position: absolute;
+  right: 18%;
+  top: 59vh;
+  font-size: 25px;
+  font-family: $merriweather;
+  color: $classicred;
+  border-bottom: 1px solid $classicred;
+  padding-bottom: 50px;
+}
+
+#event-details-btn{
+  -webkit-transition-duration: 0.33s;
+       -o-transition-duration: 0.33s;
+          transition-duration: 0.33s;
+}
+
+#event-details-btn:hover{
+  -webkit-transform: scale(1.022);
+      -ms-transform: scale(1.022);
+          transform: scale(1.022);
+}
+
+#event-details-btn:active{
+  -webkit-transition-duration: 0.1s;
+       -o-transition-duration: 0.1s;
+          transition-duration: 0.1s;
+}
+
+#organiser-details-btn{
+  -webkit-transition-duration: 0.33s;
+       -o-transition-duration: 0.33s;
+          transition-duration: 0.33s;
+}
+
+#organiser-details-btn:hover{
+  -webkit-transform: scale(1.022);
+      -ms-transform: scale(1.022);
+          transform: scale(1.022);
+}
+
+#organiser-details-btn:active{
+  -webkit-transition-duration: 0.1s;
+       -o-transition-duration: 0.1s;
+          transition-duration: 0.1s;
 }

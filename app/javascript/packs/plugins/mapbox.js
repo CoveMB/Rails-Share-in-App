@@ -19,7 +19,7 @@ const addEventListener = () => {
   document.querySelector(".mapboxgl-ctrl-geocoder--input").addEventListener("keydown", (event) => {
     if (event.keyCode == 13) {
       window.scrollTo({
-        top: 930,
+        top: 840,
         left: 0,
         behavior: 'smooth'
       });

@@ -64,7 +64,7 @@ const initFilter = () => {
         });
       });
       document.querySelector(".datepicker-done").addEventListener("click", () => {
-        removeDateMarkers(mapElement, map, markersOnMap);
+        markersOnMap = removeDateMarkers(mapElement, map, markersOnMap);
       });
     });
   }
@@ -78,7 +78,7 @@ const removeDateMarkers = (mapElement, map, markersOnMap) => {
   const newMarkers = JSON.parse(mapElement.dataset.markers).filter((marker) => {
     return !marker["categories"][0].includes("Date");
   });
-  
+
   return renderNewMarkers(newMarkers, map);
 };
 

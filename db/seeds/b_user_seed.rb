@@ -16,7 +16,6 @@ doan = User.new(
 )
 doan.avatar.attach(io: File.open("./app/assets/images/storage/kimsonpic.webp"), filename: "kimsonpic.webp")
 doan.image.attach(io: File.open("./app/assets/images/storage/kimsonimage.jpg"), filename: "kimsonimage.jpg")
-p doan.id
 doan.save!
 
 camille = User.new(
@@ -496,7 +495,6 @@ ben = User.create!(
 )
 ben.avatar.attach(io: File.open("./app/assets/images/storage/benpic.jpeg"), filename: "benpic.jpeg")
 # ben.image.attach(io: File.open("./app/assets/images/storage/bencover.jpg"), filename: "bencover.jpg")
-p ben.id
 ben.save!
 
 p "#{User.count} users created!"

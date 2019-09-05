@@ -3,7 +3,8 @@ require 'date'
 def create_event(info)
   organiser = Organiser.find_by_name(info[:organiser])
   address = info.key?(:address) ? info[:address] : organiser.address
-  event = Event.new(
+
+  event = Event.find_or_create_by!(
     organiser: organiser,
     event_type: EventType.find_by_name(info[:event_type]),
     name: info[:name],
@@ -13,6 +14,9 @@ def create_event(info)
     description: info[:description],
     event_website: info[:event_website],
   )
+
+  p event
+
   event.image.attach(io: File.open("./app/assets/images/storage/#{info[:image]}"), filename: "#{info[:image]}")
   info[:interests].each do |interest|
     event.interests << Interest.find_by_name(interest)

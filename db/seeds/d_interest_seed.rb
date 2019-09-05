@@ -1,6 +1,6 @@
 def create_interests(interests, interest_category)
   interests.each do |interest|
-    Interest.create!(
+    Interest.find_or_create_by!(
       name: interest,
       interest_category: InterestCategory.find_by_name(interest_category)
     )

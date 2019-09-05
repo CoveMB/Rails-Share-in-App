@@ -17,6 +17,8 @@ def create_event(info)
 
   p event
 
+  event.users = []
+
   event.image.attach(io: File.open("./app/assets/images/storage/#{info[:image]}"), filename: "#{info[:image]}")
   info[:interests].each do |interest|
     event.interests << Interest.find_by_name(interest)

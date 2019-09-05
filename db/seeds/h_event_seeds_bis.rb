@@ -9,7 +9,7 @@ def create_event(info)
     name: info[:name],
     start_date: info[:start_date],
     end_date: info[:end_date],
-    address: address,
+    address: info[:address],
     description: info[:description],
     event_website: info[:event_website],
   )
@@ -47,5 +47,3 @@ create_event(
   image: "spalaval.jpg",
   interests: ["Wellness Meetup", "Health Meetup"]
 )
-
-

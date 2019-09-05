@@ -1,11 +1,11 @@
-User.create!(
-  name: "admin",
-  surname: "admin",
-  password: "password123",
-  address: "1354 rue Casgrain montreal",
-  email: "admin@gmail.com",
-  admin: true
-)
+# User.create!(
+#   name: "admin",
+#   surname: "admin",
+#   password: "password123",
+#   address: "1354 rue Casgrain montreal",
+#   email: "admin@gmail.com",
+#   admin: true
+# )
 
 doan = User.new(
   name: "Kimson",
@@ -30,27 +30,27 @@ camille.avatar.attach(io: File.open("./app/assets/images/storage/camillepic.jpeg
 camille.image.attach(io: File.open("./app/assets/images/storage/cover.jpg"), filename: "cover.jpg")
 camille.save!
 
-ap = User.create!(
-  name: "John",
-  surname: "90",
-  password: "password123",
-  address: "1339 rue Casgrain montreal",
-  email: "john@gmail.com"
-)
-ap.avatar.attach(io: File.open("./app/assets/images/storage/pxxpic.jpg"), filename: "pxxpic.jpg")
-ap.image.attach(io: File.open("./app/assets/images/storage/pxximg.jpeg"), filename: "pxximg.jpeg")
-ap.save!
+# ap = User.create!(
+#   name: "John",
+#   surname: "90",
+#   password: "password123",
+#   address: "1339 rue Casgrain montreal",
+#   email: "john@gmail.com"
+# )
+# ap.avatar.attach(io: File.open("./app/assets/images/storage/pxxpic.jpg"), filename: "pxxpic.jpg")
+# ap.image.attach(io: File.open("./app/assets/images/storage/pxximg.jpeg"), filename: "pxximg.jpeg")
+# ap.save!
 
-marteen = User.create!(
-  name: "Marteen",
-  surname: "Deckers",
-  password: "password123",
-  address: "1339 rue Hutchison montreal",
-  email: "marteen@gmail.com"
-)
-marteen.avatar.attach(io: File.open("./app/assets/images/storage/martinpic.jpeg"), filename: "martinpic.jpeg")
-marteen.image.attach(io: File.open("./app/assets/images/storage/martinimg.jpeg"), filename: "martinimg.jpeg")
-marteen.save!
+# marteen = User.create!(
+#   name: "Marteen",
+#   surname: "Deckers",
+#   password: "password123",
+#   address: "1339 rue Hutchison montreal",
+#   email: "marteen@gmail.com"
+# )
+# marteen.avatar.attach(io: File.open("./app/assets/images/storage/martinpic.jpeg"), filename: "martinpic.jpeg")
+# marteen.image.attach(io: File.open("./app/assets/images/storage/martinimg.jpeg"), filename: "martinimg.jpeg")
+# marteen.save!
 
 benjamin = User.create!(
   name: "Benjamin",
@@ -81,12 +81,25 @@ alma = User.create!(
   surname: "Mamaradlo",
   bio: "I was always interested in fashion and technology but I took the creative path. After 15 years in the Fashion industry, I am ready to take a new challenge.",
   address: "6417 rue hutchison montreal",
-  email: "caitlin@gmail.com",
+  email: "alma@gmail.com",
   password: "password123"
 )
-alma.avatar.attach(io: File.open("./app/assets/images/storage/jeanpic.jpeg"), filename: "almapic.jpeg")
-alma.image.attach(io: File.open("./app/assets/images/storage/jeancover.jpg"), filename: "almacover.jpg")
+alma.avatar.attach(io: File.open("./app/assets/images/storage/almapic.jpg"), filename: "almapic.jpg")
+# alma.image.attach(io: File.open("./app/assets/images/storage/jeancover.jpg"), filename: "almacover.jpg")
 alma.save!
+
+
+cat = User.create!(
+  name: "Caitlin",
+  surname: "Snyder",
+  bio: "Background in humanitarian information management--excited to join Le Wagon Batch 281 to merge my existing experiences with software development!",
+  address: "6417 rue hutchison montreal",
+  email: "cat@gmail.com",
+  password: "password123"
+)
+cat.avatar.attach(io: File.open("./app/assets/images/storage/catpic.jpg"), filename: "catpic.jpg")
+# alma.image.attach(io: File.open("./app/assets/images/storage/jeancover.jpg"), filename: "almacover.jpg")
+cat.save!
 
 courtney = User.create!(
   name: "Courtney",
@@ -96,8 +109,8 @@ courtney = User.create!(
   email: "courtney@gmail.com",
   password: "password123"
 )
-courtney.avatar.attach(io: File.open("./app/assets/images/storage/jeanpic.jpeg"), filename: "courtneypic.jpeg")
-courtney.image.attach(io: File.open("./app/assets/images/storage/jeancover.jpg"), filename: "courtneycover.jpg")
+courtney.avatar.attach(io: File.open("./app/assets/images/storage/courtneypic.jpeg"), filename: "courtneypic.jpeg")
+# courtney.image.attach(io: File.open("./app/assets/images/storage/jeancover.jpg"), filename: "courtneycover.jpg")
 courtney.save!
 
 fred = User.create!(
@@ -108,8 +121,8 @@ fred = User.create!(
   email: "fred@gmail.com",
   password: "password123"
 )
-fred.avatar.attach(io: File.open("./app/assets/images/storage/jeanpic.jpeg"), filename: "fredpic.jpeg")
-fred.image.attach(io: File.open("./app/assets/images/storage/jeancover.jpg"), filename: "fredcover.jpg")
+fred.avatar.attach(io: File.open("./app/assets/images/storage/fredthompic.jpg"), filename: "fredthompic.jpg")
+# fred.image.attach(io: File.open("./app/assets/images/storage/jeancover.jpg"), filename: "fredcover.jpg")
 fred.save!
 
 chen = User.create!(
@@ -120,8 +133,8 @@ chen = User.create!(
   email: "chen@gmail.com",
   password: "password123"
 )
-chen.avatar.attach(io: File.open("./app/assets/images/storage/jeanpic.jpeg"), filename: "chenpic.jpeg")
-chen.image.attach(io: File.open("./app/assets/images/storage/jeancover.jpg"), filename: "chencover.jpg")
+chen.avatar.attach(io: File.open("./app/assets/images/storage/chenpic.jpg"), filename: "chenpic.jpg")
+# chen.image.attach(io: File.open("./app/assets/images/storage/jeancover.jpg"), filename: "chencover.jpg")
 chen.save!
 
 katharina = User.create!(
@@ -132,8 +145,8 @@ katharina = User.create!(
   email: "katharina@gmail.com",
   password: "password123"
 )
-katharina.avatar.attach(io: File.open("./app/assets/images/storage/jeanpic.jpeg"), filename: "katharinapic.jpeg")
-katharina.image.attach(io: File.open("./app/assets/images/storage/jeancover.jpg"), filename: "katharinacover.jpg")
+katharina.avatar.attach(io: File.open("./app/assets/images/storage/khatarinapic.jpeg"), filename: "khatarinapic.jpeg")
+# katharina.image.attach(io: File.open("./app/assets/images/storage/khatarinapic.jpegg"), filename: "katharinacover.jpg")
 katharina.save!
 
 khaoula = User.create!(
@@ -144,8 +157,8 @@ khaoula = User.create!(
   email: "khaoula@gmail.com",
   password: "password123"
 )
-khaoula.avatar.attach(io: File.open("./app/assets/images/storage/jeanpic.jpeg"), filename: "khaoulapic.jpeg")
-khaoula.image.attach(io: File.open("./app/assets/images/storage/jeancover.jpg"), filename: "khaoulacover.jpg")
+khaoula.avatar.attach(io: File.open("./app/assets/images/storage/khaoula.jpeg"), filename: "khaoula.jpeg")
+# khaoula.image.attach(io: File.open("./app/assets/images/storage/jeancover.jpg"), filename: "khaoulacover.jpg")
 khaoula.save!
 
 lea = User.create!(
@@ -156,8 +169,8 @@ lea = User.create!(
   email: "lea@gmail.com",
   password: "password123"
 )
-lea.avatar.attach(io: File.open("./app/assets/images/storage/leapic.jpeg"), filename: "leapic.jpeg")
-lea.image.attach(io: File.open("./app/assets/images/storage/leacover.jpg"), filename: "leacover.jpg")
+lea.avatar.attach(io: File.open("./app/assets/images/storage/leapic.png"), filename: "leapic.png")
+# lea.image.attach(io: File.open("./app/assets/images/storage/leacover.jpg"), filename: "leacover.jpg")
 lea.save!
 
 louis = User.create!(
@@ -168,8 +181,8 @@ louis = User.create!(
   email: "louis@gmail.com",
   password: "password123"
 )
-louis.avatar.attach(io: File.open("./app/assets/images/storage/louispic.jpeg"), filename: "louispic.jpeg")
-louis.image.attach(io: File.open("./app/assets/images/storage/louiscover.jpg"), filename: "louiscover.jpg")
+louis.avatar.attach(io: File.open("./app/assets/images/storage/louispic.png"), filename: "louispic.png")
+# louis.image.attach(io: File.open("./app/assets/images/storage/louiscover.jpg"), filename: "louiscover.jpg")
 louis.save!
 
 luc = User.create!(
@@ -181,7 +194,7 @@ luc = User.create!(
   password: "password123"
 )
 luc.avatar.attach(io: File.open("./app/assets/images/storage/lucpic.jpeg"), filename: "lucpic.jpeg")
-luc.image.attach(io: File.open("./app/assets/images/storage/luccover.jpg"), filename: "luccover.jpg")
+# luc.image.attach(io: File.open("./app/assets/images/storage/luccover.jpg"), filename: "luccover.jpg")
 luc.save!
 
 leo = User.create!(
@@ -192,8 +205,8 @@ leo = User.create!(
   email: "leo@gmail.com",
   password: "password123"
 )
-leo.avatar.attach(io: File.open("./app/assets/images/storage/leopic.jpeg"), filename: "leopic.jpeg")
-leo.image.attach(io: File.open("./app/assets/images/storage/leocover.jpg"), filename: "leocover.jpg")
+leo.avatar.attach(io: File.open("./app/assets/images/storage/leopic.jpg"), filename: "leopic.jpg")
+# leo.image.attach(io: File.open("./app/assets/images/storage/leocover.jpg"), filename: "leocover.jpg")
 leo.save!
 
 michael = User.create!(
@@ -205,7 +218,7 @@ michael = User.create!(
   password: "password123"
 )
 michael.avatar.attach(io: File.open("./app/assets/images/storage/michaelpic.jpeg"), filename: "michaelpic.jpeg")
-michael.image.attach(io: File.open("./app/assets/images/storage/michaelcover.jpg"), filename: "michaelcover.jpg")
+# michael.image.attach(io: File.open("./app/assets/images/storage/michaelcover.jpg"), filename: "michaelcover.jpg")
 michael.save!
 
 nacera = User.create!(
@@ -216,8 +229,8 @@ nacera = User.create!(
   email: "nacera@gmail.com",
   password: "password123"
 )
-nacera.avatar.attach(io: File.open("./app/assets/images/storage/nacerapic.jpeg"), filename: "nacerapic.jpeg")
-nacera.image.attach(io: File.open("./app/assets/images/storage/naceracover.jpg"), filename: "naceracover.jpg")
+nacera.avatar.attach(io: File.open("./app/assets/images/storage/nacerapic.jpg"), filename: "nacerapic.jpg")
+# nacera.image.attach(io: File.open("./app/assets/images/storage/naceracover.jpg"), filename: "naceracover.jpg")
 nacera.save!
 
 nicolas = User.create!(
@@ -228,8 +241,8 @@ nicolas = User.create!(
   email: "nicolas@gmail.com",
   password: "password123"
 )
-nicolas.avatar.attach(io: File.open("./app/assets/images/storage/nicolaspic.jpeg"), filename: "nicolaspic.jpeg")
-nicolas.image.attach(io: File.open("./app/assets/images/storage/nicolascover.jpg"), filename: "nicolascover.jpg")
+nicolas.avatar.attach(io: File.open("./app/assets/images/storage/nicolaspic.jpg"), filename: "nicolaspic.jpeg")
+# nicolas.image.attach(io: File.open("./app/assets/images/storage/nicolascover.jpg"), filename: "nicolascover.jpg")
 nicolas.save!
 
 perrin = User.create!(
@@ -241,7 +254,7 @@ perrin = User.create!(
   password: "password123"
 )
 perrin.avatar.attach(io: File.open("./app/assets/images/storage/perrinpic.jpeg"), filename: "perrinpic.jpeg")
-perrin.image.attach(io: File.open("./app/assets/images/storage/perrincover.jpg"), filename: "perrincover.jpg")
+# perrin.image.attach(io: File.open("./app/assets/images/storage/perrincover.jpg"), filename: "perrincover.jpg")
 perrin.save!
 
 sam = User.create!(
@@ -252,8 +265,8 @@ sam = User.create!(
   email: "sam@gmail.com",
   password: "password123"
 )
-sam.avatar.attach(io: File.open("./app/assets/images/storage/sampic.jpeg"), filename: "sampic.jpeg")
-sam.image.attach(io: File.open("./app/assets/images/storage/samcover.jpg"), filename: "samcover.jpg")
+sam.avatar.attach(io: File.open("./app/assets/images/storage/samiuelpic.jpg"), filename: "ssamiuelpic.jpg")
+# sam.image.attach(io: File.open("./app/assets/images/storage/samcover.jpg"), filename: "samcover.jpg")
 sam.save!
 
 seong = User.create!(
@@ -265,7 +278,7 @@ seong = User.create!(
   password: "password123"
 )
 seong.avatar.attach(io: File.open("./app/assets/images/storage/seongpic.jpeg"), filename: "seongpic.jpeg")
-seong.image.attach(io: File.open("./app/assets/images/storage/seongcover.jpg"), filename: "seongcover.jpg")
+# seong.image.attach(io: File.open("./app/assets/images/storage/seongcover.jpg"), filename: "seongcover.jpg")
 seong.save!
 
 simon = User.create!(
@@ -276,8 +289,8 @@ simon = User.create!(
   email: "simon@gmail.com",
   password: "password123"
 )
-simon.avatar.attach(io: File.open("./app/assets/images/storage/simonpic.jpeg"), filename: "simonpic.jpeg")
-simon.image.attach(io: File.open("./app/assets/images/storage/simoncover.jpg"), filename: "simoncover.jpg")
+simon.avatar.attach(io: File.open("./app/assets/images/storage/simonpic.jpg"), filename: "simonpic.jpg")
+# simon.image.attach(io: File.open("./app/assets/images/storage/simoncover.jpg"), filename: "simoncover.jpg")
 simon.save!
 
 younes = User.create!(
@@ -289,7 +302,7 @@ younes = User.create!(
   password: "password123"
 )
 younes.avatar.attach(io: File.open("./app/assets/images/storage/younespic.jpeg"), filename: "younespic.jpeg")
-younes.image.attach(io: File.open("./app/assets/images/storage/younescover.jpg"), filename: "younescover.jpg")
+# younes.image.attach(io: File.open("./app/assets/images/storage/younescover.jpg"), filename: "younescover.jpg")
 younes.save!
 
 kristyna = User.create!(
@@ -300,8 +313,8 @@ kristyna = User.create!(
   email: "kristyna@gmail.com",
   password: "password123"
 )
-kristyna.avatar.attach(io: File.open("./app/assets/images/storage/kristynapic.jpeg"), filename: "kristynapic.jpeg")
-kristyna.image.attach(io: File.open("./app/assets/images/storage/kristynacover.jpg"), filename: "kristynacover.jpg")
+kristyna.avatar.attach(io: File.open("./app/assets/images/storage/kristyna.jpg"), filename: "kristyna.jpg")
+# kristyna.image.attach(io: File.open("./app/assets/images/storage/kristynacover.jpg"), filename: "kristynacover.jpg")
 kristyna.save!
 
 romain = User.create!(
@@ -312,8 +325,8 @@ romain = User.create!(
   email: "romain@gmail.com",
   password: "password123"
 )
-romain.avatar.attach(io: File.open("./app/assets/images/storage/romainpic.jpeg"), filename: "romainpic.jpeg")
-romain.image.attach(io: File.open("./app/assets/images/storage/romaincover.jpg"), filename: "romaincover.jpg")
+romain.avatar.attach(io: File.open("./app/assets/images/storage/romain.jpg"), filename: "romain.jpg")
+# romain.image.attach(io: File.open("./app/assets/images/storage/romaincover.jpg"), filename: "romaincover.jpg")
 romain.save!
 
 alex = User.create!(
@@ -324,8 +337,8 @@ alex = User.create!(
   email: "alex@gmail.com",
   password: "password123"
 )
-alex.avatar.attach(io: File.open("./app/assets/images/storage/alexpic.jpeg"), filename: "alexpic.jpeg")
-alex.image.attach(io: File.open("./app/assets/images/storage/alexcover.jpg"), filename: "alexcover.jpg")
+alex.avatar.attach(io: File.open("./app/assets/images/storage/alexandrespic.jpeg"), filename: "alexandrespic.jpeg")
+# alex.image.attach(io: File.open("./app/assets/images/storage/alexcover.jpg"), filename: "alexcover.jpg")
 alex.save!
 
 mg = User.create!(
@@ -336,8 +349,8 @@ mg = User.create!(
   email: "mg@gmail.com",
   password: "password123"
 )
-mg.avatar.attach(io: File.open("./app/assets/images/storage/mgpic.jpeg"), filename: "mgpic.jpeg")
-mg.image.attach(io: File.open("./app/assets/images/storage/mgcover.jpg"), filename: "mgcover.jpg")
+mg.avatar.attach(io: File.open("./app/assets/images/storage/mgpic.jpg"), filename: "mgpic.jpg")
+# mg.image.attach(io: File.open("./app/assets/images/storage/mgcover.jpg"), filename: "mgcover.jpg")
 mg.save!
 
 aline = User.create!(
@@ -348,9 +361,21 @@ aline = User.create!(
   email: "aline@gmail.com",
   password: "password123"
 )
-aline.avatar.attach(io: File.open("./app/assets/images/storage/alinepic.jpeg"), filename: "alinepic.jpeg")
-aline.image.attach(io: File.open("./app/assets/images/storage/alinecover.jpg"), filename: "alinecover.jpg")
+aline.avatar.attach(io: File.open("./app/assets/images/storage/alinepic.jpg"), filename: "alinepic.jpg")
+# aline.image.attach(io: File.open("./app/assets/images/storage/alinecover.jpg"), filename: "alinecover.jpg")
 aline.save!
+
+antoine = User.create!(
+  name: "Antoine",
+  surname: "Ayoub",
+  bio: "Co Founder Le Wagon Montréal",
+  address: "6417 rue hutchison montreal",
+  email: "antoine@gmail.com",
+  password: "password123"
+)
+antoine.avatar.attach(io: File.open("./app/assets/images/storage/antoinepic.jpg"), filename: "antoinepic.jpg")
+# aline.image.attach(io: File.open("./app/assets/images/storage/alinecover.jpg"), filename: "alinecover.jpg")
+antoine.save!
 
 martin = User.create!(
   name: "Martin",
@@ -361,7 +386,7 @@ martin = User.create!(
   password: "password123"
 )
 martin.avatar.attach(io: File.open("./app/assets/images/storage/martinpic.jpeg"), filename: "martinpic.jpeg")
-martin.image.attach(io: File.open("./app/assets/images/storage/martincover.jpg"), filename: "martincover.jpg")
+# martin.image.attach(io: File.open("./app/assets/images/storage/martincover.jpg"), filename: "martincover.jpg")
 martin.save!
 
 richard = User.create!(
@@ -372,8 +397,8 @@ richard = User.create!(
   email: "richard@gmail.com",
   password: "password123"
 )
-richard.avatar.attach(io: File.open("./app/assets/images/storage/richardpic.jpeg"), filename: "richardpic.jpeg")
-richard.image.attach(io: File.open("./app/assets/images/storage/richardcover.jpg"), filename: "richardcover.jpg")
+richard.avatar.attach(io: File.open("./app/assets/images/storage/richardpic.jpg"), filename: "richardpic.jpg")
+# richard.image.attach(io: File.open("./app/assets/images/storage/richardcover.jpg"), filename: "richardcover.jpg")
 richard.save!
 
 stephane = User.create!(
@@ -384,7 +409,7 @@ stephane = User.create!(
   email: "stephane@gmail.com",
   password: "password123"
 )
-stephane.avatar.attach(io: File.open("./app/assets/images/storage/stepghanepic.jpeg"), filename: "stephanepic.jpeg")
+stephane.avatar.attach(io: File.open("./app/assets/images/storage/stephpic.jpeg"), filename: "stephpic.jpeg")
 #stephane.image.attach(io: File.open("./app/assets/images/storage/stephanecover.jpg"), filename: "stephanecover.jpg")
 stephane.save!
 
@@ -393,11 +418,11 @@ simon = User.create!(
   surname: "Guertin",
   bio: "Born and raised in Montreal, Quebec. 🌅 Summers were spent canoe tripping and winters ski racing on the slopes. 📈 I joined the family business 7 years ago, making me the fourth generation to work in insurance. Club Assurance is a damage insurance brokerage, founded by my father in 1992. As the company grew organically year after year ( more then 100% in the past 5 years) I wore many hats: collector, personal; commercial insurance broker, underwriter, head of the sales department, head of the customer service department and director of operations. 💻 Throughout this path I also worked as a full stack developer for the company. ",
   address: "6417 rue hutchison montreal",
-  email: "simon@gmail.com",
+  email: "simong@gmail.com",
   password: "password123"
 )
-simon.avatar.attach(io: File.open("./app/assets/images/storage/simonpic.jpeg"), filename: "simonpic.jpeg")
-simon.image.attach(io: File.open("./app/assets/images/storage/simoncover.jpg"), filename: "simoncover.jpg")
+simon.avatar.attach(io: File.open("./app/assets/images/storage/simmonpic.png"), filename: "simmonpic.png")
+# simon.image.attach(io: File.open("./app/assets/images/storage/simoncover.jpg"), filename: "simoncover.jpg")
 simon.save!
 
 frede = User.create!(
@@ -408,8 +433,8 @@ frede = User.create!(
   email: "frede@gmail.com",
   password: "password123"
 )
-frede.avatar.attach(io: File.open("./app/assets/images/storage/fredepic.jpeg"), filename: "fredepic.jpeg")
-frede.image.attach(io: File.open("./app/assets/images/storage/fredecover.jpg"), filename: "fredecover.jpg")
+frede.avatar.attach(io: File.open("./app/assets/images/storage/fredcharestpic.jpeg"), filename: "fredcharestpic.jpegg")
+# frede.image.attach(io: File.open("./app/assets/images/storage/fredcharestpic.jpeg"), filename: "fredecover.jpg")
 frede.save!
 
 johnn = User.create!(
@@ -420,8 +445,8 @@ johnn = User.create!(
   email: "johnn@gmail.com",
   password: "password123"
 )
-johnn.avatar.attach(io: File.open("./app/assets/images/storage/johnnpic.jpeg"), filename: "johnnpic.jpeg")
-johnn.image.attach(io: File.open("./app/assets/images/storage/johnncover.jpg"), filename: "johnncover.jpg")
+johnn.avatar.attach(io: File.open("./app/assets/images/storage/freemanpic.jpg"), filename: "freemanpic.jpg")
+# johnn.image.attach(io: File.open("./app/assets/images/storage/johnncover.jpg"), filename: "johnncover.jpg")
 johnn.save!
 
 zachary = User.create!(
@@ -432,8 +457,8 @@ zachary = User.create!(
   email: "zachary@gmail.com",
   password: "password123"
 )
-zachary.avatar.attach(io: File.open("./app/assets/images/storage/zacharypic.jpeg"), filename: "zacharyhpic.jpeg")
-zachary.image.attach(io: File.open("./app/assets/images/storage/zacharycover.jpg"), filename: "zacharycover.jpg")
+zachary.avatar.attach(io: File.open("./app/assets/images/storage/zachapic.jpg"), filename: "zachapic.jpg")
+# zachary.image.attach(io: File.open("./app/assets/images/storage/zacharycover.jpg"), filename: "zacharycover.jpg")
 zachary.save!
 
 alina = User.create!(
@@ -445,7 +470,7 @@ alina = User.create!(
   password: "password123"
 )
 alina.avatar.attach(io: File.open("./app/assets/images/storage/alinapic.jpeg"), filename: "alinapic.jpeg")
-alina.image.attach(io: File.open("./app/assets/images/storage/alinacover.jpg"), filename: "alinacover.jpg")
+# alina.image.attach(io: File.open("./app/assets/images/storage/alinacover.jpg"), filename: "alinacover.jpg")
 alina.save!
 
 laure = User.create!(
@@ -456,8 +481,8 @@ laure = User.create!(
   email: "laure@gmail.com",
   password: "password123"
 )
-laure.avatar.attach(io: File.open("./app/assets/images/storage/laurepic.jpeg"), filename: "laurepic.jpeg")
-laure.image.attach(io: File.open("./app/assets/images/storage/laurecover.jpg"), filename: "laurecover.jpg")
+laure.avatar.attach(io: File.open("./app/assets/images/storage/laurepic.jpg"), filename: "laurepic.jpg")
+# laure.image.attach(io: File.open("./app/assets/images/storage/laurecover.jpg"), filename: "laurecover.jpg")
 laure.save!
 
 ben = User.create!(
@@ -469,7 +494,7 @@ ben = User.create!(
   password: "password123"
 )
 ben.avatar.attach(io: File.open("./app/assets/images/storage/benpic.jpeg"), filename: "benpic.jpeg")
-ben.image.attach(io: File.open("./app/assets/images/storage/bencover.jpg"), filename: "bencover.jpg")
+# ben.image.attach(io: File.open("./app/assets/images/storage/bencover.jpg"), filename: "bencover.jpg")
 ben.save!
 
-p "Users created!"
+p "#{User.count} users created!"

@@ -2,24 +2,26 @@ require 'date'
 
 def create_event(info)
   organiser = Organiser.find_by_name(info[:organiser])
-  address = info.key?(:address) ? info[:address] : organiser.address
 
-  event = Event.new(
+  event = Event.find_or_create_by!(
+    address: info[:address],
     organiser: organiser,
     event_type: EventType.find_by_name(info[:event_type]),
     name: info[:name],
     start_date: info[:start_date],
     end_date: info[:end_date],
-    address: address,
     description: info[:description],
     event_website: info[:event_website],
   )
+
+  p event
 
   info[:interests].each do |interest|
     event.interests << Interest.find_by_name(interest)
   end
 
   event.save!
+  p event
   p "WARNING EVENT NOT GEOCODED for: #{event.address}" unless event.geocoded?
 end
 
@@ -47,3 +49,4 @@ end
 
 
 p "Date events created"
+p "#{Event.count} events created"

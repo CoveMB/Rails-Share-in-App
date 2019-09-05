@@ -233,13 +233,6 @@ create_event(
   image: "yataievent.jpg",
   interests: ["Street Food", "Food Festival"]
 )
-yatai = Event.find_by_name("Yatai Mtl")
-alexandraplatz.start_date = DateTime.parse("7th september 2019")
-alexandraplatz.end_date = DateTime.parse("8th september 2019")
-yatai.users << User.find_by_name("Benjamin")
-yatai.users << User.find_by_name("Camille")
-yatai.users << User.find_by_name("Kristyna")
-yatai.save!
 
 create_event(
   organiser: "Bunker Art Gallery",
@@ -305,12 +298,6 @@ create_event(
   image: "mileex.jpg",
   interests: ["Neighborhood Visit", "Neighborhood Meetup", "Street Food", "Neighborhood History"]
 )
-alexandraplatz = Event.find_by_name("Mile-Ex Alexandraplatz Night Market")
-alexandraplatz.start_date = DateTime.parse("14th september 2019")
-alexandraplatz.end_date = DateTime.parse("15th september 2019")
-alexandraplatz.users = []
-alexandraplatz.users << User.find_by_name("Kristyna")
-alexandraplatz.save!
 
 create_event(
   organiser: "SOS Labyrinthe",

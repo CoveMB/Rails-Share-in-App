@@ -2,7 +2,7 @@ class EventsController < ApplicationController
   skip_before_action :authenticate_user!, only: :index
 
   def index
-    cookies[:user_id] = current_user.id if current_user
+    set_cookie
     @interest_categories = policy_scope(InterestCategory)
     @events = policy_scope(Event)
     geocoded = @events.filter(&:geocoded?)
@@ -19,6 +19,7 @@ class EventsController < ApplicationController
   end
 
   def show
+    set_cookie
     @event = Event.friendly.find(params[:id])
     authorize @event
   end

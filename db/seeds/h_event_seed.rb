@@ -163,7 +163,7 @@ create_event(
 create_event(
   organiser: "C2 Montreal",
   event_type: "Association Event",
-  name:" Commerce + Creativity | International business conference",
+  name: "Commerce + Creativity | International business conference",
   start_date: DateTime.parse("22th may 2019"),
   end_date: DateTime.parse("24th may 2019"),
   description: "C2 Montréal is the most forward-thinking business event in the world. Named best conference four years running, C2 is much more than just simply a conference. We combine progressive and inspiring content in a highly creative, festival-like setting that will blow your mind. At C2, guests transform into active participants who aren’t afraid to dive right in. C2 is for business leaders who want to lead the pack.",
@@ -243,7 +243,7 @@ create_event(
   end_date: DateTime.parse("24th june 2020"),
   description: "L'Oasis Musicale is a series of concerts that aims to offer up-and-coming musicians and musicians from the local scene the opportunity to perform live in a charming place in the heart of downtown Montreal. . For several years now, we have set up a series of weekly concerts allowing these young talents to perform in Christ Church Cathedral: every Saturday at 16:30, the Cathedral welcomes young musicians who present us mostly classical music, but also world music or sometimes even jazz or folk music!",
   event_website: "https://www.oasismusicale.ca/oasis",
-  image: "oasisevent.webp",
+  image: "oasisevent.jpg",
   interests: ["Concert"]
 )
 

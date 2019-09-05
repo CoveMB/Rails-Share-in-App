@@ -144,4 +144,4 @@ Organiser.find_or_create_by!(
   website: "https://www.longueuil.quebec/en/events"
 ).avatar.attach(io: File.open('./app/assets/images/storage/long.gif'), filename: 'long.gif')
 
-p "Organisers find_or_create_byd!"
+p "Organisers created!"

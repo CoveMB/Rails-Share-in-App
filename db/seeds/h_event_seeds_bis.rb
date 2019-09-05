@@ -17,15 +17,13 @@ def create_event(info)
   info[:interests].each do |interest|
     event.interests << Interest.find_by_name(interest)
   end
- # ["kimson@gmail.com", "marteen@gmail.com", "john@gmail.com", "camille@gmail.com"].each do |user|
-  #  event.users << User.find_by_email(user)
- # end
+
   event.save!
   p "WARNING EVENT NOT GEOCODED for: #{event.name}" unless event.geocoded?
 end
 
 create_event(
-  organiser: "Tourisme Laval",
+  organiser: "Laval Events",
   event_type: "Outdoor Activity",
   name:"AéroSim Expérience",
   start_date: DateTime.parse("25th april 2019"),
@@ -33,11 +31,11 @@ create_event(
   description: "AeroSim Experience is the leader in flight simulation entertainment of professional level that is open to the general public in Canada. It offers an extremely realistic immersive experience, thanks to high-definition images and true-to-life weather simulations.",
   event_website: "https://www.tourismelaval.com/en/activities-in-laval/what-to-do/aerosim-experience",
   image: "volsimul.jpg",
-  interests: ["Flying", "Tech Workshop"]
+  interests: ["Tech Workshop", "Flying"]
 )
 
 create_event(
-  organiser: "Tourismes Laval",
+  organiser: "Laval Events",
   event_type: "Health",
   name:"Amerispa Sheraton Laval",
   start_date: DateTime.parse("25th april 2019"),

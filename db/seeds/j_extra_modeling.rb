@@ -17,8 +17,8 @@ alexandraplatz.users << User.find_by_name("Kristyna")
 alexandraplatz.save!
 
 kristyna.events <<  Event.find_by_name("THIERRY MUGLER - Couturissime")
-kristyna <<  Event.find_by_name("ENVIRONMENT MUSEUM")
-kristyna <<  Event.find_by_name("FIESTA OLYMPICA")
+kristyna.events <<  Event.find_by_name("ENVIRONMENT MUSEUM")
+kristyna.events <<  Event.find_by_name("FIESTA OLYMPICA")
 kristyna.save!
 
 p "Seed modeling done!"

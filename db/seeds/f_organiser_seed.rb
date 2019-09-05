@@ -124,7 +124,7 @@ Organiser.find_or_create_by!(
   address: "3801 #B Saint-Denis Montreal",
   description: "Spade & Palacio is a collaboration of two born and raised, young Montrealers who are passionate about our city and love to show it. We originally met during our guiding classes and bonded over a shared interest and intention of having our visitors walk away with a day in the life of a local experience. Three years later we decided to take matters into our own hands and the company was born.",
   website: "https://spadeandpalacio.com"
-).avatar.attach(io: File.open('./app/assets/images/storage/spade.png'), filename: 'spade.png')
+).avatar.attach(io: File.open('./app/assets/images/storage/sp.png'), filename: 'sp.png')
 
 Organiser.find_or_create_by!(
   name: "Laval Events",

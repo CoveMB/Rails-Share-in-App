@@ -4,9 +4,11 @@
 }
 
 .header-white-box{
-  height:482px;
-  top:34%;
-  position:absolute;
+  height: 65vh;
+  width: 50vw;
+  margin-top: 10vh;
+  // top: 34%;
+  // position:absolute;
   border-radius:5px;
   @include box-shadow(0 20px 30px rgba(0,0,0,.6));
   border:1px solid rgba(255,255,255,.3);
@@ -45,9 +47,9 @@
 }
 
 .home-logo{
-  // margin-bottom: -65%;
-  margin-top: -51%;
-  size:80%;
+  margin-bottom: 3%;
+  margin-top: -20vh;
+  size: 80%;
 }
 
 .header-home-title-line h3 {

@@ -15,8 +15,6 @@ def create_event(info)
     event_website: info[:event_website],
   )
 
-  p event
-
   event.users = []
 
   event.image.attach(io: File.open("./app/assets/images/storage/#{info[:image]}"), filename: "#{info[:image]}")
@@ -24,10 +22,12 @@ def create_event(info)
     event.interests << Interest.find_by_name(interest)
   end
 
-  times = rand(4..10)
+  times = rand(4..12)
 
   times.times do
-    event.users << User.find(rand(User.first.id..User.last.id))
+    attendee = []
+    attendee << User.find(rand(User.second.id..User.last.id))
+    event.users = attendee.uniq
   end
 
   event.save!

@@ -1,4 +1,4 @@
-Organiser.create!(
+Organiser.find_or_create_by!(
   name: "Montreal Events",
   organiser_type: OrganiserType.find_by_name("City Organiser"),
   address: "Montreal Canada",
@@ -6,7 +6,7 @@ Organiser.create!(
   website: "https://www.mtl.org/en"
 ).avatar.attach(io: File.open('./app/assets/images/storage/montreal.jpg'), filename: 'montreal.jpg')
 
-Organiser.create!(
+Organiser.find_or_create_by!(
   name: "Pointe-à-Callière",
   organiser_type: OrganiserType.find_by_name("Museum"),
   address: "350 Place Royale, Ville-Marie Montréal",
@@ -14,7 +14,7 @@ Organiser.create!(
   website: "https://pacmusee.qc.ca/en/"
 ).avatar.attach(io: File.open('./app/assets/images/storage/pac.png'), filename: 'pac.png')
 
-Organiser.create!(
+Organiser.find_or_create_by!(
   name: "Montreal Museum of Fine Arts",
   organiser_type: OrganiserType.find_by_name("Museum"),
   address: "1380 Rue Sherbrooke Ouest, Ville-Marie Montréal",
@@ -22,7 +22,7 @@ Organiser.create!(
   website: "https://www.mbam.qc.ca/"
 ).avatar.attach(io: File.open('./app/assets/images/storage/mbam.png'), filename: 'mbam.png')
 
-Organiser.create!(
+Organiser.find_or_create_by!(
   name: "Contemporary Art Museum of Montreal",
   organiser_type: OrganiserType.find_by_name("Museum"),
   address: "185 Rue Sainte-Catherine Ouest, Ville-Marie Montréal",
@@ -30,7 +30,7 @@ Organiser.create!(
   website: "https://macm.org/"
 ).avatar.attach(io: File.open('./app/assets/images/storage/mac.jpg'), filename: 'mac.jpg')
 
-Organiser.create!(
+Organiser.find_or_create_by!(
   name: "McCord",
   organiser_type: OrganiserType.find_by_name("Museum"),
   address: "690 Rue Sherbrooke Ouest, Ville-Marie Montréal",
@@ -38,7 +38,7 @@ Organiser.create!(
   website: "https://www.musee-mccord.qc.ca/fr/"
 ).avatar.attach(io: File.open('./app/assets/images/storage/mccord.jpeg'), filename: 'mccord.jpeg')
 
-Organiser.create!(
+Organiser.find_or_create_by!(
   name: "Centre Phi",
   organiser_type: OrganiserType.find_by_name("Museum"),
   address: "407 Rue Saint-Pierre, Montréal",
@@ -46,7 +46,7 @@ Organiser.create!(
   website: "https://phi-centre.com"
 ).avatar.attach(io: File.open('./app/assets/images/storage/phi.jpeg'), filename: 'phi.jpeg')
 
-Organiser.create!(
+Organiser.find_or_create_by!(
   name: "Biosphere",
   organiser_type: OrganiserType.find_by_name("Museum"),
   address: "160 ch du Tour de l'Isle Montreal",
@@ -54,7 +54,7 @@ Organiser.create!(
   website: "https://www.canada.ca/fr/environnement-changement-climatique/services/biosphere.html"
 ).avatar.attach(io: File.open('./app/assets/images/storage/jeandrapeau.jpg'), filename: 'jeandrapeau.jpg')
 
-Organiser.create!(
+Organiser.find_or_create_by!(
   name: "C2 Montreal",
   organiser_type: OrganiserType.find_by_name("Association"),
   address: "355 rue Sainte-Catherine Est Montreal",
@@ -62,7 +62,7 @@ Organiser.create!(
   website: "https://www.c2montreal.com"
 ).avatar.attach(io: File.open('./app/assets/images/storage/c2-montreal.png'), filename: 'c2-montreal.png')
 
-Organiser.create!(
+Organiser.find_or_create_by!(
   name: "Rage",
   organiser_type: OrganiserType.find_by_name("Sport Squad"),
   address: "1436 rue Amherst, Montréal",
@@ -70,15 +70,15 @@ Organiser.create!(
   website: "http://www.rageaxethrowing.com/"
 ).avatar.attach(io: File.open('./app/assets/images/storage/rage.jpg'), filename: 'rage.jpg')
 
-Organiser.create!(
+Organiser.find_or_create_by!(
   name: "Montreal on Wheels",
   organiser_type: OrganiserType.find_by_name("Sport Squad"),
   address: "27 rue de la Commune Est Montréal",
-  description: "Montréal is a bike-friendly city with benefits: unique bike tours organized by Montréal on Wheels provide a different and most pleasurable way to discover the city. Created by professional guides, these thematic tours open up the city’s history, neighbourhoods, architecture, cuisine and quirky charm in a way you would have never thought possible!",
+  description: "Montréal is a bike-friendly city with benefits: unique bike tours organized by Montréal on Wheels provide a different and most pleasurable way to discover the city. find_or_create_byd by professional guides, these thematic tours open up the city’s history, neighbourhoods, architecture, cuisine and quirky charm in a way you would have never thought possible!",
   website: "https://caroulemontreal.com/"
 ).avatar.attach(io: File.open('./app/assets/images/storage/montrealonwheels.png'), filename: 'montrealonwheels.png')
 
-Organiser.create!(
+Organiser.find_or_create_by!(
   name: "Yatai Mtl",
   organiser_type: OrganiserType.find_by_name("Association"),
   address: "5635 Rue Saint-Dominique, Montreal",
@@ -86,7 +86,7 @@ Organiser.create!(
   website: "https://www.yataimtl.com/"
 ).avatar.attach(io: File.open('./app/assets/images/storage/yatai.jpeg'), filename: 'yatai.jpeg')
 
-Organiser.create!(
+Organiser.find_or_create_by!(
   name: "Bunker Art Gallery",
   organiser_type: OrganiserType.find_by_name("Gallery"),
   address: "206, rue Saint-Paul Ouest, Montréal",
@@ -94,7 +94,7 @@ Organiser.create!(
   website: "bunkerart.yveslaroche.com"
 ).avatar.attach(io: File.open('./app/assets/images/storage/bunker.jpg'), filename: 'bunker.jpg')
 
-Organiser.create!(
+Organiser.find_or_create_by!(
   name: "Oasis Musical",
   organiser_type: OrganiserType.find_by_name("Association"),
   address: "635 rue Sainte-Catherine Ouest, Montréal",
@@ -102,7 +102,7 @@ Organiser.create!(
   website: "https://www.oasismusicale.ca/"
 ).avatar.attach(io: File.open('./app/assets/images/storage/oasis.webp'), filename: 'oasis.webp')
 
-Organiser.create!(
+Organiser.find_or_create_by!(
   name: "Parc Olympique",
   organiser_type: OrganiserType.find_by_name("Association"),
   address: "4141, avenue Pierre-De Coubertin, Montreal",
@@ -110,7 +110,7 @@ Organiser.create!(
   website: "https://parcolympique.qc.ca"
 ).avatar.attach(io: File.open('./app/assets/images/storage/parc.png'), filename: 'parc.png')
 
-Organiser.create!(
+Organiser.find_or_create_by!(
   name: "SOS Labyrinthe",
   organiser_type: OrganiserType.find_by_name("Atttraction"),
   address: "Vieux-port de Montreal",
@@ -118,7 +118,7 @@ Organiser.create!(
   website: "https://soslabyrinthe.com"
 ).avatar.attach(io: File.open('./app/assets/images/storage/logoSOS.png'), filename: 'logoSOS.png')
 
-Organiser.create!(
+Organiser.find_or_create_by!(
   name: "Spade & Palacio",
   organiser_type: OrganiserType.find_by_name("Atttraction"),
   address: "3801 #B Saint-Denis Montreal",
@@ -126,7 +126,7 @@ Organiser.create!(
   website: "https://spadeandpalacio.com"
 ).avatar.attach(io: File.open('./app/assets/images/storage/spade.png'), filename: 'spade.png')
 
-Organiser.create!(
+Organiser.find_or_create_by!(
   name: "Laval Events",
   organiser_type: OrganiserType.find_by_name("City Organiser"),
   address: "Laval City Hall, 1 Place du Souvenir, Laval",
@@ -135,7 +135,7 @@ Organiser.create!(
   website: "https://www.laval.ca/Pages/Fr/accueil.aspx"
 ).avatar.attach(io: File.open('./app/assets/images/storage/laval.gif'), filename: 'laval.gif')
 
-Organiser.create!(
+Organiser.find_or_create_by!(
   name: "Longueuil Events",
   organiser_type: OrganiserType.find_by_name("City Organiser"),
   address: "4250 Ch de la Savane, Saint-Hubert",
@@ -144,4 +144,4 @@ Organiser.create!(
   website: "https://www.longueuil.quebec/en/events"
 ).avatar.attach(io: File.open('./app/assets/images/storage/long.gif'), filename: 'long.gif')
 
-p "Organisers created!"
+p "Organisers find_or_create_byd!"

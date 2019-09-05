@@ -14,14 +14,11 @@ def create_event(info)
     event_website: info[:event_website],
   )
 
-  p event
-
   info[:interests].each do |interest|
     event.interests << Interest.find_by_name(interest)
   end
 
   event.save!
-  p event
   p "WARNING EVENT NOT GEOCODED for: #{event.address}" unless event.geocoded?
 end
 

@@ -24,8 +24,9 @@ def create_event(info)
 
   times = rand(4..12)
 
+  attendee = []
+
   times.times do
-    attendee = []
     attendee << User.find(rand(User.second.id..User.last.id))
     event.users = attendee.uniq
   end

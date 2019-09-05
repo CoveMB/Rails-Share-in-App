@@ -20,7 +20,7 @@ def create_event(info)
   end
 
   event.save!
-  p "WARNING EVENT NOT GEOCODED for: #{event.name}" unless event.geocoded?
+  p "WARNING EVENT NOT GEOCODED for: #{event.address}" unless event.geocoded?
 end
 
 Organiser.create!(
@@ -31,18 +31,19 @@ Organiser.create!(
   website: "https://www.longueuil.quebec/en/events"
 )
 
-create_event(
-  organiser: "Date Events",
-  event_type: "Exhibition",
-  name:"Date Event",
-  start_date: DateTime.parse("25th april 2019"),
-  end_date: DateTime.parse("27th october 2019"),
-  address: "2000 12e Avenue, Pointe-aux-Trembles",
-  description: "A date event for demo day purpose",
-  event_website: "https://www.musee-mccord.qc.ca/en/exhibitions/art-haida/",
-  image: "haida.jpg",
-  interests: ["Date Music"]
-)
+
+["2000 12e Avenue, Pointe-aux-Trembles", "2480 Chambly Road, Longueuil", "326 Rue Saint-Laurent Ouest, Longueuil", "2778 Boulevard Jacques-Cartier Est, Longueuil", "886 Chambly Road, Longueuil", "1185 Chemin du Tremblay, Longueuil", "155 Boulevard des Laurentides, Laval", "3005 Boulevard de la Concorde Est Laval", "1091 Boulevard des Laurentides", "525 Boulevard Saint-Martin Ouest, Laval", "4183 Boulevard Sainte-Rose, Laval-Ouest"].each do |address|
+  create_event(
+    organiser: "Date Events",
+    event_type: "Exhibition",
+    name:"Date Event",
+    start_date: DateTime.parse("25th april 2019"),
+    end_date: DateTime.parse("27th october 2019"),
+    address: address,
+    description: "A date event for demo day purpose",
+    interests: ["Date Music"]
+  )
+end
 
 
 p "Date events created"

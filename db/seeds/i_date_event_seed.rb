@@ -47,3 +47,4 @@ end
 
 
 p "Date events created"
+p "#{Event.count} events created"

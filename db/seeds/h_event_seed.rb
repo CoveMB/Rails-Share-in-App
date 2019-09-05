@@ -17,9 +17,13 @@ def create_event(info)
   info[:interests].each do |interest|
     event.interests << Interest.find_by_name(interest)
   end
-  ["kimson@gmail.com", "marteen@gmail.com", "john@gmail.com", "camille@gmail.com"].each do |user|
-    event.users << User.find_by_email(user)
+
+  times = rand(4..10)
+
+  times.times do
+    event.users << User.find(rand(User.first.id..User.last.id))
   end
+
   event.save!
   p "WARNING EVENT NOT GEOCODED for: #{event.name}" unless event.geocoded?
 end

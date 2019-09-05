@@ -233,6 +233,11 @@ create_event(
   interests: ["Street Food", "Food Festival"]
 )
 
+yatai = Event.find_by_name("Yatai Mtl")
+yatai.users << User.find_by_name("Benjamin")
+yatai.users << User.find_by_name("Camille")
+yatai.users << User.find_by_name("Kristyna")
+
 create_event(
   organiser: "Bunker Art Gallery",
   event_type: "Exhibition",

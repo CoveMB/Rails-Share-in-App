@@ -111,12 +111,15 @@ const renderNewMarkers = (newMarkers, map) => {
       .addTo(map);
       newMarker.getElement().addEventListener("mouseenter", (event) => {
         newMarker.togglePopup();
+        newMarker.getElement().classList.toggle("anim-custom-marker");
       });
       newMarker.getElement().addEventListener("click", (event) => {
         window.location.href = marker.event_path;
       });
       newMarker.getElement().addEventListener("mouseleave", (event) => {
         newMarker.togglePopup();
+        newMarker.getElement().classList.toggle("anim-custom-marker");
+        clearInterval();
       });
       return newMarker;
   });

@@ -30,13 +30,13 @@ create_event(
   end_date: DateTime.parse("27th october 2019"),
   description: "AeroSim Experience is the leader in flight simulation entertainment of professional level that is open to the general public in Canada. It offers an extremely realistic immersive experience, thanks to high-definition images and true-to-life weather simulations.",
   event_website: "https://www.tourismelaval.com/en/activities-in-laval/what-to-do/aerosim-experience",
-  image: "volsimul.jpg",
+  image: "volsimul.jpeg",
   interests: ["Tech Workshop", "Flying"]
 )
 
 create_event(
   organiser: "Laval Events",
-  event_type: "Health",
+  event_type: "Outdoor Activity",
   name:"Amerispa Sheraton Laval",
   start_date: DateTime.parse("25th april 2019"),
   end_date: DateTime.parse("27th october 2019"),

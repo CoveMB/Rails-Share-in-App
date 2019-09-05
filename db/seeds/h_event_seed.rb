@@ -16,6 +16,7 @@ def create_event(info)
   )
 
   event.users = []
+  event.interests = []
 
   event.image.attach(io: File.open("./app/assets/images/storage/#{info[:image]}"), filename: "#{info[:image]}")
   info[:interests].each do |interest|

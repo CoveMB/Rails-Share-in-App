@@ -44,15 +44,31 @@ const initDetailsToggle = () => {
     const followDetailsBtn = document.getElementById("follow-details-btn");
     const profileEventsList = document.getElementById("profile-events-list");
     const profileOrganisersList = document.getElementById("profile-organisers-list");
+    const profileCard = document.querySelector(".body-card");
+    const originalHeigth = profileCard.offsetHeight;
 
     followDetailsBtn.addEventListener("click", (event) => {
-      profileEventsList.style.display = "none";
-      profileOrganisersList.style.display = "block";
+      profileEventsList.classList.remove("animated", "fadeInUp");
+      profileEventsList.classList.add("animated", "fadeOutDown");
+      setTimeout(()=>{
+        console.log(originalHeigth);
+        profileEventsList.style.display = "none";
+        profileOrganisersList.classList.remove("animated", "fadeOutDown");
+        profileOrganisersList.classList.add("animated", "fadeInUp");
+        profileOrganisersList.style.display = "block";
+        profileCard.style.height = originalHeigth + "px";
+      }, 600);
     });
 
     profileDetailsBtn.addEventListener("click", () => {
-      profileEventsList.style.display = "block";
-      profileOrganisersList.style.display = "none";
+      profileOrganisersList.classList.remove("animated", "fadeInUp");
+      profileOrganisersList.classList.add("animated", "fadeOutDown");
+      setTimeout(()=>{
+        profileOrganisersList.style.display = "none";
+        profileEventsList.classList.remove("animated", "fadeOutDown");
+        profileEventsList.classList.add("animated", "fadeInUp");
+        profileEventsList.style.display = "block";
+      }, 600);
     });
 
   }

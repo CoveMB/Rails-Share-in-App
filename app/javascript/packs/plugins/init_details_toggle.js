@@ -31,9 +31,9 @@ const initDetailsToggle = () => {
       userList.classList.add("animated", "fadeInUp");
       userList.style.display = "block";
       interestsLists.forEach((interestList) => {
-        setTimeout(()=>{
-          interestList.style.display = "none";
-        }, 600);
+
+        interestList.style.display = "none";
+
       });
       setTimeout(() => {
         organiserCard.style.display = "none";

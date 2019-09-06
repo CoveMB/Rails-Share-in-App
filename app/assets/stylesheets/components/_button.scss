@@ -104,6 +104,27 @@ button:focus {
   background-color: $classicred;
 }
 
+#profile-details-btn{
+  position: absolute;
+  left: 18%;
+  top: 59vh;
+  font-family: $merriweather;
+  font-size: 25px;
+  color: $classicred;
+  border-bottom: 1px solid $classicred;
+  padding-bottom: 50px;
+}
+
+#follow-details-btn{
+  position: absolute;
+  right: 18%;
+  top: 59vh;
+  font-size: 25px;
+  font-family: $merriweather;
+  color: $classicred;
+  border-bottom: 1px solid $classicred;
+  padding-bottom: 50px;
+}
 
 #event-details-btn{
   position: absolute;

@@ -39,6 +39,23 @@ const initDetailsToggle = () => {
 
     });
   }
+  if (window.location.href.match(/users/)){
+    const profileDetailsBtn = document.getElementById("profile-details-btn");
+    const followDetailsBtn = document.getElementById("follow-details-btn");
+    const profileEventsList = document.getElementById("profile-events-list");
+    const profileOrganisersList = document.getElementById("profile-organisers-list");
+
+    followDetailsBtn.addEventListener("click", (event) => {
+      profileEventsList.style.display = "none";
+      profileOrganisersList.style.display = "block";
+    });
+
+    profileDetailsBtn.addEventListener("click", () => {
+      profileEventsList.style.display = "block";
+      profileOrganisersList.style.display = "none";
+    });
+
+  }
 
 };
 

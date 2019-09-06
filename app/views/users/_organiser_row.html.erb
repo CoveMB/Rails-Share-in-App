@@ -1,0 +1,8 @@
+<% if organiser.avatar.attached? %>
+<div class="user-row">
+  <%= link_to(organiser_path(organiser)) do %> <%= image_tag url_for(organiser.avatar), class: "avatar", style: "width: 60px !important; height: 60px !important;" %>
+    <p id="user-<%= organiser.id %>" class="user-row-text"><%= organiser.name %></p>
+  <% end %>
+  <div class="user-row-border"></div>
+</div>
+<% end %>

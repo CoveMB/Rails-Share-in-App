@@ -1,3 +1,8 @@
+<% if @user == current_user %>
+  <h3 class="btn" id="profile-details-btn">Profile</h3>
+  <h3 class="btn" id="follow-details-btn">Favorites Organisers</h3>
+<% end %>
+
 <div class="body-card">
   <% if user.avatar.attached? %>
     <%= image_tag url_for(user.avatar), class: "card-avatar" %>
@@ -21,6 +26,9 @@
     </div>
     <div class="col-md-6 col-sm-12 card-column">
       <%= render "event_list"%>
+      <% if @user == current_user %>
+        <%= render "organiser_list"%>
+      <% end %>
     </div>
   </div>
 </div>

@@ -1,0 +1,15 @@
+<div class="user-list-container scrollbar-custom animated fadeIn" id="profile-organisers-list" style="display: none;">
+
+    <h2 class="user-list-title">Organisers you follow</h2>
+
+  <ul id="attendee-list">
+
+    <% @user.organisers.each do |organiser| %>
+
+      <li>
+        <%= render "organiser_row", organiser: organiser %>
+      </li>
+
+    <% end %>
+  </ul>
+</div>

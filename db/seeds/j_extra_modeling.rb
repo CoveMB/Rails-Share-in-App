@@ -11,7 +11,6 @@ yatai.users << User.find_by_name("Lea")
 yatai.users << User.find_by_name("Stephane")
 yatai.users << User.find_by_name("Richard")
 yatai.users << User.find_by_name("Khaoula")
-
 yatai.users << User.find_by_name("Kimson")
 yatai.users << User.find_by_name("Martin")
 yatai.users << User.find_by_name("Benjamin")

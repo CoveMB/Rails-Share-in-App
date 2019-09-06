@@ -1,5 +1,5 @@
 function changeBtn(){
-  document.getElementById("organiser-follow-btn").outerHTML = '<%= link_to "You are following #{@organiser.name}", organiser_user_organiser_path(@organiser, current_user), remote: true, method: :delete, class: "event-btn redi animated FadeIn", id:"organiser-follow-btn" %>'
+  document.getElementById("organiser-follow-btn").outerHTML = '<%= link_to "You are following #{@organiser.name}", organiser_user_organiser_path(@organiser, current_user), remote: true, method: :delete, class: "event-btn redi animated FadeInUp", id:"organiser-follow-btn" %>'
 }
 
 function flash(flashHTML){

@@ -1,6 +1,7 @@
 const initDetailsToggle = () => {
   if (window.location.href.match(/events/)){
     const eventDetailsBtn = document.getElementById("event-details-btn");
+    const followBtn = document.getElementById("organiser-follow-btn");
     const organiserDetailsBtn = document.getElementById("organiser-details-btn");
     const eventCard = document.getElementById("event-card");
     const organiserCard = document.getElementById("organiser-card");
@@ -25,6 +26,7 @@ const initDetailsToggle = () => {
     });
 
     eventDetailsBtn.addEventListener("click", (event) => {
+      followBtn.style.display = "none";
       oeList.classList.remove("animated", "fadeInUp");
       oeList.classList.add("animated", "fadeOutDown");
       userList.classList.remove("animated", "fadeOutDown");
@@ -39,10 +41,12 @@ const initDetailsToggle = () => {
         organiserCard.style.display = "none";
         eventCard.style.display = "block";
         attendeeBtn.style.display = "block";
+        followBtn.style.display = "block";
       }, 600);
     });
 
     organiserDetailsBtn.addEventListener("click", (event) => {
+      attendeeBtn.style.display = "none";
       oeList.classList.remove("animated", "fadeOutDown");
       oeList.classList.add("animated", "fadeInUp");
       userList.classList.remove("animated", "fadeInUp");
@@ -55,6 +59,7 @@ const initDetailsToggle = () => {
       setTimeout(() => {
         eventCard.style.display = "none";
         organiserCard.style.display = "block";
+        attendeeBtn.style.display = "block";
       }, 600);
 
     });

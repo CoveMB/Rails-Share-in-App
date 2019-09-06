@@ -34,9 +34,9 @@
     </div>
     <div class="right">
       <% unless current_user.events.include? event %>
-        <%= link_to "Register to the event", organiser_event_user_event_path(event.organiser, event, current_user), remote: true, method: :patch, class: "event-btn redi", id:"event-attendee-btn" %>
+        <%= link_to "Register to the event", organiser_event_user_event_path(event.organiser, event, current_user), remote: true, method: :patch, class: "event-btn redi animated fadeInUp", id:"event-attendee-btn" %>
       <% else %>
-        <%= link_to "Unregister from the event", organiser_event_user_event_path(event.organiser, event, current_user), remote: true, method: :delete, class: "event-btn redi", id:"event-attendee-btn" %>
+        <%= link_to "Unregister from the event", organiser_event_user_event_path(event.organiser, event, current_user), remote: true, method: :delete, class: "event-btn redi animated fadeInUp", id:"event-attendee-btn" %>
       <% end %>
     </div>
 

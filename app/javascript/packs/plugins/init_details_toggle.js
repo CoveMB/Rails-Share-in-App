@@ -8,6 +8,10 @@ const initDetailsToggle = () => {
     const userList = document.getElementById("attendee-list-event");
     const interestsLists = document.querySelectorAll(".interest-event-list");
     const attendeeBtn = document.getElementById("event-attendee-btn");
+    const originalHeigth = eventCard.offsetHeight;
+    const oeList = document.getElementById("orgoniser-events-list-in-event");
+    // eventCard.style.height = originalHeigth + "px";
+    // organiserCard.style.height = originalHeigth + "px";
 
     interests.forEach((interest) => {
       interest.addEventListener("click", (event) => {
@@ -21,21 +25,37 @@ const initDetailsToggle = () => {
     });
 
     eventDetailsBtn.addEventListener("click", (event) => {
+      oeList.classList.remove("animated", "fadeInUp");
+      oeList.classList.add("animated", "fadeOutDown");
+      userList.classList.remove("animated", "fadeOutDown");
+      userList.classList.add("animated", "fadeInUp");
       userList.style.display = "block";
       interestsLists.forEach((interestList) => {
-        interestList.style.display = "none";
+        setTimeout(()=>{
+          interestList.style.display = "none";
+        }, 600);
       });
-      eventCard.style.display = "block";
-      organiserCard.style.display = "none";
-      attendeeBtn.style.display = "block";
+      setTimeout(() => {
+        organiserCard.style.display = "none";
+        eventCard.style.display = "block";
+        attendeeBtn.style.display = "block";
+      }, 600);
     });
 
     organiserDetailsBtn.addEventListener("click", (event) => {
+      oeList.classList.remove("animated", "fadeOutDown");
+      oeList.classList.add("animated", "fadeInUp");
+      userList.classList.remove("animated", "fadeInUp");
+      userList.classList.add("animated", "fadeOutDown");
       interestsLists.forEach((interestList) => {
-        interestList.style.display = "none";
+        setTimeout(()=>{
+          interestList.style.display = "none";
+        }, 600);
       });
-      eventCard.style.display = "none";
-      organiserCard.style.display = "block";
+      setTimeout(() => {
+        eventCard.style.display = "none";
+        organiserCard.style.display = "block";
+      }, 600);
 
     });
   }

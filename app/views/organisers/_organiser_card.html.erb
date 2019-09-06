@@ -5,10 +5,10 @@
     <%= image_tag image_path('default_avatar.jpg'), class: "card-avatar" %>
   <% end %>
   <div class="row">
-    <div class="info-event col-md-6 col-sm-12 card-column" id="left-part">
+    <div class="info-event col-md-6 col-sm-12 card-column animated fadeIn" id="left-part">
       <%= render "organisers/organiser_details", organiser: organiser %>
     </div>
-    <div class="col-md-6 col-sm-12 card-column">
+    <div class="col-md-6 col-sm-12 card-column animated fadeIn">
       <%= render "organisers/event_list", organiser: organiser %>
 
     </div>

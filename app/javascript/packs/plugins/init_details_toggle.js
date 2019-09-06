@@ -11,7 +11,7 @@ const initDetailsToggle = () => {
     const originalHeigth = eventCard.offsetHeight;
     const oeList = document.getElementById("orgoniser-events-list-in-event");
     // eventCard.style.height = originalHeigth + "px";
-    // organiserCard.style.height = originalHeigth + "px";
+    organiserCard.style.height = originalHeigth + "px";
 
     interests.forEach((interest) => {
       interest.addEventListener("click", (event) => {

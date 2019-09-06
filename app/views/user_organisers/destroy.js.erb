@@ -1,0 +1,14 @@
+function changeBtn(){
+  document.getElementById("organiser-follow-btn").outerHTML = '<%= link_to "Follow #{@organiser.name}", organiser_user_organiser_path(@organiser, current_user), remote: true, method: :patch, class: "event-btn redi animated FadeIn", id:"organiser-follow-btn" %>'
+}
+
+
+function flash(flashHTML){
+  document.querySelector("body").insertAdjacentHTML("beforeend", flashHTML);
+}
+
+<% if @organiser.errors.any? %>
+<% else %>
+  changeBtn();
+  flash('<div class="alert alert-info alert-dismissible fade show m-1" role="alert">You don\'t follow #{@organiser.nane} any more<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
+<% end %>

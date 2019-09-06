@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_02_214533) do
+ActiveRecord::Schema.define(version: 2019_09_06_115000) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -161,6 +161,13 @@ ActiveRecord::Schema.define(version: 2019_09_02_214533) do
     t.index ["user_id"], name: "index_user_interests_on_user_id"
   end
 
+  create_table "user_organisers", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "organiser_id"
+    t.index ["organiser_id"], name: "index_user_organisers_on_organiser_id"
+    t.index ["user_id"], name: "index_user_organisers_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -196,4 +203,6 @@ ActiveRecord::Schema.define(version: 2019_09_02_214533) do
   add_foreign_key "user_events", "users"
   add_foreign_key "user_interests", "interests"
   add_foreign_key "user_interests", "users"
+  add_foreign_key "user_organisers", "organisers"
+  add_foreign_key "user_organisers", "users"
 end

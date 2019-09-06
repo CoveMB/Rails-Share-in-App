@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
   # Organiser and event routes
   resources :organisers, only: [:show] do
+    resources :user_organisers, only: [:update, :destroy]
     resources :events, only: [:show] do
       resources :user_events, only: [:update, :destroy]
     end

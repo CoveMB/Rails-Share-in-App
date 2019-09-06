@@ -7,11 +7,23 @@
   <div class="row">
     <div class="info-event col-md-6 col-sm-12 card-column" id="left-part">
       <%= render "organisers/organiser_details", organiser: organiser %>
-      <%= link_to "Visit organiser's website", organiser.website, class: "event-btn ired", target: "_blank" %>
-
     </div>
     <div class="col-md-6 col-sm-12 card-column">
       <%= render "organisers/event_list", organiser: organiser %>
+
     </div>
+  </div>
+  <div class="buttons-container d-flex align-items-center justify-content-between">
+    <div class="left">
+      <%= link_to "Visit organiser's website", organiser.website, class: "event-btn ired", target: "_blank" %>
+    </div>
+    <div class="right">
+      <% unless current_user.organisers.include? organiser %>
+        <%= link_to "Follow #{organiser.name}", organiser_user_organiser_path(organiser, current_user), remote: true, method: :patch, class: "event-btn redi", id:"organiser-follow-btn" %>
+      <% else %>
+        <%= link_to "You are following #{organiser.name}", organiser_user_organiser_path(organiser, current_user), remote: true, method: :delete, class: "event-btn redi", id:"organiser-follow-btn" %>
+      <% end %>
+    </div>
+
   </div>
 </div>

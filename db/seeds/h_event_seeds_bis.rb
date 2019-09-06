@@ -3,19 +3,33 @@ require 'date'
 def create_event(info)
   organiser = Organiser.find_by_name(info[:organiser])
   address = info.key?(:address) ? info[:address] : organiser.address
-  event = Event.new(
+
+  event = Event.find_or_create_by!(
     organiser: organiser,
     event_type: EventType.find_by_name(info[:event_type]),
     name: info[:name],
     start_date: info[:start_date],
     end_date: info[:end_date],
-    address: info[:address],
+    address: address,
     description: info[:description],
     event_website: info[:event_website],
   )
+
+  event.users = []
+  event.interests = []
+
   event.image.attach(io: File.open("./app/assets/images/storage/#{info[:image]}"), filename: "#{info[:image]}")
   info[:interests].each do |interest|
     event.interests << Interest.find_by_name(interest)
+  end
+
+  times = rand(4..12)
+
+  attendee = []
+
+  times.times do
+    attendee << User.find(rand(User.second.id..User.last.id))
+    event.users = attendee.uniq
   end
 
   event.save!
@@ -23,25 +37,42 @@ def create_event(info)
 end
 
 create_event(
-  organiser: "Laval Events",
+  organiser: "C2 Montreal",
   event_type: "Outdoor Activity",
-  name:"AéroSim Expérience",
-  start_date: DateTime.parse("25th april 2019"),
-  end_date: DateTime.parse("27th october 2019"),
-  description: "AeroSim Experience is the leader in flight simulation entertainment of professional level that is open to the general public in Canada. It offers an extremely realistic immersive experience, thanks to high-definition images and true-to-life weather simulations.",
-  event_website: "https://www.tourismelaval.com/en/activities-in-laval/what-to-do/aerosim-experience",
-  image: "volsimul.jpeg",
-  interests: ["Tech Workshop", "Flying"]
+  name:"SUSHI.. For free!",
+  start_date: DateTime.parse("22th june 2019"),
+  end_date: DateTime.parse("24th june 2019"),
+  address: "4943 boulevard Rosemont Montreal",
+  description: "The Yatai is the name of the itinerant stand in Japan, a tradition that dates back to the Edo period in the 1630s. This ancient practice is still very popular with the Japanese people during the summer festivals (Matsuri), near the temples, along the rivers or at the exit of the offices.
+  An occasion to discover this facet of Japanese culture and share the pleasure of Yatai.",
+  event_website: "https://www.yataimtl.com/",
+  image: "sushi.jpg",
+  interests: ["Street Food", "Food Festival"]
 )
 
 create_event(
-  organiser: "Laval Events",
+  organiser: "Spade & Palacio",
   event_type: "Outdoor Activity",
-  name:"Amerispa Sheraton Laval",
-  start_date: DateTime.parse("25th april 2019"),
-  end_date: DateTime.parse("27th october 2019"),
-  description: "The Amerispa centre at the Sheraton Laval will give your body the attention it deserves. After a shopping spree or a day out with friends, take the time to re;ax amd enjoy a great massage as well high-quality skincare and bodycare treatments. Close your eyes, and let go.",
-  event_website: "https://www.tourismelaval.com/en/activities-in-laval/what-to-do/amerispa-sheraton-laval",
-  image: "spalaval.jpg",
-  interests: ["Wellness Meetup", "Health Meetup"]
+  name:"UKRAINIAN - Street Food Expérience",
+  start_date: DateTime.parse("14th september 2019"),
+  end_date: DateTime.parse("15th september 2019"),
+  address: "6201 boulevard monk",
+  description: "AeroSim Experience is the leader in flight simulation entertainment of professional level that is open to the general public in Canada. It offers an extremely realistic immersive experience, thanks to high-definition images and true-to-life weather simulations.",
+  event_website: "https://www.tourismelaval.com/en/activities-in-laval/what-to-do/aerosim-experience",
+  image: "jean-talon.jpeg",
+  interests: ["Street Food", "Food Festival"]
+)
+
+create_event(
+  organiser: "Parc Olympique",
+  event_type: "Outdoor Activity",
+  name:"FOOD TRUCK - First Sunday",
+  start_date: DateTime.parse("22th june 2019"),
+  end_date: DateTime.parse("24th june 2019"),
+  address: "4061 rue Ontario Est Montreal",
+  description: "The Yatai is the name of the itinerant stand in Japan, a tradition that dates back to the Edo period in the 1630s. This ancient practice is still very popular with the Japanese people during the summer festivals (Matsuri), near the temples, along the rivers or at the exit of the offices.
+  An occasion to discover this facet of Japanese culture and share the pleasure of Yatai.",
+  event_website: "https://www.yataimtl.com/",
+  image: "foodtruck.jpg",
+  interests: ["Street Food", "Food Festival"]
 )

@@ -9,7 +9,7 @@ yatai.users << User.find_by_name("Camille")
 yatai.users << User.find_by_name("Kristyna")
 yatai.save!
 
-alexandraplatz = Event.find_by_name("Mile-Ex Alexandraplatz Night Market")
+alexandraplatz = Event.find_by_name("MILE EX - Alexandraplatz Night Market")
 alexandraplatz.start_date = DateTime.parse("14th september 2019")
 alexandraplatz.end_date = DateTime.parse("15th september 2019")
 alexandraplatz.users = []

@@ -289,14 +289,14 @@ create_event(
 create_event(
   organiser: "Montreal Events",
   event_type: "Outdoor Activity",
-  name:"Mile-Ex Alexandraplatz Night Market",
+  name:"MILE EX - Alexandraplatz Night Market",
   start_date: DateTime.parse("9th june 2019"),
   end_date: DateTime.parse("13th october 2019"),
   address: "150 Rue Saint Zotique Ouest Montréal,",
   description: "There’s something bittersweet about witnessing the development of an emerging neighbourhood. Too often, we’re only privy to our city’s secret spots once they’re out of the bag and crowded, or we want to hold on to them before they are. Mile Ex is currently in the midst of its transformation, and still has that twinge of excitement and mystery to it. Officially called the “Alexandra-Marconi” district, Mile Ex spans from Parc Avenue to Clark Street, between Jean-Talon and the train tracks. It’s a cozy, primarily residential neighbourhood that’s been built up from an austere industrial area by its dedicated residents, yet a new wave of development is beginning to obscure its humble roots.",
   event_website: "https://localfoodtours.com/montreal/mile-ex-montreal-reasons-why-you-should-go/",
   image: "mileex.jpg",
-  interests: ["Neighborhood Visit", "Neighborhood Meetup", "Street Food", "Neighborhood History"]
+  interests: ["Street Food", "Neighborhood Visit", "Neighborhood Meetup", "Food Festival"]
 )
 
 create_event(

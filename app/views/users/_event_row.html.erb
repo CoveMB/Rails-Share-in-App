@@ -1,6 +1,6 @@
 <% if event.organiser.avatar.attached? %>
 <div class="user-row">
-  <%= link_to(organiser_event_path(event.organiser, event)) do %> <%= image_tag url_for(event.organiser.avatar), class: "avatar" %>
+  <%= link_to(organiser_event_path(event.organiser, event)) do %> <%= image_tag url_for(event.organiser.avatar), class: "avatar", style: "width: 60px !important; height: 60px !important;" %>
     <p id="user-<%= event.id %>" class="user-row-text"><%= event.name %></p>
   <% end %>
   <div class="user-row-border"></div>

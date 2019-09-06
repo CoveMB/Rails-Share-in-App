@@ -4,6 +4,11 @@ kristyna.events = []
 yatai = Event.find_by_name("YATAI - Japan Street Food Celebration")
 yatai.start_date = DateTime.parse("7th september 2019")
 yatai.end_date = DateTime.parse("8th september 2019")
+
+yatai.users = []
+yatai.users << User.find_by_name("Antoine")
+yatai.users << User.find_by_name("Luc")
+yatai.users << User.find_by_name("Martin")
 yatai.users << User.find_by_name("Benjamin")
 yatai.users << User.find_by_name("Camille")
 yatai.users << User.find_by_name("Kristyna")

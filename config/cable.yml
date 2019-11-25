@@ -6,5 +6,5 @@ test:
 
 production:
   adapter: redis
-  url: <%= Rails.application.credentials.dig(:redis, :url) %>
+  url: <%= ENV['REDIS_URL'].as_json %>
   channel_prefix: Rails-Share-in-App_production

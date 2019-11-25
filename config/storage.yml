@@ -19,7 +19,7 @@ amazon:
 google:
   service: GCS
   project: your_project
-  credentials: <%= Rails.application.credentials.gcs_share_in.to_json %>
+  credentials: <%= ENV['GOOGLE_APPLICATION_CREDENTIALS'].as_json %>
   bucket: share-in
 
 # Use rails credentials:edit to set the Azure Storage secret (as azure_storage:storage_access_key)

@@ -1,7 +1,6 @@
 <h3 class="btn" id="event-details-btn">Events Details</h3>
 <h3 class="btn" id="organiser-details-btn">Organiser Details</h3>
 
-
 <div class="body-card" id="event-card">
 
   <div>
@@ -25,24 +24,24 @@
 
     </div>
 
-</div>
-
+  </div>
 
   <div class="buttons-container d-flex align-items-center justify-content-between">
     <div class="left">
       <%= link_to "Visit event's website", event.event_website, class: "event-btn ired", target: "_blank" %>
     </div>
     <div class="right">
-      <% unless current_user.events.include? event %>
-        <%= link_to "Register to the event", organiser_event_user_event_path(event.organiser, event, current_user), remote: true, method: :patch, class: "event-btn redi animated fadeInUp", id:"event-attendee-btn" %>
-      <% else %>
-        <%= link_to "Unregister from the event", organiser_event_user_event_path(event.organiser, event, current_user), remote: true, method: :delete, class: "event-btn redi animated fadeInUp", id:"event-attendee-btn" %>
+      <% if user_signed_in? %>
+        <% unless current_user.events.include? event %>
+          <%= link_to "Register to the event", organiser_event_user_event_path(event.organiser, event, current_user), remote: true, method: :patch, class: "event-btn redi animated fadeInUp", id:"event-attendee-btn" %>
+        <% else %>
+          <%= link_to "Unregister from the event", organiser_event_user_event_path(event.organiser, event, current_user), remote: true, method: :delete, class: "event-btn redi animated fadeInUp", id:"event-attendee-btn" %>
+        <% end %>
       <% end %>
     </div>
 
   </div>
 
 </div>
-
 
 <%= render "organisers/organiser_card", organiser: event.organiser, id: "organiser-card" %>

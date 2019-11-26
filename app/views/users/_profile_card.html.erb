@@ -12,16 +12,21 @@
   <div class="row">
 
     <div class="info-event col-md-6 col-sm-12 card-column" id="left-part">
-      <p class="profile-name"><%= user.name %> <%=user.surname %></p>
+      <p class="profile-name"><%= user.name %>
+        <%=user.surname %></p>
       <p class="profile-bio"><%= @user.bio %>
       </p>
-      <% if current_user == user %>
-        <button class="event-btn ired" data-toggle="modal" data-target="#exempleModal">
-          Edit your profile</button>
-        <%= render "edit_modal" %>
-      <% else %>
-      <a class="message-btn" rel="nofollow" data-method="post" href="<%= user_chats_path(current_user, other_user: user.id) %>">Message <%= user.name %> <i class="far fa-comment-dots message-icon"></i></a>
-
+      <% if user_signed_in? %>
+        <% if current_user == user %>
+          <button class="event-btn ired" data-toggle="modal" data-target="#exempleModal">
+            Edit your profile</button>
+          <%= render "edit_modal" %>
+        <% else %>
+          <a class="message-btn" rel="nofollow" data-method="post" href="<%= user_chats_path(current_user, other_user: user.id) %>">Message
+            <%= user.name %>
+            <i class="far fa-comment-dots message-icon"></i>
+          </a>
+        <% end %>
       <% end %>
     </div>
     <div class="col-md-6 col-sm-12 card-column">

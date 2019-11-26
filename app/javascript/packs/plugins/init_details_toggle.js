@@ -26,7 +26,9 @@ const initDetailsToggle = () => {
     });
 
     eventDetailsBtn.addEventListener("click", (event) => {
-      followBtn.style.display = "none";
+      if(followBtn){
+        followBtn.style.display = "none";
+      }
       oeList.classList.remove("animated", "fadeInUp");
       oeList.classList.add("animated", "fadeOutDown");
       userList.classList.remove("animated", "fadeOutDown");
@@ -40,13 +42,17 @@ const initDetailsToggle = () => {
       setTimeout(() => {
         organiserCard.style.display = "none";
         eventCard.style.display = "block";
-        attendeeBtn.style.display = "block";
-        followBtn.style.display = "block";
+        if(attendeeBtn){
+          attendeeBtn.style.display = "block";
+          followBtn.style.display = "block";
+        }
       }, 600);
     });
 
     organiserDetailsBtn.addEventListener("click", (event) => {
-      attendeeBtn.style.display = "none";
+      if(attendeeBtn){
+        attendeeBtn.style.display = "none";
+      }
       oeList.classList.remove("animated", "fadeOutDown");
       oeList.classList.add("animated", "fadeInUp");
       userList.classList.remove("animated", "fadeInUp");
@@ -59,7 +65,9 @@ const initDetailsToggle = () => {
       setTimeout(() => {
         eventCard.style.display = "none";
         organiserCard.style.display = "block";
-        attendeeBtn.style.display = "block";
+        if(attendeeBtn){
+          attendeeBtn.style.display = "block";
+        }
       }, 600);
 
     });
@@ -72,29 +80,33 @@ const initDetailsToggle = () => {
     const profileCard = document.querySelector(".body-card");
     const originalHeigth = profileCard.offsetHeight;
 
-    followDetailsBtn.addEventListener("click", (event) => {
-      profileEventsList.classList.remove("animated", "fadeInUp");
-      profileEventsList.classList.add("animated", "fadeOutDown");
-      setTimeout(()=>{
-        console.log(originalHeigth);
-        profileEventsList.style.display = "none";
-        profileOrganisersList.classList.remove("animated", "fadeOutDown");
-        profileOrganisersList.classList.add("animated", "fadeInUp");
-        profileOrganisersList.style.display = "block";
-        profileCard.style.height = originalHeigth + "px";
-      }, 600);
-    });
+    if(followDetailsBtn){
+      followDetailsBtn.addEventListener("click", (event) => {
+        profileEventsList.classList.remove("animated", "fadeInUp");
+        profileEventsList.classList.add("animated", "fadeOutDown");
+        setTimeout(()=>{
+          console.log(originalHeigth);
+          profileEventsList.style.display = "none";
+          profileOrganisersList.classList.remove("animated", "fadeOutDown");
+          profileOrganisersList.classList.add("animated", "fadeInUp");
+          profileOrganisersList.style.display = "block";
+          profileCard.style.height = originalHeigth + "px";
+        }, 600);
+      });
+    }
 
-    profileDetailsBtn.addEventListener("click", () => {
-      profileOrganisersList.classList.remove("animated", "fadeInUp");
-      profileOrganisersList.classList.add("animated", "fadeOutDown");
-      setTimeout(()=>{
-        profileOrganisersList.style.display = "none";
-        profileEventsList.classList.remove("animated", "fadeOutDown");
-        profileEventsList.classList.add("animated", "fadeInUp");
-        profileEventsList.style.display = "block";
-      }, 600);
-    });
+    if(profileDetailsBtn){      
+      profileDetailsBtn.addEventListener("click", () => {
+        profileOrganisersList.classList.remove("animated", "fadeInUp");
+        profileOrganisersList.classList.add("animated", "fadeOutDown");
+        setTimeout(()=>{
+          profileOrganisersList.style.display = "none";
+          profileEventsList.classList.remove("animated", "fadeOutDown");
+          profileEventsList.classList.add("animated", "fadeInUp");
+          profileEventsList.style.display = "block";
+        }, 600);
+      });
+    }
 
   }
 
